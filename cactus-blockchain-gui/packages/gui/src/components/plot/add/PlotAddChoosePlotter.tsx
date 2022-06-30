@@ -1,8 +1,8 @@
 import React, { useMemo } from 'react';
 import { useWatch } from 'react-hook-form';
 import { t, Trans } from '@lingui/macro';
-import { CardStep, Select, StateColor } from '@chia/core';
-import { useGetPlottersQuery } from '@chia/api-react';
+import { CardStep, Select, StateColor } from '@cactus/core';
+import { useGetPlottersQuery } from '@cactus/api-react';
 import {
   FormControl,
   FormHelperText,
@@ -12,8 +12,8 @@ import {
   Typography,
 } from '@mui/material';
 import styled from 'styled-components';
-import { defaultPlotter, PlotterName } from '@chia/api';
-import type { Plotter, PlotterMap } from '@chia/api';
+import { defaultPlotter, PlotterName } from '@cactus/api';
+import type { Plotter, PlotterMap } from '@cactus/api';
 
 type Props = {
   step: number;
@@ -91,8 +91,8 @@ export default function PlotAddChoosePlotter(props: Props) {
       <Typography variant="subtitle1">
         <Trans>
             Depending on your system configuration, you may find that an alternative plotter
-            produces plots faster than the default Chia Proof of Space plotter. If unsure,
-            use the default Chia Proof of Space plotter.
+            produces plots faster than the default Cactus Proof of Space plotter. If unsure,
+            use the default Cactus Proof of Space plotter.
         </Trans>
       </Typography>
 

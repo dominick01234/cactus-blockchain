@@ -2,8 +2,8 @@ import React from 'react';
 import { Trans } from '@lingui/macro';
 import { useNavigate } from 'react-router-dom';
 import { Divider, Grid, Typography } from '@mui/material';
-import { Button, CardHero, Link, useOpenDialog } from '@chia/core';
-import { Farming } from '@chia/icons';
+import { Button, CardHero, Link, useOpenDialog } from '@cactus/core';
+import { Farming } from '@cactus/icons';
 import PlotAddDirectoryDialog from '../plot/PlotAddDirectoryDialog';
 
 export default function FarmHero() {
@@ -30,7 +30,7 @@ export default function FarmHero() {
               where your farm will be once you add a plot.{' '}
               <Link
                 target="_blank"
-                href="https://github.com/Chia-Network/chia-blockchain/wiki/Network-Architecture"
+                href="https://github.com/Cactus-Network/cactus-blockchain/wiki/Network-Architecture"
               >
                 Learn more
               </Link>

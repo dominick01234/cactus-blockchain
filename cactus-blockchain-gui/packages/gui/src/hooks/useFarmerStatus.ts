@@ -1,5 +1,5 @@
-import { ServiceName } from '@chia/api';
-import { useIsServiceRunningQuery } from '@chia/api-react';
+import { ServiceName } from '@cactus/api';
+import { useIsServiceRunningQuery } from '@cactus/api-react';
 import FarmerStatus from '../constants/FarmerStatus';
 import FullNodeState from '../constants/FullNodeState';
 import useFullNodeState from './useFullNodeState';

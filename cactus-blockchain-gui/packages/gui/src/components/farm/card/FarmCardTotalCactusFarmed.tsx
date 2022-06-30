@@ -1,20 +1,20 @@
 import React, { useMemo } from 'react';
 import { Trans } from '@lingui/macro';
-import { useCurrencyCode, mojoToChiaLocaleString, CardSimple, useLocale } from '@chia/core';
-import { useGetFarmedAmountQuery } from '@chia/api-react';
+import { useCurrencyCode, mojoToCactusLocaleString, CardSimple, useLocale } from '@cactus/core';
+import { useGetFarmedAmountQuery } from '@cactus/api-react';
 
-export default function FarmCardTotalChiaFarmed() {
+export default function FarmCardTotalCactusFarmed() {
   const currencyCode = useCurrencyCode();
   const [locale] = useLocale();
   const { data, isLoading, error } = useGetFarmedAmountQuery();
 
   const farmedAmount = data?.farmedAmount;
 
-  const totalChiaFarmed = useMemo(() => {
+  const totalCactusFarmed = useMemo(() => {
     if (farmedAmount !== undefined) {
       return (
         <>
-          {mojoToChiaLocaleString(farmedAmount, locale)}
+          {mojoToCactusLocaleString(farmedAmount, locale)}
           &nbsp;
           {currencyCode}
         </>
@@ -24,8 +24,8 @@ export default function FarmCardTotalChiaFarmed() {
 
   return (
     <CardSimple
-      title={<Trans>Total Chia Farmed</Trans>}
-      value={totalChiaFarmed}
+      title={<Trans>Total Cactus Farmed</Trans>}
+      value={totalCactusFarmed}
       loading={isLoading}
       error={error}
     />

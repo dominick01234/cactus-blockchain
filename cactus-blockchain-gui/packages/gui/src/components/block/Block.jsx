@@ -10,7 +10,7 @@ import {
 } from '@mui/material';
 import moment from 'moment';
 import { Trans } from '@lingui/macro';
-import { useGetBlockQuery, useGetBlockRecordQuery  } from '@chia/api-react'
+import { useGetBlockQuery, useGetBlockRecordQuery  } from '@cactus/api-react'
 import { useParams, useNavigate } from 'react-router-dom';
 import {
   Back,
@@ -25,10 +25,10 @@ import {
   calculatePoolReward,
   calculateBaseFarmerReward,
   useCurrencyCode,
-  mojoToChia,
+  mojoToCactus,
   Suspender,
   toBech32m,
-} from '@chia/core';
+} from '@cactus/core';
 import {
   hex_to_array,
   arr_to_hex,
@@ -149,13 +149,13 @@ export default function Block() {
       ? blockRecord.weight - prevBlockRecord.weight
       : blockRecord?.weight ?? 0;
 
-  const poolReward = mojoToChia(calculatePoolReward(blockRecord.height));
-  const baseFarmerReward = mojoToChia(
+  const poolReward = mojoToCactus(calculatePoolReward(blockRecord.height));
+  const baseFarmerReward = mojoToCactus(
     calculateBaseFarmerReward(blockRecord.height),
   );
 
-  const chiaFees = blockRecord.fees !== undefined
-    ? mojoToChia(blockRecord.fees)
+  const cactusFees = blockRecord.fees !== undefined
+    ? mojoToCactus(blockRecord.fees)
     : '';
 
   const rows = [
@@ -246,7 +246,7 @@ export default function Block() {
       value: (
         <Link
           target="_blank"
-          href={`https://www.chiaexplorer.com/blockchain/puzzlehash/${blockRecord.farmerPuzzleHash}`}
+          href={`https://www.cactusexplorer.com/blockchain/puzzlehash/${blockRecord.farmerPuzzleHash}`}
         >
           {currencyCode
             ? toBech32m(
@@ -262,7 +262,7 @@ export default function Block() {
       value: (
         <Link
           target="_blank"
-          href={`https://www.chiaexplorer.com/blockchain/puzzlehash/${blockRecord.poolPuzzleHash}`}
+          href={`https://www.cactusexplorer.com/blockchain/puzzlehash/${blockRecord.poolPuzzleHash}`}
         >
           {currencyCode
             ? toBech32m(
@@ -297,7 +297,7 @@ export default function Block() {
     },
     {
       name: <Trans>Fees Amount</Trans>,
-      value: chiaFees ? `${chiaFees} ${currencyCode}` : '',
+      value: cactusFees ? `${cactusFees} ${currencyCode}` : '',
       tooltip: (
         <Trans>
           The total transactions fees in this block. Rewarded to the farmer.
@@ -312,7 +312,7 @@ export default function Block() {
         title={
           <Back variant="h5">
             <Trans>
-              Block at height {blockRecord.height} in the Chia blockchain
+              Block at height {blockRecord.height} in the Cactus blockchain
             </Trans>
           </Back>
         }

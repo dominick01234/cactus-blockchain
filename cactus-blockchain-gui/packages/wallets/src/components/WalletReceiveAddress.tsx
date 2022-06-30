@@ -1,7 +1,7 @@
 import React from 'react';
 import { Trans } from '@lingui/macro';
-import { Button, CopyToClipboard, Card, Loading, Flex, TooltipIcon } from '@chia/core';
-import { useGetCurrentAddressQuery, useGetNextAddressMutation } from '@chia/api-react';
+import { Button, CopyToClipboard, Card, Loading, Flex, TooltipIcon } from '@cactus/core';
+import { useGetCurrentAddressQuery, useGetNextAddressMutation } from '@cactus/api-react';
 import {
   Box,
   TextField,

@@ -1,6 +1,6 @@
 from typing import Any, Dict, Sequence, Union
 
-from chia.util.streamable import recurse_jsonify
+from cactus.util.streamable import recurse_jsonify
 
 
 def format_bytes(bytes: int) -> str:

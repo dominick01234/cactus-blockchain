@@ -1,8 +1,8 @@
 import React, { useState, useMemo } from 'react';
 import { Trans } from '@lingui/macro';
-import { TableControlled } from '@chia/core';
-import { type Plot } from '@chia/api';
-import { useGetHarvesterPlotsDuplicatesQuery, useGetHarvesterQuery } from '@chia/api-react';
+import { TableControlled } from '@cactus/core';
+import { type Plot } from '@cactus/api';
+import { useGetHarvesterPlotsDuplicatesQuery, useGetHarvesterQuery } from '@cactus/api-react';
 import { Typography } from '@mui/material';
 import PlotAction from './PlotAction';
 

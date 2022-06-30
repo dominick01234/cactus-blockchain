@@ -1,7 +1,7 @@
 import React from 'react';
 import { Trans } from '@lingui/macro';
-import { FormatLargeNumber, CardSimple } from '@chia/core';
-import { useGetBlockchainStateQuery } from '@chia/api-react';
+import { FormatLargeNumber, CardSimple } from '@cactus/core';
+import { useGetBlockchainStateQuery } from '@cactus/api-react';
 
 export default function FullNodeCardTotalIterations() {
   const { data, isLoading, error } = useGetBlockchainStateQuery();

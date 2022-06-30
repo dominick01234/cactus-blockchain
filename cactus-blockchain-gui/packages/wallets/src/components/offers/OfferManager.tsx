@@ -18,13 +18,13 @@ import {
   TableControlled,
   TooltipIcon,
   useOpenDialog,
-  chiaToMojo,
+  cactusToMojo,
   mojoToCATLocaleString,
   useShowSaveDialog,
   Tooltip,
   LayoutDashboardSub,
-} from '@chia/core';
-import { OfferTradeRecord } from '@chia/api';
+} from '@cactus/core';
+import { OfferTradeRecord } from '@cactus/api';
 import fs from 'fs';
 import { Remote } from 'electron';
 import {
@@ -43,8 +43,8 @@ import {
   Typography
 } from '@mui/material';
 import { Cancel, GetApp as Download, Info, Reply as Share, Visibility } from '@mui/icons-material';
-import { Offers } from '@chia/icons';
-import { useCancelOfferMutation, useGetOfferDataMutation, useGetWalletsQuery } from '@chia/api-react';
+import { Offers } from '@cactus/icons';
+import { useCancelOfferMutation, useGetOfferDataMutation, useGetWalletsQuery } from '@cactus/api-react';
 import { colorForOfferState, displayStringForOfferState, formatAmountForWalletType, suggestedFilenameForOffer } from './utils';
 import useAssetIdName from '../../hooks/useAssetIdName';
 import useWalletOffers from '../../hooks/useWalletOffers';
@@ -75,10 +75,10 @@ function ConfirmOfferCancellation(props: ConfirmOfferCancellationProps) {
   }
 
   async function handleConfirm() {
-    const { fee: xchFee } = methods.getValues();
+    const { fee: cacFee } = methods.getValues();
 
     const fee = cancelWithTransaction
-      ? chiaToMojo(xchFee)
+      ? cactusToMojo(cacFee)
       : new BigNumber(0);
 
     onClose([true, { cancelWithTransaction, cancellationFee: fee }]);
@@ -510,7 +510,7 @@ export function OfferManager() {
               <Offers color="primary" fontSize="extraLarge" />
               <Typography variant="body1">
                 <Trans>
-                  Create an offer to exchange XCH or other tokens. View an offer to inspect and accept an offer made by another party.
+                  Create an offer to exchange CAC or other tokens. View an offer to inspect and accept an offer made by another party.
                 </Trans>
               </Typography>
               <Flex gap={1}>

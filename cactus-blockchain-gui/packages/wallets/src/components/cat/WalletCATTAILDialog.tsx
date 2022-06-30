@@ -8,7 +8,7 @@ import {
   InputAdornment,
   TextField,
 } from '@mui/material';
-import { Button, CopyToClipboard, DialogActions, Loading, Link, Flex } from '@chia/core';
+import { Button, CopyToClipboard, DialogActions, Loading, Link, Flex } from '@cactus/core';
 import useWallet from '../../hooks/useWallet';
 
 type Props = {

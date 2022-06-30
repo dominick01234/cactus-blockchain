@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Trans } from '@lingui/macro';
-import { Card, CopyToClipboard, Flex, Loading, useOpenDialog } from '@chia/core';
+import { Card, CopyToClipboard, Flex, Loading, useOpenDialog } from '@cactus/core';
 import { Alert, InputAdornment, Typography } from '@mui/material';
 import { Edit as RenameIcon, Fingerprint as FingerprintIcon } from '@mui/icons-material';
 import {
@@ -9,7 +9,7 @@ import {
   ListItemIcon,
   MenuItem,
 } from '@mui/material';
-import { useSetCATNameMutation, useGetCatListQuery } from '@chia/api-react';
+import { useSetCATNameMutation, useGetCatListQuery } from '@cactus/api-react';
 import WalletHistory from '../WalletHistory';
 import useWallet from '../../hooks/useWallet';
 import WalletReceiveAddress from '../WalletReceiveAddress';

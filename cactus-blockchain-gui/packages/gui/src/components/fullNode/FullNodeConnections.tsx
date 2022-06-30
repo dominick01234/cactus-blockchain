@@ -10,8 +10,8 @@ import {
   Table,
   IconButton,
   useOpenDialog,
-} from '@chia/core';
-import { useGetFullNodeConnectionsQuery } from '@chia/api-react';
+} from '@cactus/core';
+import { useGetFullNodeConnectionsQuery } from '@cactus/api-react';
 import { Tooltip } from '@mui/material';
 import { service_connection_types } from '../../util/service_names';
 import Connection from '../../types/Connection';

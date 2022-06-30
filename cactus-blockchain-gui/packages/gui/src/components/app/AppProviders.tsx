@@ -1,8 +1,8 @@
 import React, { ReactNode, useEffect, useState, Suspense } from 'react';
 import { Provider } from 'react-redux';
 import { Outlet } from 'react-router-dom';
-import { useDarkMode, sleep, ThemeProvider, ModalDialogsProvider, ModalDialogs, LocaleProvider, LayoutLoading, dark, light, ErrorBoundary } from '@chia/core';
-import { store, api } from '@chia/api-react';
+import { useDarkMode, sleep, ThemeProvider, ModalDialogsProvider, ModalDialogs, LocaleProvider, LayoutLoading, dark, light, ErrorBoundary } from '@cactus/core';
+import { store, api } from '@cactus/api-react';
 import { Trans } from '@lingui/macro';
 import { i18n, defaultLocale, locales } from '../../config/locales';
 import AppState from './AppState';

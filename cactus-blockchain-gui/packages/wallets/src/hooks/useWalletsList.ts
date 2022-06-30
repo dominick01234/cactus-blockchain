@@ -1,9 +1,9 @@
 import { useMemo } from 'react';
-import { WalletType } from '@chia/api';
-import type { Wallet } from '@chia/api';
-import { useShowError} from '@chia/core';
+import { WalletType } from '@cactus/api';
+import type { Wallet } from '@cactus/api';
+import { useShowError} from '@cactus/core';
 import { orderBy } from 'lodash';
-import { useGetWalletsQuery, useGetStrayCatsQuery, useGetCatListQuery, useAddCATTokenMutation } from '@chia/api-react';
+import { useGetWalletsQuery, useGetStrayCatsQuery, useGetCatListQuery, useAddCATTokenMutation } from '@cactus/api-react';
 import useHiddenWallet from './useHiddenWallet';
 
 type ListItem = {
@@ -131,7 +131,7 @@ export default function useWalletsList(search?: string): {
         hidden: isHidden(wallet.id),
         walletId: wallet.id,
         assetId: wallet.meta?.assetId,
-        name: wallet.type === WalletType.STANDARD_WALLET ? 'Chia' : wallet.name,
+        name: wallet.type === WalletType.STANDARD_WALLET ? 'Cactus' : wallet.name,
       })),
       ...catBaseWallets.map((wallet: Wallet) => ({
         id: wallet.id,

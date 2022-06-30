@@ -1,9 +1,9 @@
 import React, { ReactNode } from 'react';
 import { useNavigate } from 'react-router';
 import { Trans } from '@lingui/macro';
-import { useCreateNewPoolWalletMutation } from '@chia/api-react';
+import { useCreateNewPoolWalletMutation } from '@cactus/api-react';
 import { ChevronRight as ChevronRightIcon } from '@mui/icons-material';
-import { Flex, Suspender } from '@chia/core';
+import { Flex, Suspender } from '@cactus/core';
 import PlotNFTState from '../../constants/PlotNFTState';
 import useUnconfirmedPlotNFTs from '../../hooks/useUnconfirmedPlotNFTs';
 import PlotNFTSelectPool, { SubmitData } from './select/PlotNFTSelectPool';
@@ -61,7 +61,7 @@ export default function PlotNFTAdd(props: Props) {
         title={<Trans>Want to Join a Pool? Create a Plot NFT</Trans>}
         description={
           <Trans>
-            Join a pool and get consistent XCH farming rewards. The average
+            Join a pool and get consistent CAC farming rewards. The average
             returns are the same, but it is much less volatile. Assign plots to
             a plot NFT. You can easily switch pools without having to re-plot.
           </Trans>

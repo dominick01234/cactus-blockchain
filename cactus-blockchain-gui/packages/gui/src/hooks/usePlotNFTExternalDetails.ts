@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
-import type { Plot, PlotNFTExternal } from '@chia/api';
-import { useIsWalletSynced } from '@chia/wallets';
+import type { Plot, PlotNFTExternal } from '@cactus/api';
+import { useIsWalletSynced } from '@cactus/wallets';
 import usePlotNFTName from './usePlotNFTName';
 
 export default function usePlotNFTExternalDetails(nft: PlotNFTExternal): {

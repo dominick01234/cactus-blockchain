@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Flex } from '@chia/core';
+import { Flex } from '@cactus/core';
 import WalletHistory from '../WalletHistory';
 import WalletStandardCards from './WalletStandardCards';
 import WalletReceiveAddress from '../WalletReceiveAddress';

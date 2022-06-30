@@ -1,5 +1,5 @@
-import { Wallet, CAT, Pool, Farmer, WalletType, OfferTradeRecord } from '@chia/api';
-import type { Transaction, WalletConnections } from '@chia/api';
+import { Wallet, CAT, Pool, Farmer, WalletType, OfferTradeRecord } from '@cactus/api';
+import type { Transaction, WalletConnections } from '@cactus/api';
 import BigNumber from 'bignumber.js';
 import onCacheEntryAddedInvalidate from '../utils/onCacheEntryAddedInvalidate';
 import normalizePoolState from '../utils/normalizePoolState';

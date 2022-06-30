@@ -12,8 +12,8 @@ import {
   Flex,
   StateTypography,
   State,
-} from '@chia/core';
-import { useGetKeyringStatusQuery } from '@chia/api-react';
+} from '@cactus/core';
+import { useGetKeyringStatusQuery } from '@cactus/api-react';
 import {
   Grid,
   Typography,

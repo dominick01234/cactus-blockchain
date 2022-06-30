@@ -1,8 +1,8 @@
 import React, { useMemo } from 'react';
 import { ListItemIcon, ListItemText, Typography } from '@mui/material';
-import { Dropdown, Flex, Loading, useTrans } from '@chia/core';
-import { useGetWalletsQuery } from '@chia/api-react';
-import { WalletType, type Wallet } from '@chia/api';
+import { Dropdown, Flex, Loading, useTrans } from '@cactus/core';
+import { useGetWalletsQuery } from '@cactus/api-react';
+import { WalletType, type Wallet } from '@cactus/api';
 import { useNavigate } from 'react-router';
 import WalletName from '../constants/WalletName';
 import WalletIcon from './WalletIcon';
@@ -11,7 +11,7 @@ import WalletBadge from './WalletBadge';
 function getPrimaryTitle(wallet: Wallet): string {
   switch (wallet.type) {
     case WalletType.STANDARD_WALLET:
-      return 'Chia';
+      return 'Cactus';
     default:
       return wallet.name;
   }

@@ -20,10 +20,10 @@ import {
   useOpenDialog,
   useShowError,
   useOpenExternal,
-  chiaToMojo,
-  mojoToChiaLocaleString,
+  cactusToMojo,
+  mojoToCactusLocaleString,
   mojoToCATLocaleString,
-} from '@chia/core';
+} from '@cactus/core';
 import {
   Box,
   Button,
@@ -38,8 +38,8 @@ import {
   Tooltip,
   Typography
 } from '@mui/material';
-import { OfferSummaryRecord, OfferTradeRecord, OfferCoinOfInterest, WalletType } from '@chia/api';
-import { useCheckOfferValidityMutation, useTakeOfferMutation } from '@chia/api-react';
+import { OfferSummaryRecord, OfferTradeRecord, OfferCoinOfInterest, WalletType } from '@cactus/api';
+import { useCheckOfferValidityMutation, useTakeOfferMutation } from '@cactus/api-react';
 import {
   colorForOfferState,
   displayStringForOfferState,
@@ -218,7 +218,7 @@ function OfferDetails(props: OfferDetailsProps) {
         return (
           <Typography variant="body2">
             <Flex flexDirection="row" flexGrow={1} gap={1}>
-              {mojoToChiaLocaleString(coin.amount)}
+              {mojoToCactusLocaleString(coin.amount)}
             </Flex>
           </Typography>
         )
@@ -238,7 +238,7 @@ function OfferDetails(props: OfferDetailsProps) {
             interactive
           >
             <Link
-              onClick={(event: React.SyntheticEvent) => handleLinkClicked(event, `https://www.chiaexplorer.com/blockchain/coin/${coin.parentCoinInfo}`)}
+              onClick={(event: React.SyntheticEvent) => handleLinkClicked(event, `https://www.cactusexplorer.com/blockchain/coin/${coin.parentCoinInfo}`)}
             >
               {coin.parentCoinInfo}
             </Link>
@@ -261,7 +261,7 @@ function OfferDetails(props: OfferDetailsProps) {
             interactive
           >
             <Link
-              onClick={(event: React.SyntheticEvent) => handleLinkClicked(event, `https://www.chiaexplorer.com/blockchain/puzzlehash/${coin.puzzleHash}`)}
+              onClick={(event: React.SyntheticEvent) => handleLinkClicked(event, `https://www.cactusexplorer.com/blockchain/puzzlehash/${coin.puzzleHash}`)}
             >
               {coin.puzzleHash}
             </Link>
@@ -281,7 +281,7 @@ function OfferDetails(props: OfferDetailsProps) {
 
   async function handleAcceptOffer(formData: any) {
     const { fee } = formData;
-    const feeInMojos = fee ? Number.parseFloat(chiaToMojo(fee)) : 0;
+    const feeInMojos = fee ? Number.parseFloat(cactusToMojo(fee)) : 0;
     const offeredUnknownCATs: string[] = Object.entries(summary.offered).filter(([assetId]) => lookupByAssetId(assetId) === undefined).map(([assetId]) => assetId);
 
     const confirmedAccept = await openDialog(

@@ -1,7 +1,7 @@
 import React from 'react';
 import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
-import { SelectKey, LayoutHero, LayoutDashboard, Mode, useMode } from '@chia/core';
-import { WalletAdd, WalletImport, Wallets, Offers, WalletStatusHeader } from '@chia/wallets';
+import { SelectKey, LayoutHero, LayoutDashboard, Mode, useMode } from '@cactus/core';
+import { WalletAdd, WalletImport, Wallets, Offers, WalletStatusHeader } from '@cactus/wallets';
 import AppProviders from './AppProviders';
 import FullNode from '../fullNode/FullNode';
 import Block from '../block/Block';

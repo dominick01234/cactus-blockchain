@@ -1,10 +1,10 @@
-import { WalletType } from '@chia/api';
+import { WalletType } from '@cactus/api';
 import type { ChipProps } from '@mui/material';
-import type { OfferSummaryRecord } from '@chia/api';
+import type { OfferSummaryRecord } from '@cactus/api';
 import {
-  mojoToChiaLocaleString,
+  mojoToCactusLocaleString,
   mojoToCATLocaleString,
-} from '@chia/core';
+} from '@cactus/core';
 import OfferState from './OfferState';
 import { AssetIdMapEntry } from '../../hooks/useAssetIdName';
 
@@ -115,7 +115,7 @@ export function colorForOfferState(state: OfferState): ChipProps['color'] {
 
 export function formatAmountForWalletType(amount: string | number, walletType: WalletType, locale?: string): string {
   if (walletType === WalletType.STANDARD_WALLET) {
-    return mojoToChiaLocaleString(amount, locale);
+    return mojoToCactusLocaleString(amount, locale);
   } else if (walletType === WalletType.CAT) {
     return mojoToCATLocaleString(amount, locale);
   }

@@ -8,7 +8,7 @@ import {
   DialogContent,
   TextField,
 } from '@mui/material';
-import { Button, DialogActions } from '@chia/core';
+import { Button, DialogActions } from '@cactus/core';
 
 type Props ={
   open: boolean;

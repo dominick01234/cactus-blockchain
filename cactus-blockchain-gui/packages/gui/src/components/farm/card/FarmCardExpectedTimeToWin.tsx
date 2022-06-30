@@ -1,9 +1,9 @@
 import React, { useMemo } from 'react';
 import { Trans } from '@lingui/macro';
 import BigNumber from 'bignumber.js';
-import { useGetBlockchainStateQuery, useGetTotalHarvestersSummaryQuery } from '@chia/api-react';
+import { useGetBlockchainStateQuery, useGetTotalHarvestersSummaryQuery } from '@cactus/api-react';
 import moment from 'moment';
-import { State, CardSimple } from '@chia/core';
+import { State, CardSimple } from '@cactus/core';
 import FullNodeState from '../../../constants/FullNodeState';
 import useFullNodeState from '../../../hooks/useFullNodeState';
 import FarmCardNotAvailable from './FarmCardNotAvailable';

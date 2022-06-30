@@ -1,7 +1,7 @@
 import React, { type ReactNode, useState } from 'react';
 import { Trans } from '@lingui/macro';
 import { Box, IconButton, InputBase } from '@mui/material';
-import { Button, useColorModeValue, Spinner, Flex, Tooltip, useTrans } from '@chia/core';
+import { Button, useColorModeValue, Spinner, Flex, Tooltip, useTrans } from '@cactus/core';
 import styled from 'styled-components';
 import { Add, KeyboardArrowDown, KeyboardArrowUp  } from '@mui/icons-material';
 import { useToggle } from 'react-use';

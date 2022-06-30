@@ -3,9 +3,9 @@ from typing import List
 
 from blspy import AugSchemeMPL
 
-from chia.util.ints import uint32
-from chia.util.keychain import Keychain
-from chia.util.validate_alert import create_alert_file, create_not_ready_alert_file, validate_alert_file
+from cactus.util.ints import uint32
+from cactus.util.keychain import Keychain
+from cactus.util.validate_alert import create_alert_file, create_not_ready_alert_file, validate_alert_file
 
 bitcoin_hash = None
 bram_message = None
@@ -51,7 +51,7 @@ while True:
 
 print("\n___________ HD PATH ____________")
 while True:
-    hd_path = input("Enter the HD path in the form 'm/12381/8444/n/n', or enter Q to quit: ").lower()
+    hd_path = input("Enter the HD path in the form 'm/12381/11444/n/n', or enter Q to quit: ").lower()
     if hd_path == "q":
         quit()
     verify = input(f"Is this correct path: {hd_path}? (y/n) ").lower()

@@ -2,8 +2,8 @@ import React from 'react';
 import { Trans } from '@lingui/macro';
 import { useNavigate } from 'react-router-dom';
 import { Grid, Typography } from '@mui/material';
-import { Button, CardHero } from '@chia/core';
-import { Pooling } from '@chia/icons';
+import { Button, CardHero } from '@cactus/core';
+import { Pooling } from '@cactus/icons';
 
 export default function PoolHero() {
   const navigate = useNavigate();
@@ -19,7 +19,7 @@ export default function PoolHero() {
           <Pooling color="primary" fontSize="extraLarge" />
           <Typography variant="body1">
             <Trans>
-              Smooth out your XCH farming rewards by joining a pool.
+              Smooth out your CAC farming rewards by joining a pool.
             </Trans>
           </Typography>
           <Button onClick={handleJoinPool} variant="contained" color="primary">

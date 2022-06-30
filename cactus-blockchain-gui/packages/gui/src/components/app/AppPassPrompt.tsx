@@ -8,9 +8,9 @@ import {
   Typography,
 } from '@mui/material';
 import { Trans, t } from '@lingui/macro';
-import { PassphrasePromptReason } from '@chia/api';
-import { useUnlockKeyringMutation, useGetKeyringStatusQuery } from '@chia/api-react';
-import { Button, Flex, TooltipIcon, useShowError, Suspender, ButtonLoading } from '@chia/core';
+import { PassphrasePromptReason } from '@cactus/api';
+import { useUnlockKeyringMutation, useGetKeyringStatusQuery } from '@cactus/api-react';
+import { Button, Flex, TooltipIcon, useShowError, Suspender, ButtonLoading } from '@cactus/core';
 
 type Props = {
   reason: PassphrasePromptReason;

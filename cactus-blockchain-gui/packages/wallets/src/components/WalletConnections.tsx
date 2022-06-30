@@ -5,10 +5,10 @@ import {
   FormatBytes,
   Loading,
   Table,
-} from '@chia/core';
+} from '@cactus/core';
 import { Tooltip } from '@mui/material';
-import { Connection, ServiceConnectionName } from '@chia/api';
-import { useGetWalletConnectionsQuery } from '@chia/api-react';
+import { Connection, ServiceConnectionName } from '@cactus/api';
+import { useGetWalletConnectionsQuery } from '@cactus/api-react';
 
 const cols = [
   {

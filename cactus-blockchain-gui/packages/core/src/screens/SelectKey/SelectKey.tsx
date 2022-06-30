@@ -14,7 +14,7 @@ import {
   useGetPublicKeysQuery,
   useDeleteAllKeysMutation,
   useLogInAndSkipImportMutation,
-} from '@chia/api-react';
+} from '@cactus/api-react';
 import SelectKeyItem from './SelectKeyItem';
 import Button from '../../components/Button';
 import Flex from '../../components/Flex';
@@ -141,7 +141,7 @@ export default function SelectKey() {
             </Typography>
             <Typography variant="subtitle1" align="center">
               <Trans>
-                Welcome to Chia. Please log in with an existing key, or create
+                Welcome to Cactus. Please log in with an existing key, or create
                 a new key.
               </Trans>
             </Typography>

@@ -1,5 +1,5 @@
 import type BigNumber from 'bignumber.js';
-import { type WalletType } from '@chia/api';
+import { type WalletType } from '@cactus/api';
 
 type OfferRowData = {
   amount: string;

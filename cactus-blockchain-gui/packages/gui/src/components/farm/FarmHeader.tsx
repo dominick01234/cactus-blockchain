@@ -1,6 +1,6 @@
 import React from 'react';
 import { Trans } from '@lingui/macro';
-import { Flex, More, useOpenDialog } from '@chia/core';
+import { Flex, More, useOpenDialog } from '@cactus/core';
 import {
   Box,
   MenuItem,

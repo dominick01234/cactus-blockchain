@@ -1,7 +1,7 @@
 import { useMemo } from 'react';
-import { useGetCatListQuery, useGetWalletsQuery } from '@chia/api-react';
-import { CATToken, Wallet } from '@chia/core';
-import { WalletType } from '@chia/api';
+import { useGetCatListQuery, useGetWalletsQuery } from '@cactus/api-react';
+import { CATToken, Wallet } from '@cactus/core';
+import { WalletType } from '@cactus/api';
 
 export type AssetIdMapEntry = {
   walletId: number;
@@ -33,9 +33,9 @@ export default function useAssetIdName() {
       let isVerified = false;
 
       if (walletType === WalletType.STANDARD_WALLET) {
-        assetId = 'xch';
-        name = 'Chia';
-        symbol = 'XCH';
+        assetId = 'cac';
+        name = 'Cactus';
+        symbol = 'CAC';
         isVerified = true;
       }
       else if (walletType === WalletType.CAT) {

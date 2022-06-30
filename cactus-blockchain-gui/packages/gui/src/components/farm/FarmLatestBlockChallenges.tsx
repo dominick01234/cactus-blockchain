@@ -1,8 +1,8 @@
 import React from 'react';
 import { Trans } from '@lingui/macro';
 import { Typography } from '@mui/material';
-import { Link, Table, Card } from '@chia/core';
-import { useGetSignagePointsQuery, useGetTotalHarvestersSummaryQuery } from '@chia/api-react';
+import { Link, Table, Card } from '@cactus/core';
+import { useGetSignagePointsQuery, useGetTotalHarvestersSummaryQuery } from '@cactus/api-react';
 import type { Row } from '../core/components/Table/Table';
 
 const cols = [
@@ -58,13 +58,13 @@ export default function FarmLatestBlockChallenges() {
       />
       <Typography variant="caption">
         <Trans>
-          *Want to explore Chia’s blocks further? Check out{' '}
+          *Want to explore Cactus’s blocks further? Check out{' '}
           <Link
             color="primary"
-            href="https://www.chiaexplorer.com/"
+            href="https://www.cactusexplorer.com/"
             target="_blank"
           >
-            Chia Explorer
+            Cactus Explorer
           </Link>{' '}
           built by an open source developer.
         </Trans>

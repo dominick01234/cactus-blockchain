@@ -1,7 +1,7 @@
 import React, { type ReactNode } from 'react';
 import { useNavigate, useMatch } from 'react-router-dom';
 import { ListItem, ListItemIcon, Typography } from '@mui/material';
-import { Flex } from '@chia/core';
+import { Flex } from '@cactus/core';
 import { styled } from '@mui/system';
 import useColorModeValue from '../../utils/useColorModeValue';
 

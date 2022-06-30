@@ -5,7 +5,7 @@ import {
   ConfirmDialog,
   useOpenDialog,
   DropdownActions,
-} from '@chia/core';
+} from '@cactus/core';
 import {
   Typography,
   ListItemIcon,
@@ -16,7 +16,7 @@ import {
 import {
   Delete as DeleteIcon,
 } from '@mui/icons-material';
-import { useDeleteUnconfirmedTransactionsMutation } from '@chia/api-react';
+import { useDeleteUnconfirmedTransactionsMutation } from '@cactus/api-react';
 import WalletName from './WalletName';
 
 type StandardWalletProps = {

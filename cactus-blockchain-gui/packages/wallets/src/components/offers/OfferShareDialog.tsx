@@ -10,8 +10,8 @@ import {
   useOpenDialog,
   useShowError,
   useOpenExternal,
-} from '@chia/core';
-import { OfferTradeRecord } from '@chia/api';
+} from '@cactus/core';
+import { OfferTradeRecord } from '@cactus/api';
 import {
   Button,
   Checkbox,
@@ -88,7 +88,7 @@ async function postToOfferBin(offerData: string, sharePrivately: boolean): Promi
 
 enum HashgreenErrorCodes {
   OFFERED_AMOUNT_TOO_SMALL = 40020, // The offered amount is too small
-  MARKET_NOT_FOUND = 50029, // Pairing doesn't exist e.g. XCH/RandoCoin
+  MARKET_NOT_FOUND = 50029, // Pairing doesn't exist e.g. CAC/RandoCoin
   OFFER_FILE_EXISTS = 50037, // Offer already shared
   COINS_ALREADY_COMMITTED = 50041, // Coins in the offer are already committed in another offer
 };
@@ -166,7 +166,7 @@ type KeybaseCLIRequest = {
   }
 };
 
-const KeybaseTeamName = 'chia_offers';
+const KeybaseTeamName = 'cactus_offers';
 const KeybaseChannelName = 'offers-trading';
 
 async function execKeybaseCLI(request: KeybaseCLIRequest): Promise<boolean> {

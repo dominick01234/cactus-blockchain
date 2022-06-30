@@ -1,13 +1,13 @@
 import React from 'react';
 import { Trans } from '@lingui/macro';
 import { useNavigate } from 'react-router';
-import { useRefreshPlotsMutation } from '@chia/api-react';
+import { useRefreshPlotsMutation } from '@cactus/api-react';
 import {
   Button,
   Flex,
   useOpenDialog,
   More,
-} from '@chia/core';
+} from '@cactus/core';
 import {
   Box,
   MenuItem,
