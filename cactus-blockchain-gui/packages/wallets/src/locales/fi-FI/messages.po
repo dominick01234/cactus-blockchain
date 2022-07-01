@@ -118,8 +118,8 @@ msgid "Add CAT wallets to have more options"
 msgstr "Lisää CAT-lompakkoja saadaksesi lisää vaihtoehtoja"
 
 #: src/components/hero/WalletHeroAdd.tsx:99
-msgid "Add Custom Token"
-msgstr "Lisää Kustomoitu Token"
+#~ msgid "Add Custom Token"
+#~ msgstr "Lisää Kustomoitu Token"
 
 #: src/components/plot/PlotHeader.tsx:89
 #~ msgid "Add Plot Directory"
@@ -133,8 +133,6 @@ msgstr "Lisää Kustomoitu Token"
 #: src/components/WalletsManageTokens.tsx:158
 #: src/components/cat/WalletCATCreateExistingSimple.tsx:61
 #: src/components/cat/WalletCATCreateSimple.tsx:70
-#: src/components/hero/WalletHeroAdd.tsx:64
-#: src/components/hero/WalletHeroWallets.tsx:83
 msgid "Add Token"
 msgstr "Lisää Token"
 
@@ -380,6 +378,24 @@ msgstr "Ennen tarjouksen lähettämistä Keybase #{KeybaseChannelName} kanavalle
 #~ msgid "CCListItems.title"
 #~ msgstr ""
 
+#: src/electron/main.tsx:430
+#~ msgid "Cactus"
+#~ msgstr "Cactus"
+
+#: src/components/cat/WalletCATSelect.tsx:25
+#: src/components/create/WalletCreateList.tsx:32
+#: src/constants/WalletName.ts:23
+msgid "Cactus Asset Token"
+msgstr "Cactus Asset Token"
+
+#: src/electron/main.tsx:369
+#~ msgid "Cactus Blockchain Wiki"
+#~ msgstr "Cactus Blockchain Wiki"
+
+#: src/components/standard/WalletStandard.tsx:23
+#~ msgid "Cactus Wallet"
+#~ msgstr "Cactus Wallet"
+
 #: src/components/_selectKey_old/SelectKey.tsx:212
 #~ msgid "Can be backed up to mnemonic seed"
 #~ msgstr "Can be backed up to mnemonic seed"
@@ -444,24 +460,6 @@ msgstr "Cactusa (CAC) ei voi lähettää CAT-osoitteeseen. Anna cactus-osoite."
 #: src/electron/main.tsx:412
 #~ msgid "Chat on KeyBase"
 #~ msgstr "Chat on KeyBase"
-
-#: src/electron/main.tsx:430
-#~ msgid "Cactus"
-#~ msgstr "Cactus"
-
-#: src/components/cat/WalletCATSelect.tsx:25
-#: src/components/create/WalletCreateList.tsx:32
-#: src/constants/WalletName.ts:23
-msgid "Cactus Asset Token"
-msgstr "Cactus Asset Token"
-
-#: src/electron/main.tsx:369
-#~ msgid "Cactus Blockchain Wiki"
-#~ msgstr "Cactus Blockchain Wiki"
-
-#: src/components/standard/WalletStandard.tsx:23
-#~ msgid "Cactus Wallet"
-#~ msgstr "Cactus Wallet"
 
 #: src/components/plot/add/PlotAddNumberOfPlots.tsx:34
 #~ msgid "Choose Number of Plots"
@@ -650,8 +648,8 @@ msgid "Create An Attestation Packet"
 msgstr "Luo todistuspaketti"
 
 #: src/components/cat/WalletCATCreateExisting.tsx:76
-msgid "Create Cactus Asset Token Wallet from Existing TAIL"
-msgstr "Luo Cactus Asset Token -lompakko olemassa olevasta TAIL tunnisteesta"
+#~ msgid "Create Cactus Asset Token Wallet from Existing TAIL"
+#~ msgstr "Luo Cactus Asset Token -lompakko olemassa olevasta TAIL tunnisteesta"
 
 #: src/components/wallet/create/WalletCreate.jsx:290
 #~ msgid "Create DID wallet"
@@ -726,8 +724,8 @@ msgid "Create an offer to exchange CAC or other tokens. View an offer to inspect
 msgstr "Luo tarjous CAC- tai muiden tokeneiden vaihtamiseksi. Katso ja hyväksy toisen osapuolen tekemän tarjous."
 
 #: src/components/cat/WalletCATCreateExisting.tsx:75
-msgid "Create custom CAT Wallet"
-msgstr "Luo kustomi CAT-lompakko"
+#~ msgid "Create custom CAT Wallet"
+#~ msgstr "Luo kustomi CAT-lompakko"
 
 #: src/components/_wallet_old/create/WalletCreate.jsx:132
 #~ msgid "Create new coloured coin"
@@ -2021,8 +2019,8 @@ msgid "Please enter a puzzlehash"
 msgstr "Syötä puzzlehash osoitetiiviste"
 
 #: src/components/cat/WalletCATCreateExisting.tsx:40
-msgid "Please enter a valid CAT name"
-msgstr "Anna kelvollinen CAT-nimi"
+#~ msgid "Please enter a valid CAT name"
+#~ msgstr "Anna kelvollinen CAT-nimi"
 
 #: src/components/cat/WalletCATCreateExistingSimple.tsx:41
 msgid "Please enter a valid asset id"
@@ -2467,7 +2465,6 @@ msgstr "Vastaanottajan Osoite"
 msgid "Recipient address is not a coloured wallet address. Please enter a coloured wallet address"
 msgstr "Vastaanottajan osoite ei ole CAT-osoite. Syötä CAT-osoite"
 
-#: src/components/cat/WalletCATCreateExisting.tsx:104
 #: src/components/cat/WalletDID.tsx:463
 #: src/components/did/WalletDID.tsx:463
 #: src/components/did/WalletDIDRecovery.tsx:124
@@ -2643,7 +2640,6 @@ msgstr "Valitse Tarjoustiedosto"
 #~ msgstr "Select Temporary Directory"
 
 #: src/components/WalletsList.tsx:32
-#: src/components/hero/WalletHeroWallets.tsx:47
 msgid "Select Wallet"
 msgstr "Valitse Lompakko"
 
@@ -3185,8 +3181,8 @@ msgid "To"
 msgstr "Osoitteeseen"
 
 #: src/components/cat/WalletCATCreateExisting.tsx:85
-msgid "Token and Asset Issuance Limitations"
-msgstr "Tokenin ja assettien liikkeeseenlaskun rajoitukset"
+#~ msgid "Token and Asset Issuance Limitations"
+#~ msgstr "Tokenin ja assettien liikkeeseenlaskun rajoitukset"
 
 #: src/components/cat/WalletCATCreateSimple.tsx:45
 msgid "Token has empty asset id"
@@ -3452,12 +3448,12 @@ msgstr "Lompakkotyyppiä {0} ei tueta"
 msgid "Wallet {walletId} not found"
 msgstr "Lompakkoa {walletId} ei löydy"
 
-#: src/components/wallet/Wallets.tsx:34
-#~ msgid "WalletItem.ccWallet"
-#~ msgstr ""
-
 #: src/components/wallet/Wallets.tsx:30
 #~ msgid "WalletItem.cactusWallet"
+#~ msgstr ""
+
+#: src/components/wallet/Wallets.tsx:34
+#~ msgid "WalletItem.ccWallet"
 #~ msgstr ""
 
 #: src/components/wallet/Wallets.tsx:48

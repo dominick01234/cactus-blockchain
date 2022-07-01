@@ -304,6 +304,18 @@ msgstr "Wstecz"
 #~ msgid "CCListItems.title"
 #~ msgstr ""
 
+#: src/electron/main.tsx:430
+#~ msgid "Cactus"
+#~ msgstr "Cactus"
+
+#: src/electron/main.tsx:369
+#~ msgid "Cactus Blockchain Wiki"
+#~ msgstr "Cactus Blockchain Wiki"
+
+#: src/components/_wallet_old/standard/WalletStandard.tsx:642
+#~ msgid "Cactus Wallet"
+#~ msgstr "Cactus Wallet"
+
 #: src/screens/SelectKey/SelectKeyItem.tsx:146
 msgid "Can be backed up to mnemonic seed"
 msgstr "Można utworzyć kopię zapasową do ziarna mnemonicznego"
@@ -347,18 +359,6 @@ msgstr "Anuluj"
 #: src/electron/main.tsx:412
 #~ msgid "Chat on KeyBase"
 #~ msgstr "Chat on KeyBase"
-
-#: src/electron/main.tsx:430
-#~ msgid "Cactus"
-#~ msgstr "Cactus"
-
-#: src/electron/main.tsx:369
-#~ msgid "Cactus Blockchain Wiki"
-#~ msgstr "Cactus Blockchain Wiki"
-
-#: src/components/_wallet_old/standard/WalletStandard.tsx:642
-#~ msgid "Cactus Wallet"
-#~ msgstr "Cactus Wallet"
 
 #: src/components/plot/add/PlotAddNumberOfPlots.tsx:34
 #~ msgid "Choose Number of Plots"
@@ -865,8 +865,8 @@ msgstr "Błąd:"
 #~ msgstr ""
 
 #: src/components/LayoutMain/LayoutFooter.tsx:50
-msgid "FAQ"
-msgstr "Najczęściej zadawane pytania (FAQ)"
+#~ msgid "FAQ"
+#~ msgstr "Najczęściej zadawane pytania (FAQ)"
 
 #: src/components/plot/PlotsFailed.tsx:34
 #~ msgid "Failed to open (invalid plots)"
@@ -2271,7 +2271,6 @@ msgstr "Wybierz..."
 #~ msgid "Send"
 #~ msgstr "Send"
 
-#: src/components/LayoutMain/LayoutFooter.tsx:53
 #: src/components/Settings/SettingsApp.tsx:108
 msgid "Send Feedback"
 msgstr "Wyślij opinię"
@@ -2898,12 +2897,12 @@ msgstr "Portfel"
 #~ msgid "Wallet is not defined"
 #~ msgstr "Wallet is not defined"
 
-#: src/components/wallet/Wallets.tsx:34
-#~ msgid "WalletItem.ccWallet"
-#~ msgstr ""
-
 #: src/components/wallet/Wallets.tsx:30
 #~ msgid "WalletItem.cactusWallet"
+#~ msgstr ""
+
+#: src/components/wallet/Wallets.tsx:34
+#~ msgid "WalletItem.ccWallet"
 #~ msgstr ""
 
 #: src/components/wallet/Wallets.tsx:48

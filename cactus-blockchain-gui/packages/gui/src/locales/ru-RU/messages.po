@@ -308,60 +308,6 @@ msgstr "Обзор"
 #~ msgid "CCListItems.title"
 #~ msgstr ""
 
-#: src/components/_selectKey_old/SelectKey.tsx:212
-#~ msgid "Can be backed up to mnemonic seed"
-#~ msgstr "Can be backed up to mnemonic seed"
-
-#: src/components/app/AppPassPrompt.tsx:151
-#: src/components/backup/BackupCreate.tsx:51
-#: src/components/block/FarmManageFarmingRewards.tsx:175
-#: src/components/block/FullNodeAddConnection.tsx:85
-#: src/components/farm/FarmManageFarmingRewards.tsx:186
-#: src/components/fullNode/FullNodeAddConnection.tsx:84
-#: src/components/plotNFT/PlotNFTPayoutInstructionsDialog.tsx:127
-#: src/components/plotNFT/select/PlotNFTSelectBase.tsx:86
-#: src/components/plotNFT/select/PlotNFTSelectFaucet.tsx:29
-#: src/components/settings/ChangePassphrasePrompt.tsx:221
-#: src/components/settings/RemovePassphrasePrompt.tsx:135
-#: src/components/settings/SetPassphrasePrompt.tsx:203
-msgid "Cancel"
-msgstr "Отмена"
-
-#: src/components/trading/TradingOverview.jsx:388
-#~ msgid "Cancel and Spend"
-#~ msgstr "Cancel and Spend"
-
-#: src/components/plot/PlotsNotFound.tsx:36
-#~ msgid "Caution, deleting these plots will delete them forever. Check that the storage devices are properly connected."
-#~ msgstr ""
-
-#: src/components/farm/FarmLastAttemptedProof.tsx:14
-msgid "Challenge"
-msgstr "Испытание"
-
-#: src/components/farm/FarmLatestBlockChallenges.tsx:13
-msgid "Challenge Hash"
-msgstr "Хэш испытания"
-
-#: src/components/plotNFT/PlotNFTChangePool.tsx:122
-msgid "Change"
-msgstr "Изменить"
-
-#: src/components/settings/ChangePassphrasePrompt.tsx:229
-#: src/components/settings/Settings.tsx:164
-#: src/components/settings/SettingsPanel.tsx:165
-msgid "Change Passphrase"
-msgstr "Сменить пароль"
-
-#: src/components/plotNFT/PlotNFTCard.tsx:404
-#: src/components/plotNFT/PlotNFTChangePool.tsx:121
-msgid "Change Pool"
-msgstr "Сменить пул"
-
-#: src/electron/main.tsx:492
-msgid "Chat on KeyBase"
-msgstr "Чат в KeyBase"
-
 #: src/electron/main.tsx:510
 msgid "Cactus"
 msgstr "Чиа"
@@ -545,6 +491,60 @@ msgstr ""
 #: src/components/_wallet_old/standard/WalletStandard.tsx:642
 #~ msgid "Cactus Wallet"
 #~ msgstr "Cactus Wallet"
+
+#: src/components/_selectKey_old/SelectKey.tsx:212
+#~ msgid "Can be backed up to mnemonic seed"
+#~ msgstr "Can be backed up to mnemonic seed"
+
+#: src/components/app/AppPassPrompt.tsx:151
+#: src/components/backup/BackupCreate.tsx:51
+#: src/components/block/FarmManageFarmingRewards.tsx:175
+#: src/components/block/FullNodeAddConnection.tsx:85
+#: src/components/farm/FarmManageFarmingRewards.tsx:186
+#: src/components/fullNode/FullNodeAddConnection.tsx:84
+#: src/components/plotNFT/PlotNFTPayoutInstructionsDialog.tsx:127
+#: src/components/plotNFT/select/PlotNFTSelectBase.tsx:86
+#: src/components/plotNFT/select/PlotNFTSelectFaucet.tsx:29
+#: src/components/settings/ChangePassphrasePrompt.tsx:221
+#: src/components/settings/RemovePassphrasePrompt.tsx:135
+#: src/components/settings/SetPassphrasePrompt.tsx:203
+msgid "Cancel"
+msgstr "Отмена"
+
+#: src/components/trading/TradingOverview.jsx:388
+#~ msgid "Cancel and Spend"
+#~ msgstr "Cancel and Spend"
+
+#: src/components/plot/PlotsNotFound.tsx:36
+#~ msgid "Caution, deleting these plots will delete them forever. Check that the storage devices are properly connected."
+#~ msgstr ""
+
+#: src/components/farm/FarmLastAttemptedProof.tsx:14
+msgid "Challenge"
+msgstr "Испытание"
+
+#: src/components/farm/FarmLatestBlockChallenges.tsx:13
+msgid "Challenge Hash"
+msgstr "Хэш испытания"
+
+#: src/components/plotNFT/PlotNFTChangePool.tsx:122
+msgid "Change"
+msgstr "Изменить"
+
+#: src/components/settings/ChangePassphrasePrompt.tsx:229
+#: src/components/settings/Settings.tsx:164
+#: src/components/settings/SettingsPanel.tsx:165
+msgid "Change Passphrase"
+msgstr "Сменить пароль"
+
+#: src/components/plotNFT/PlotNFTCard.tsx:404
+#: src/components/plotNFT/PlotNFTChangePool.tsx:121
+msgid "Change Pool"
+msgstr "Сменить пул"
+
+#: src/electron/main.tsx:492
+msgid "Chat on KeyBase"
+msgstr "Чат в KeyBase"
 
 #: src/components/app/AppSelectMode.tsx:158
 msgid "Choose Farming Mode"
@@ -2041,6 +2041,10 @@ msgstr "Публ. ключ"
 #~ msgid "Plot NFT"
 #~ msgstr ""
 
+#: src/components/plot/add/PlotAddNumberOfPlots.tsx:318
+msgid "Plot NFT Plot Target Address"
+msgstr ""
+
 #: src/components/plot/add/PlotAddNumberOfPlots.tsx:319
 msgid "Plot NFT Pool Contract Address"
 msgstr ""
@@ -3189,12 +3193,12 @@ msgstr "Режим кошелька"
 msgid "Wallet is not defined"
 msgstr "Кошелек не определен"
 
-#: src/components/wallet/Wallets.tsx:34
-#~ msgid "WalletItem.ccWallet"
-#~ msgstr ""
-
 #: src/components/wallet/Wallets.tsx:30
 #~ msgid "WalletItem.cactusWallet"
+#~ msgstr ""
+
+#: src/components/wallet/Wallets.tsx:34
+#~ msgid "WalletItem.ccWallet"
 #~ msgstr ""
 
 #: src/components/wallet/Wallets.tsx:48

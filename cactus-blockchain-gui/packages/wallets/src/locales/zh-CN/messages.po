@@ -118,8 +118,8 @@ msgid "Add CAT wallets to have more options"
 msgstr "添加 CAT 钱包以提供更多选项"
 
 #: src/components/hero/WalletHeroAdd.tsx:99
-msgid "Add Custom Token"
-msgstr "添加自定义代币"
+#~ msgid "Add Custom Token"
+#~ msgstr "添加自定义代币"
 
 #: src/components/plot/PlotHeader.tsx:89
 #~ msgid "Add Plot Directory"
@@ -133,8 +133,6 @@ msgstr "添加自定义代币"
 #: src/components/WalletsManageTokens.tsx:158
 #: src/components/cat/WalletCATCreateExistingSimple.tsx:61
 #: src/components/cat/WalletCATCreateSimple.tsx:70
-#: src/components/hero/WalletHeroAdd.tsx:64
-#: src/components/hero/WalletHeroWallets.tsx:83
 msgid "Add Token"
 msgstr "添加代币"
 
@@ -380,6 +378,24 @@ msgstr "在 #{KeybaseChannelName} 频道发布密钥库之前, 您必须先加�
 #~ msgid "CCListItems.title"
 #~ msgstr ""
 
+#: src/electron/main.tsx:430
+#~ msgid "Cactus"
+#~ msgstr "Cactus"
+
+#: src/components/cat/WalletCATSelect.tsx:25
+#: src/components/create/WalletCreateList.tsx:32
+#: src/constants/WalletName.ts:23
+msgid "Cactus Asset Token"
+msgstr ""
+
+#: src/electron/main.tsx:369
+#~ msgid "Cactus Blockchain Wiki"
+#~ msgstr "Cactus Blockchain Wiki"
+
+#: src/components/standard/WalletStandard.tsx:23
+#~ msgid "Cactus Wallet"
+#~ msgstr "Cactus Wallet"
+
 #: src/components/_selectKey_old/SelectKey.tsx:212
 #~ msgid "Can be backed up to mnemonic seed"
 #~ msgstr "Can be backed up to mnemonic seed"
@@ -444,24 +460,6 @@ msgstr ""
 #: src/electron/main.tsx:412
 #~ msgid "Chat on KeyBase"
 #~ msgstr "Chat on KeyBase"
-
-#: src/electron/main.tsx:430
-#~ msgid "Cactus"
-#~ msgstr "Cactus"
-
-#: src/components/cat/WalletCATSelect.tsx:25
-#: src/components/create/WalletCreateList.tsx:32
-#: src/constants/WalletName.ts:23
-msgid "Cactus Asset Token"
-msgstr ""
-
-#: src/electron/main.tsx:369
-#~ msgid "Cactus Blockchain Wiki"
-#~ msgstr "Cactus Blockchain Wiki"
-
-#: src/components/standard/WalletStandard.tsx:23
-#~ msgid "Cactus Wallet"
-#~ msgstr "Cactus Wallet"
 
 #: src/components/plot/add/PlotAddNumberOfPlots.tsx:34
 #~ msgid "Choose Number of Plots"
@@ -650,8 +648,8 @@ msgid "Create An Attestation Packet"
 msgstr "创建一个认证包"
 
 #: src/components/cat/WalletCATCreateExisting.tsx:76
-msgid "Create Cactus Asset Token Wallet from Existing TAIL"
-msgstr "从现有的TAIL创建Cactus Asset Token 钱包"
+#~ msgid "Create Cactus Asset Token Wallet from Existing TAIL"
+#~ msgstr "从现有的TAIL创建Cactus Asset Token 钱包"
 
 #: src/components/wallet/create/WalletCreate.jsx:290
 #~ msgid "Create DID wallet"
@@ -726,8 +724,8 @@ msgid "Create an offer to exchange CAC or other tokens. View an offer to inspect
 msgstr ""
 
 #: src/components/cat/WalletCATCreateExisting.tsx:75
-msgid "Create custom CAT Wallet"
-msgstr "创建自定义 CAT 钱包"
+#~ msgid "Create custom CAT Wallet"
+#~ msgstr "创建自定义 CAT 钱包"
 
 #: src/components/_wallet_old/create/WalletCreate.jsx:132
 #~ msgid "Create new coloured coin"
@@ -2021,8 +2019,8 @@ msgid "Please enter a puzzlehash"
 msgstr "请输入谜题哈希"
 
 #: src/components/cat/WalletCATCreateExisting.tsx:40
-msgid "Please enter a valid CAT name"
-msgstr "请输入有效的 CAT 名称"
+#~ msgid "Please enter a valid CAT name"
+#~ msgstr "请输入有效的 CAT 名称"
 
 #: src/components/cat/WalletCATCreateExistingSimple.tsx:41
 msgid "Please enter a valid asset id"
@@ -2467,7 +2465,6 @@ msgstr "接收地址"
 msgid "Recipient address is not a coloured wallet address. Please enter a coloured wallet address"
 msgstr ""
 
-#: src/components/cat/WalletCATCreateExisting.tsx:104
 #: src/components/cat/WalletDID.tsx:463
 #: src/components/did/WalletDID.tsx:463
 #: src/components/did/WalletDIDRecovery.tsx:124
@@ -2643,7 +2640,6 @@ msgstr "选择报价文件"
 #~ msgstr "Select Temporary Directory"
 
 #: src/components/WalletsList.tsx:32
-#: src/components/hero/WalletHeroWallets.tsx:47
 msgid "Select Wallet"
 msgstr "选择钱包"
 
@@ -3185,8 +3181,8 @@ msgid "To"
 msgstr "目标地址"
 
 #: src/components/cat/WalletCATCreateExisting.tsx:85
-msgid "Token and Asset Issuance Limitations"
-msgstr ""
+#~ msgid "Token and Asset Issuance Limitations"
+#~ msgstr ""
 
 #: src/components/cat/WalletCATCreateSimple.tsx:45
 msgid "Token has empty asset id"
@@ -3452,12 +3448,12 @@ msgstr "不支持类型 {0} 的钱包"
 msgid "Wallet {walletId} not found"
 msgstr "未找到钱包 {walletId}"
 
-#: src/components/wallet/Wallets.tsx:34
-#~ msgid "WalletItem.ccWallet"
-#~ msgstr ""
-
 #: src/components/wallet/Wallets.tsx:30
 #~ msgid "WalletItem.cactusWallet"
+#~ msgstr ""
+
+#: src/components/wallet/Wallets.tsx:34
+#~ msgid "WalletItem.ccWallet"
 #~ msgstr ""
 
 #: src/components/wallet/Wallets.tsx:48

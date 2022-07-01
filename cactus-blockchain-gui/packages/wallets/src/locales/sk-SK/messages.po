@@ -118,8 +118,8 @@ msgid "Add CAT wallets to have more options"
 msgstr "Pridajte CAT peňaženky, aby ste mali viac možností"
 
 #: src/components/hero/WalletHeroAdd.tsx:99
-msgid "Add Custom Token"
-msgstr "Pridať vlastný token"
+#~ msgid "Add Custom Token"
+#~ msgstr "Pridať vlastný token"
 
 #: src/components/plot/PlotHeader.tsx:89
 #~ msgid "Add Plot Directory"
@@ -133,8 +133,6 @@ msgstr "Pridať vlastný token"
 #: src/components/WalletsManageTokens.tsx:158
 #: src/components/cat/WalletCATCreateExistingSimple.tsx:61
 #: src/components/cat/WalletCATCreateSimple.tsx:70
-#: src/components/hero/WalletHeroAdd.tsx:64
-#: src/components/hero/WalletHeroWallets.tsx:83
 msgid "Add Token"
 msgstr "Pridať token"
 
@@ -380,6 +378,24 @@ msgstr "Pred odoslaním ponuky na Keybase kanál #{KeybaseChannelName} sa musít
 #~ msgid "CCListItems.title"
 #~ msgstr ""
 
+#: src/electron/main.tsx:430
+#~ msgid "Cactus"
+#~ msgstr "Cactus"
+
+#: src/components/cat/WalletCATSelect.tsx:25
+#: src/components/create/WalletCreateList.tsx:32
+#: src/constants/WalletName.ts:23
+msgid "Cactus Asset Token"
+msgstr "Cactus Asset Token"
+
+#: src/electron/main.tsx:369
+#~ msgid "Cactus Blockchain Wiki"
+#~ msgstr "Cactus Blockchain Wiki"
+
+#: src/components/standard/WalletStandard.tsx:23
+#~ msgid "Cactus Wallet"
+#~ msgstr "Cactus Wallet"
+
 #: src/components/_selectKey_old/SelectKey.tsx:212
 #~ msgid "Can be backed up to mnemonic seed"
 #~ msgstr "Can be backed up to mnemonic seed"
@@ -444,24 +460,6 @@ msgstr "Cactus nie je možné odoslať na farebnú adresu. Zadajte prosím Cactu
 #: src/electron/main.tsx:412
 #~ msgid "Chat on KeyBase"
 #~ msgstr "Chat on KeyBase"
-
-#: src/electron/main.tsx:430
-#~ msgid "Cactus"
-#~ msgstr "Cactus"
-
-#: src/components/cat/WalletCATSelect.tsx:25
-#: src/components/create/WalletCreateList.tsx:32
-#: src/constants/WalletName.ts:23
-msgid "Cactus Asset Token"
-msgstr "Cactus Asset Token"
-
-#: src/electron/main.tsx:369
-#~ msgid "Cactus Blockchain Wiki"
-#~ msgstr "Cactus Blockchain Wiki"
-
-#: src/components/standard/WalletStandard.tsx:23
-#~ msgid "Cactus Wallet"
-#~ msgstr "Cactus Wallet"
 
 #: src/components/plot/add/PlotAddNumberOfPlots.tsx:34
 #~ msgid "Choose Number of Plots"
@@ -650,8 +648,8 @@ msgid "Create An Attestation Packet"
 msgstr "Vytvoriť atestačný paket"
 
 #: src/components/cat/WalletCATCreateExisting.tsx:76
-msgid "Create Cactus Asset Token Wallet from Existing TAIL"
-msgstr "Vytvorte peňaženku Cactus Asset Token z existujúcej TAIL"
+#~ msgid "Create Cactus Asset Token Wallet from Existing TAIL"
+#~ msgstr "Vytvorte peňaženku Cactus Asset Token z existujúcej TAIL"
 
 #: src/components/wallet/create/WalletCreate.jsx:290
 #~ msgid "Create DID wallet"
@@ -726,8 +724,8 @@ msgid "Create an offer to exchange CAC or other tokens. View an offer to inspect
 msgstr "Vytvoriť ponuku na výmenu CAC alebo iných tokenov. Pozrite si ponuku pre preskúmanie a prijatie ponuky vytvorenej inou stranou."
 
 #: src/components/cat/WalletCATCreateExisting.tsx:75
-msgid "Create custom CAT Wallet"
-msgstr "Vytvoriť vlastnú CAT peňaženku"
+#~ msgid "Create custom CAT Wallet"
+#~ msgstr "Vytvoriť vlastnú CAT peňaženku"
 
 #: src/components/_wallet_old/create/WalletCreate.jsx:132
 #~ msgid "Create new coloured coin"
@@ -2021,8 +2019,8 @@ msgid "Please enter a puzzlehash"
 msgstr "Zadajte prosím hash hádaniek"
 
 #: src/components/cat/WalletCATCreateExisting.tsx:40
-msgid "Please enter a valid CAT name"
-msgstr "Prosím zadajte platný CAT názov"
+#~ msgid "Please enter a valid CAT name"
+#~ msgstr "Prosím zadajte platný CAT názov"
 
 #: src/components/cat/WalletCATCreateExistingSimple.tsx:41
 msgid "Please enter a valid asset id"
@@ -2467,7 +2465,6 @@ msgstr "Adresa príjemcu"
 msgid "Recipient address is not a coloured wallet address. Please enter a coloured wallet address"
 msgstr "Adresa príjemcu nie je adresa farebnej peňaženky. Prosím zadajte adresu farebnej peňaženky"
 
-#: src/components/cat/WalletCATCreateExisting.tsx:104
 #: src/components/cat/WalletDID.tsx:463
 #: src/components/did/WalletDID.tsx:463
 #: src/components/did/WalletDIDRecovery.tsx:124
@@ -2643,7 +2640,6 @@ msgstr "Vybrať súbor ponuky"
 #~ msgstr "Select Temporary Directory"
 
 #: src/components/WalletsList.tsx:32
-#: src/components/hero/WalletHeroWallets.tsx:47
 msgid "Select Wallet"
 msgstr "Vybrať peňaženku"
 
@@ -3185,8 +3181,8 @@ msgid "To"
 msgstr "Príjemca"
 
 #: src/components/cat/WalletCATCreateExisting.tsx:85
-msgid "Token and Asset Issuance Limitations"
-msgstr "Obmedzenia vydávania tokenov a aktív"
+#~ msgid "Token and Asset Issuance Limitations"
+#~ msgstr "Obmedzenia vydávania tokenov a aktív"
 
 #: src/components/cat/WalletCATCreateSimple.tsx:45
 msgid "Token has empty asset id"
@@ -3452,12 +3448,12 @@ msgstr "Peňaženka typu {0} nie je podporovaná"
 msgid "Wallet {walletId} not found"
 msgstr "Peňaženka {walletId} nebola nájdená"
 
-#: src/components/wallet/Wallets.tsx:34
-#~ msgid "WalletItem.ccWallet"
-#~ msgstr ""
-
 #: src/components/wallet/Wallets.tsx:30
 #~ msgid "WalletItem.cactusWallet"
+#~ msgstr ""
+
+#: src/components/wallet/Wallets.tsx:34
+#~ msgid "WalletItem.ccWallet"
 #~ msgstr ""
 
 #: src/components/wallet/Wallets.tsx:48
