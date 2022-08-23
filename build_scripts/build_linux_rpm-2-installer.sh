@@ -11,20 +11,20 @@ if [ ! "$1" ]; then
 elif [ "$1" = "amd64" ]; then
 	#PLATFORM="$1"
 	REDHAT_PLATFORM="x86_64"
-	DIR_NAME="chia-blockchain-linux-x64"
+	DIR_NAME="cactus-blockchain-linux-x64"
 else
 	#PLATFORM="$1"
-	DIR_NAME="chia-blockchain-linux-arm64"
+	DIR_NAME="cactus-blockchain-linux-arm64"
 fi
 
 # If the env variable NOTARIZE and the username and password variables are
 # set, this will attempt to Notarize the signed DMG
 
-if [ ! "$CHIA_INSTALLER_VERSION" ]; then
-	echo "WARNING: No environment variable CHIA_INSTALLER_VERSION set. Using 0.0.0."
-	CHIA_INSTALLER_VERSION="0.0.0"
+if [ ! "$CACTUS_INSTALLER_VERSION" ]; then
+	echo "WARNING: No environment variable CACTUS_INSTALLER_VERSION set. Using 0.0.0."
+	CACTUS_INSTALLER_VERSION="0.0.0"
 fi
-echo "Chia Installer Version is: $CHIA_INSTALLER_VERSION"
+echo "Cactus Installer Version is: $CACTUS_INSTALLER_VERSION"
 
 echo "Installing npm and electron packagers"
 cd npm_linux_rpm || exit
@@ -38,7 +38,7 @@ rm -rf dist
 mkdir dist
 
 echo "Create executables with pyinstaller"
-SPEC_FILE=$(python -c 'import chia; print(chia.PYINSTALLER_SPEC_PATH)')
+SPEC_FILE=$(python -c 'import cactus; print(cactus.PYINSTALLER_SPEC_PATH)')
 pyinstaller --log-level=INFO "$SPEC_FILE"
 LAST_EXIT_CODE=$?
 if [ "$LAST_EXIT_CODE" -ne 0 ]; then
@@ -47,11 +47,11 @@ if [ "$LAST_EXIT_CODE" -ne 0 ]; then
 fi
 
 # Builds CLI only rpm
-CLI_RPM_BASE="chia-blockchain-cli-$CHIA_INSTALLER_VERSION-1.$REDHAT_PLATFORM"
-mkdir -p "dist/$CLI_RPM_BASE/opt/chia"
+CLI_RPM_BASE="cactus-blockchain-cli-$CACTUS_INSTALLER_VERSION-1.$REDHAT_PLATFORM"
+mkdir -p "dist/$CLI_RPM_BASE/opt/cactus"
 mkdir -p "dist/$CLI_RPM_BASE/usr/bin"
-cp -r dist/daemon/* "dist/$CLI_RPM_BASE/opt/chia/"
-ln -s ../../opt/chia/chia "dist/$CLI_RPM_BASE/usr/bin/chia"
+cp -r dist/daemon/* "dist/$CLI_RPM_BASE/opt/cactus/"
+ln -s ../../opt/cactus/cactus "dist/$CLI_RPM_BASE/usr/bin/cactus"
 # This is built into the base build image
 # shellcheck disable=SC1091
 . /etc/profile.d/rvm.sh
@@ -62,28 +62,28 @@ rvm use ruby-3
 fpm -s dir -t rpm \
   -C "dist/$CLI_RPM_BASE" \
   -p "dist/$CLI_RPM_BASE.rpm" \
-  --name chia-blockchain-cli \
+  --name cactus-blockchain-cli \
   --license Apache-2.0 \
-  --version "$CHIA_INSTALLER_VERSION" \
+  --version "$CACTUS_INSTALLER_VERSION" \
   --architecture "$REDHAT_PLATFORM" \
-  --description "Chia is a modern cryptocurrency built from scratch, designed to be efficient, decentralized, and secure." \
+  --description "Cactus is a modern cryptocurrency built from scratch, designed to be efficient, decentralized, and secure." \
   --depends /usr/lib64/libcrypt.so.1 \
   .
 # CLI only rpm done
 
-cp -r dist/daemon ../chia-blockchain-gui/packages/gui
+cp -r dist/daemon ../cactus-blockchain-gui/packages/gui
 
 # Change to the gui package
-cd ../chia-blockchain-gui/packages/gui || exit
+cd ../cactus-blockchain-gui/packages/gui || exit
 
-# sets the version for chia-blockchain in package.json
+# sets the version for cactus-blockchain in package.json
 cp package.json package.json.orig
-jq --arg VER "$CHIA_INSTALLER_VERSION" '.version=$VER' package.json > temp.json && mv temp.json package.json
+jq --arg VER "$CACTUS_INSTALLER_VERSION" '.version=$VER' package.json > temp.json && mv temp.json package.json
 
 echo electron-packager
-electron-packager . chia-blockchain --asar.unpack="**/daemon/**" --platform=linux \
---icon=src/assets/img/Chia.icns --overwrite --app-bundle-id=net.chia.blockchain \
---appVersion=$CHIA_INSTALLER_VERSION --executable-name=chia-blockchain \
+electron-packager . cactus-blockchain --asar.unpack="**/daemon/**" --platform=linux \
+--icon=src/assets/img/Cactus.icns --overwrite --app-bundle-id=net.cactus.blockchain \
+--appVersion=$CACTUS_INSTALLER_VERSION --executable-name=cactus-blockchain \
 --no-prune --no-deref-symlinks \
 --ignore="/node_modules/(?!ws(/|$))(?!@electron(/|$))" --ignore="^/src$" --ignore="^/public$"
 LAST_EXIT_CODE=$?
@@ -104,9 +104,9 @@ mv $DIR_NAME ../../../build_scripts/dist/
 cd ../../../build_scripts || exit
 
 if [ "$REDHAT_PLATFORM" = "x86_64" ]; then
-	echo "Create chia-blockchain-$CHIA_INSTALLER_VERSION.rpm"
+	echo "Create cactus-blockchain-$CACTUS_INSTALLER_VERSION.rpm"
 
-	# Disables build links from the generated rpm so that we dont conflict with other packages. See https://github.com/Chia-Network/chia-blockchain/issues/3846
+	# Disables build links from the generated rpm so that we dont conflict with other packages. See https://github.com/Cactus-Network/cactus-blockchain/issues/3846
 	# shellcheck disable=SC2086
 	sed -i '1s/^/%define _build_id_links none\n%global _enable_debug_package 0\n%global debug_package %{nil}\n%global __os_install_post \/usr\/lib\/rpm\/brp-compress %{nil}\n/' "$GLOBAL_NPM_ROOT/electron-installer-redhat/resources/spec.ejs"
 
@@ -122,7 +122,7 @@ if [ "$REDHAT_PLATFORM" = "x86_64" ]; then
 
   electron-installer-redhat --src dist/$DIR_NAME/ \
   --arch "$REDHAT_PLATFORM" \
-  --options.version $CHIA_INSTALLER_VERSION \
+  --options.version $CACTUS_INSTALLER_VERSION \
   --config rpm-options.json
   LAST_EXIT_CODE=$?
   if [ "$LAST_EXIT_CODE" -ne 0 ]; then

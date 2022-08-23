@@ -10,29 +10,29 @@ import pytest
 import pytest_asyncio
 from blspy import G1Element
 
-from chia.consensus.block_rewards import calculate_base_farmer_reward, calculate_pool_reward
-from chia.full_node.full_node_api import FullNodeAPI
-from chia.pools.pool_puzzles import SINGLETON_LAUNCHER_HASH
-from chia.pools.pool_wallet_info import PoolSingletonState, PoolWalletInfo
-from chia.protocols import full_node_protocol
-from chia.protocols.full_node_protocol import RespondBlock
-from chia.rpc.rpc_server import start_rpc_server
-from chia.rpc.wallet_rpc_api import WalletRpcApi
-from chia.rpc.wallet_rpc_client import WalletRpcClient
-from chia.simulator.simulator_protocol import FarmNewBlockProtocol, ReorgProtocol
-from chia.types.blockchain_format.sized_bytes import bytes32
-from chia.types.peer_info import PeerInfo
-from chia.util.bech32m import encode_puzzle_hash
-from chia.util.byte_types import hexstr_to_bytes
-from chia.util.config import load_config
-from chia.util.ints import uint16, uint32
-from chia.wallet.derive_keys import find_authentication_sk, find_owner_sk
-from chia.wallet.transaction_record import TransactionRecord
-from chia.wallet.util.wallet_types import WalletType
-from chia.simulator.block_tools import BlockTools, get_plot_dir
+from cactus.consensus.block_rewards import calculate_base_farmer_reward, calculate_pool_reward
+from cactus.full_node.full_node_api import FullNodeAPI
+from cactus.pools.pool_puzzles import SINGLETON_LAUNCHER_HASH
+from cactus.pools.pool_wallet_info import PoolSingletonState, PoolWalletInfo
+from cactus.protocols import full_node_protocol
+from cactus.protocols.full_node_protocol import RespondBlock
+from cactus.rpc.rpc_server import start_rpc_server
+from cactus.rpc.wallet_rpc_api import WalletRpcApi
+from cactus.rpc.wallet_rpc_client import WalletRpcClient
+from cactus.simulator.simulator_protocol import FarmNewBlockProtocol, ReorgProtocol
+from cactus.types.blockchain_format.sized_bytes import bytes32
+from cactus.types.peer_info import PeerInfo
+from cactus.util.bech32m import encode_puzzle_hash
+from cactus.util.byte_types import hexstr_to_bytes
+from cactus.util.config import load_config
+from cactus.util.ints import uint16, uint32
+from cactus.wallet.derive_keys import find_authentication_sk, find_owner_sk
+from cactus.wallet.transaction_record import TransactionRecord
+from cactus.wallet.util.wallet_types import WalletType
+from cactus.simulator.block_tools import BlockTools, get_plot_dir
 from tests.util.wallet_is_synced import wallet_is_synced
 from tests.setup_nodes import setup_simulators_and_wallets
-from chia.simulator.time_out_assert import time_out_assert, time_out_assert_not_none
+from cactus.simulator.time_out_assert import time_out_assert, time_out_assert_not_none
 
 # TODO: Compare deducted fees in all tests against reported total_fee
 
@@ -951,10 +951,10 @@ class TestPoolWalletRpc:
 
             await farm_blocks(full_node_api, our_ph, 3)
 
-            async def have_chia():
+            async def have_cactus():
                 return (await wallets[0].get_confirmed_balance()) > FEE_AMOUNT
 
-            await time_out_assert(timeout=MAX_WAIT_SECS, function=have_chia)
+            await time_out_assert(timeout=MAX_WAIT_SECS, function=have_cactus)
             await time_out_assert(20, wallet_is_synced, True, wallet_nodes[0], full_node_api)
 
             creation_tx: TransactionRecord = await client.create_new_pool_wallet(
@@ -1089,10 +1089,10 @@ class TestPoolWalletRpc:
 
             await farm_blocks(full_node_api, our_ph, 3)
 
-            async def have_chia():
+            async def have_cactus():
                 return (await wallets[0].get_confirmed_balance()) > FEE_AMOUNT
 
-            await time_out_assert(timeout=WAIT_SECS, function=have_chia)
+            await time_out_assert(timeout=WAIT_SECS, function=have_cactus)
             await time_out_assert(20, wallet_is_synced, True, wallet_nodes[0], full_node_api)
 
             creation_tx: TransactionRecord = await client.create_new_pool_wallet(
@@ -1189,10 +1189,10 @@ class TestPoolWalletRpc:
 
             await farm_blocks(full_node_api, our_ph, 3)
 
-            async def have_chia():
+            async def have_cactus():
                 return (await wallets[0].get_confirmed_balance()) > FEE_AMOUNT
 
-            await time_out_assert(timeout=WAIT_SECS, function=have_chia)
+            await time_out_assert(timeout=WAIT_SECS, function=have_cactus)
             await time_out_assert(20, wallet_is_synced, True, wallet_nodes[0], full_node_api)
 
             creation_tx: TransactionRecord = await client.create_new_pool_wallet(
