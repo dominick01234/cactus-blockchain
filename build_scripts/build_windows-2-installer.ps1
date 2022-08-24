@@ -47,7 +47,7 @@ $Env:NODE_OPTIONS = "--max-old-space-size=3000"
 Set-Location -Path "packages\gui" -PassThru
 
 Write-Output "   ---"
-Write-Output "Increase the stack for cactus command for (cactus plots create) cactuspos limitations"
+Write-Output "Increase the stack for cactus command for (cactus plots create) chiapos limitations"
 # editbin.exe needs to be in the path
 editbin.exe /STACK:8000000 daemon\cactus.exe
 Write-Output "   ---"

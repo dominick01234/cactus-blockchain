@@ -7,7 +7,7 @@ from pathlib import Path
 from typing import Any, Callable, Dict, List, Optional, Set, Tuple
 
 from blspy import G1Element
-from cactuspos import DiskProver
+from chiapos import DiskProver
 
 from cactus.consensus.pos_quality import UI_ACTUAL_SPACE_CONSTANT_FACTOR, _expected_plot_size
 from cactus.plotting.cache import Cache, CacheEntry

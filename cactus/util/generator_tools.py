@@ -1,5 +1,5 @@
 from typing import Any, Iterator, List, Tuple, Optional
-from cactusbip158 import PyBIP158
+from chiabip158 import PyBIP158
 
 from cactus.types.blockchain_format.coin import Coin
 from cactus.types.blockchain_format.sized_bytes import bytes32

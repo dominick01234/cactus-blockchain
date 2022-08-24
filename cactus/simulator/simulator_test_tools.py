@@ -83,7 +83,7 @@ def create_config(cactus_root: Path, fingerprint: int) -> Dict[str, Any]:
     config["full_node"]["rpc_port"] = find_available_listen_port("Node RPC")
     # simulator overrides
     config["simulator"]["key_fingerprint"] = fingerprint
-    config["simulator"]["farming_address"] = encode_puzzle_hash(get_puzzle_hash_from_key(fingerprint), "txch")
+    config["simulator"]["farming_address"] = encode_puzzle_hash(get_puzzle_hash_from_key(fingerprint), "tcac")
     config["simulator"]["plot_directory"] = "test-simulator/plots"
     # save config
     save_config(cactus_root, "config.yaml", config)

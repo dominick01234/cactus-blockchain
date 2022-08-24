@@ -3,7 +3,7 @@ from typing import Callable, List, Optional
 
 from blspy import G1Element, G2Element
 from cactus_rs import serialized_length
-from cactusbip158 import PyBIP158
+from chiabip158 import PyBIP158
 
 from cactus.types.blockchain_format.coin import Coin
 from cactus.types.blockchain_format.foliage import TransactionsInfo

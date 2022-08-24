@@ -3,9 +3,9 @@ from setuptools import setup
 dependencies = [
     "aiofiles==0.7.0",  # Async IO for files
     "blspy==1.0.13",  # Signature library
-    "cactusvdf==1.0.6",  # timelord and vdf verification
-    "cactusbip158==1.1",  # bip158-style wallet filters
-    "cactuspos==1.0.10",  # proof of space
+    "chiavdf==1.0.6",  # timelord and vdf verification
+    "chiabip158==1.1",  # bip158-style wallet filters
+    "chiapos==1.0.10",  # proof of space
     "clvm==0.9.7",
     "clvm_tools==0.4.5",  # Currying, Program.to, other conveniences
     "cactus_rs==0.1.5",
@@ -69,9 +69,9 @@ dev_dependencies = [
 kwargs = dict(
     name="cactus-blockchain",
     author="Mariano Sorgente",
-    author_email="mariano@cactus.net",
+    author_email="mariano@cactus-network.net",
     description="Cactus blockchain full node, farmer, timelord, and wallet.",
-    url="https://cactus.net/",
+    url="https://cactus-network.net/",
     license="Apache License",
     python_requires=">=3.7, <4",
     keywords="cactus blockchain node",

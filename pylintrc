@@ -179,9 +179,9 @@ ignored-classes=optparse.Values,thread._local,_thread._local
 # and thus existing member attributes cannot be deduced by static analysis. It
 # supports qualified module names, as well as Unix pattern matching.
 ignored-modules=blspy,
-                cactusbip158,
-                cactuspos,
-                cactusvdf,
+                chiabip158,
+                chiapos,
+                chiavdf,
                 cactus_rs,
                 cryptography,
                 aiohttp,

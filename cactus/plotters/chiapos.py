@@ -14,9 +14,9 @@ from cactus.plotting.util import add_plot_directory, validate_plot_size
 log = logging.getLogger(__name__)
 
 
-def get_cactuspos_install_info() -> Optional[Dict[str, Any]]:
-    cactuspos_version: str = pkg_resources.get_distribution("cactuspos").version
-    return {"display_name": "Cactus Proof of Space", "version": cactuspos_version, "installed": True}
+def get_chiapos_install_info() -> Optional[Dict[str, Any]]:
+    chiapos_version: str = pkg_resources.get_distribution("chiapos").version
+    return {"display_name": "Cactus Proof of Space", "version": chiapos_version, "installed": True}
 
 
 class Params:

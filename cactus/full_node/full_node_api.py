@@ -6,7 +6,7 @@ from secrets import token_bytes
 from typing import Dict, List, Optional, Tuple, Set
 
 from blspy import AugSchemeMPL, G2Element
-from cactusbip158 import PyBIP158
+from chiabip158 import PyBIP158
 
 import cactus.server.ws_connection as ws
 from cactus.consensus.block_creation import create_unfinished_block

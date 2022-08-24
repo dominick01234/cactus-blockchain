@@ -560,7 +560,7 @@ class NFTWallet:
             name,
         )
 
-    async def create_tandem_xch_tx(
+    async def create_tandem_cac_tx(
         self, fee: uint64, announcement_to_assert: Optional[Announcement] = None
     ) -> TransactionRecord:
         cactus_coins = await self.standard_wallet.select_coins(fee)
@@ -687,7 +687,7 @@ class NFTWallet:
 
         if fee > 0:
             announcement_to_make = nft_coin.coin.name()
-            cactus_tx = await self.create_tandem_xch_tx(fee, Announcement(nft_coin.coin.name(), announcement_to_make))
+            cactus_tx = await self.create_tandem_cac_tx(fee, Announcement(nft_coin.coin.name(), announcement_to_make))
         else:
             announcement_to_make = None
             cactus_tx = None
@@ -767,7 +767,7 @@ class NFTWallet:
             offered_coin_info = wallet.get_nft(offered_asset_id)
             offered_coin: Coin = offered_coin_info.coin
             requested_amount = offer_dict[requested_asset_id]
-            if requested_asset_id is None:  # If we are just asking for xch.
+            if requested_asset_id is None:  # If we are just asking for cac.
                 trade_prices = Program.to([[uint64(requested_amount), OFFER_MOD.get_tree_hash()]])
             else:
                 trade_prices = Program.to(
@@ -811,7 +811,7 @@ class NFTWallet:
                 # Due to the coin id's matching this is impossible unless we use separate coins
                 # when fulfilling the offer.
                 raise ValueError("Amount offered and amount paid in royalties are equal")
-            if offered_asset_id is None:  # xch offer
+            if offered_asset_id is None:  # cac offer
                 wallet = wallet_state_manager.main_wallet
                 coin_amount_needed: int = offered_amount + royalty_amount + fee
             else:
@@ -860,7 +860,7 @@ class NFTWallet:
             # ((nft_launcher_id . ((ROYALTY_ADDRESS, royalty_amount, (ROYALTY_ADDRESS)))))
             # we are basically just recreating the royalty announcement above.
             inner_royalty_sol = Program.to([[requested_asset_id, [royalty_address, royalty_amount, [royalty_address]]]])
-            if offered_asset_id is None:  # xch offer
+            if offered_asset_id is None:  # cac offer
                 offer_puzzle: Program = OFFER_MOD
                 royalty_sol = inner_royalty_sol
             else:  # CAT

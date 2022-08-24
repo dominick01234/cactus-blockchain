@@ -6,7 +6,7 @@ from typing import Callable, Dict, List, Optional, Tuple
 import blspy
 from blspy import G1Element, G2Element
 from cactus_rs import compute_merkle_set_root
-from cactusbip158 import PyBIP158
+from chiabip158 import PyBIP158
 
 from cactus.consensus.block_record import BlockRecord
 from cactus.consensus.block_rewards import calculate_base_farmer_reward, calculate_pool_reward

@@ -6,7 +6,7 @@ from pathlib import Path
 from typing import Dict, ItemsView, KeysView, List, Optional, Tuple, ValuesView
 
 from blspy import G1Element
-from cactuspos import DiskProver
+from chiapos import DiskProver
 
 from cactus.plotting.util import parse_plot_info
 from cactus.types.blockchain_format.proof_of_space import ProofOfSpace

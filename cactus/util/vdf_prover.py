@@ -1,6 +1,6 @@
 from typing import Tuple
 
-from cactusvdf import prove
+from chiavdf import prove
 
 from cactus.consensus.constants import ConsensusConstants
 from cactus.types.blockchain_format.classgroup import ClassgroupElement

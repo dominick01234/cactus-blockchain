@@ -352,7 +352,7 @@ async def make_offer(args: dict, wallet_client: WalletRpcClient, fingerprint: in
                 except ValueError:
                     id = uint32(int(name))
                     if id == 1:
-                        name = "XCH"
+                        name = "CAC"
                         unit = units["cactus"]
                     else:
                         name = await wallet_client.get_cat_name(str(id))
@@ -412,10 +412,10 @@ async def print_offer_summary(cat_name_resolver: CATNameResolver, sum_dict: Dict
     for asset_id, amount in sum_dict.items():
         description: str = ""
         unit: int = units["cactus"]
-        wid: str = "1" if asset_id == "xch" else ""
+        wid: str = "1" if asset_id == "cac" else ""
         mojo_amount: int = int(Decimal(amount))
-        name: str = "XCH"
-        if asset_id != "xch":
+        name: str = "CAC"
+        if asset_id != "cac":
             name = asset_id
             if asset_id == "unknown":
                 name = "Unknown"
@@ -575,14 +575,14 @@ async def take_offer(args: dict, wallet_client: WalletRpcClient, fingerprint: in
             offered, requested, nft_coin_id, nft_royalty_percentage
         )
         nft_royalty_currency: str = "Unknown CAT"
-        if nft_royalty_asset_id == "xch":
-            nft_royalty_currency = "XCH"
+        if nft_royalty_asset_id == "cac":
+            nft_royalty_currency = "CAC"
         else:
             result = await cat_name_resolver(bytes32.fromhex(nft_royalty_asset_id))
             if result is not None:
                 nft_royalty_currency = result[1]
 
-        nft_royalty_divisor = units["cactus"] if nft_royalty_asset_id == "xch" else units["cat"]
+        nft_royalty_divisor = units["cactus"] if nft_royalty_asset_id == "cac" else units["cat"]
         nft_total_amount_requested_str = (
             f"{Decimal(nft_total_amount_requested) / nft_royalty_divisor} {nft_royalty_currency}"
         )
@@ -753,12 +753,12 @@ async def mint_nft(args: Dict, wallet_client: WalletRpcClient, fingerprint: int)
     royalty_address = (
         None
         if not args["royalty_address"]
-        else ensure_valid_address(args["royalty_address"], allowed_types={AddressType.XCH}, config=config)
+        else ensure_valid_address(args["royalty_address"], allowed_types={AddressType.CAC}, config=config)
     )
     target_address = (
         None
         if not args["target_address"]
-        else ensure_valid_address(args["target_address"], allowed_types={AddressType.XCH}, config=config)
+        else ensure_valid_address(args["target_address"], allowed_types={AddressType.CAC}, config=config)
     )
     no_did_ownership = args["no_did_ownership"]
     hash = args["hash"]
@@ -841,7 +841,7 @@ async def transfer_nft(args: Dict, wallet_client: WalletRpcClient, fingerprint: 
         wallet_id = args["wallet_id"]
         nft_coin_id = args["nft_coin_id"]
         config = load_config(DEFAULT_ROOT_PATH, "config.yaml")
-        target_address = ensure_valid_address(args["target_address"], allowed_types={AddressType.XCH}, config=config)
+        target_address = ensure_valid_address(args["target_address"], allowed_types={AddressType.CAC}, config=config)
         fee: int = int(Decimal(args["fee"]) * units["cactus"])
         response = await wallet_client.transfer_nft(wallet_id, nft_coin_id, target_address, fee)
         spend_bundle = response["spend_bundle"]

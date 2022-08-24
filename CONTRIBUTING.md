@@ -5,9 +5,9 @@ We are happy that you are taking a look at the code for Cactus, a proof of space
 
 A lot of fascinating new cryptography and blockchain concepts are used and implemented here.
 This repo includes the code for the Cactus full node, farmer, and timelord (in cactus folder), which are all written in python.
-It also includes a verifiable delay function implementation that it imports from the [cactusvdf repo](https://github.com/Cactus-Network/cactusvdf) (in c/c++), and a proof of space implementation that it imports from the [cactuspos repo](https://github.com/Cactus-Network/cactuspos). BLS signatures are imported from the [bls-signatures repo](https://github.com/Cactus-Network/bls-signatures) as blspy. There is an additional dependency on the [cactusbip158 repo](https://github.com/Cactus-Network/cactusbip158). For major platforms, binary and source wheels are shipped to PyPI from each dependent repo. Then cactus-blockchain can pip install those from PyPI or they can be prepackaged as is done for the Windows installer. On unsupported platforms, pip will fall back to the source distributions, to be compiled locally.
+It also includes a verifiable delay function implementation that it imports from the [chiavdf repo](https://github.com/Cactus-Network/chiavdf) (in c/c++), and a proof of space implementation that it imports from the [chiapos repo](https://github.com/Cactus-Network/chiapos). BLS signatures are imported from the [bls-signatures repo](https://github.com/Cactus-Network/bls-signatures) as blspy. There is an additional dependency on the [chiabip158 repo](https://github.com/Cactus-Network/chiabip158). For major platforms, binary and source wheels are shipped to PyPI from each dependent repo. Then cactus-blockchain can pip install those from PyPI or they can be prepackaged as is done for the Windows installer. On unsupported platforms, pip will fall back to the source distributions, to be compiled locally.
 
-If you want to learn more about this project, read the [wiki](https://github.com/Cactus-Network/cactus-blockchain/wiki), or check out the [green paper](https://www.cactus.net/assets/CactusGreenPaper.pdf).
+If you want to learn more about this project, read the [wiki](https://github.com/Cactus-Network/cactus-blockchain/wiki), or check out the [green paper](https://www.cactus-network.net/assets/CactusGreenPaper.pdf).
 
 ## Contributions
 

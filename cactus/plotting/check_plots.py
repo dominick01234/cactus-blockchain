@@ -5,7 +5,7 @@ from time import sleep, time
 from typing import List
 
 from blspy import G1Element
-from cactuspos import Verifier
+from chiapos import Verifier
 
 from cactus.plotting.manager import PlotManager
 from cactus.plotting.util import (

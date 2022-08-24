@@ -122,7 +122,7 @@ async def test_nft_offer_sell_nft(two_wallet_nodes: Any, trusted: Any) -> None:
     )
     metadata = Program.to(
         [
-            ("u", ["https://www.cactus.net/img/branding/cactus-logo.svg"]),
+            ("u", ["https://www.cactus-network.net/img/branding/cactus-logo.svg"]),
             ("h", "0xD4584AD463139FA8C0D9F68F4B59F185"),
         ]
     )
@@ -149,7 +149,7 @@ async def test_nft_offer_sell_nft(two_wallet_nodes: Any, trusted: Any) -> None:
         wallet_node_taker.wallet_state_manager, wallet_taker, name="NFT WALLET TAKER"
     )
 
-    # maker create offer: NFT for xch
+    # maker create offer: NFT for cac
     trade_manager_maker = wallet_maker.wallet_state_manager.trade_manager
     trade_manager_taker = wallet_taker.wallet_state_manager.trade_manager
 
@@ -161,13 +161,13 @@ async def test_nft_offer_sell_nft(two_wallet_nodes: Any, trusted: Any) -> None:
     nft_to_offer = coins_maker[0]
     nft_to_offer_info: Optional[PuzzleInfo] = match_puzzle(nft_to_offer.full_puzzle)
     nft_to_offer_asset_id: bytes32 = create_asset_id(nft_to_offer_info)  # type: ignore
-    xch_requested = 1000
+    cac_requested = 1000
     maker_fee = uint64(433)
 
-    offer_did_nft_for_xch = {nft_to_offer_asset_id: -1, wallet_maker.id(): xch_requested}
+    offer_did_nft_for_cac = {nft_to_offer_asset_id: -1, wallet_maker.id(): cac_requested}
 
     success, trade_make, error = await trade_manager_maker.create_offer_for_ids(
-        offer_did_nft_for_xch, {}, fee=maker_fee
+        offer_did_nft_for_cac, {}, fee=maker_fee
     )
 
     assert success is True
@@ -199,9 +199,9 @@ async def test_nft_offer_sell_nft(two_wallet_nodes: Any, trusted: Any) -> None:
     await time_out_assert(20, len, 1, nft_wallet_taker.my_nft_coins)
 
     # assert payments and royalties
-    expected_royalty = uint64(xch_requested * royalty_basis_pts / 10000)
-    expected_maker_balance = funds - 2 - maker_fee + xch_requested + expected_royalty
-    expected_taker_balance = funds - taker_fee - xch_requested - expected_royalty
+    expected_royalty = uint64(cac_requested * royalty_basis_pts / 10000)
+    expected_maker_balance = funds - 2 - maker_fee + cac_requested + expected_royalty
+    expected_taker_balance = funds - taker_fee - cac_requested - expected_royalty
     await time_out_assert(20, wallet_maker.get_confirmed_balance, expected_maker_balance)
     await time_out_assert(20, wallet_taker.get_confirmed_balance, expected_taker_balance)
 
@@ -277,7 +277,7 @@ async def test_nft_offer_request_nft(two_wallet_nodes: Any, trusted: Any) -> Non
     )
     metadata = Program.to(
         [
-            ("u", ["https://www.cactus.net/img/branding/cactus-logo.svg"]),
+            ("u", ["https://www.cactus-network.net/img/branding/cactus-logo.svg"]),
             ("h", "0xD4584AD463139FA8C0D9F68F4B59F185"),
         ]
     )
@@ -306,7 +306,7 @@ async def test_nft_offer_request_nft(two_wallet_nodes: Any, trusted: Any) -> Non
         wallet_node_maker.wallet_state_manager, wallet_maker, name="NFT WALLET MAKER"
     )
 
-    # maker create offer: NFT for xch
+    # maker create offer: NFT for cac
     trade_manager_maker = wallet_maker.wallet_state_manager.trade_manager
     trade_manager_taker = wallet_taker.wallet_state_manager.trade_manager
 
@@ -320,11 +320,11 @@ async def test_nft_offer_request_nft(two_wallet_nodes: Any, trusted: Any) -> Non
 
     assert isinstance(nft_to_request_info, PuzzleInfo)
     nft_to_request_asset_id = create_asset_id(nft_to_request_info)
-    xch_offered = 1000
+    cac_offered = 1000
     maker_fee = 10
     driver_dict = {nft_to_request_asset_id: nft_to_request_info}
 
-    offer_dict = {nft_to_request_asset_id: 1, wallet_maker.id(): -xch_offered}
+    offer_dict = {nft_to_request_asset_id: 1, wallet_maker.id(): -cac_offered}
 
     success, trade_make, error = await trade_manager_maker.create_offer_for_ids(offer_dict, driver_dict, fee=maker_fee)
 
@@ -353,9 +353,9 @@ async def test_nft_offer_request_nft(two_wallet_nodes: Any, trusted: Any) -> Non
     await farm_blocks_until(maker_1_taker_0, full_node_api, ph_token)
 
     # assert payments and royalties
-    expected_royalty = uint64(xch_offered * royalty_basis_pts / 10000)
-    expected_maker_balance = funds - maker_fee - xch_offered - expected_royalty
-    expected_taker_balance = funds - 2 - taker_fee + xch_offered + expected_royalty
+    expected_royalty = uint64(cac_offered * royalty_basis_pts / 10000)
+    expected_maker_balance = funds - maker_fee - cac_offered - expected_royalty
+    expected_taker_balance = funds - 2 - taker_fee + cac_offered + expected_royalty
     await time_out_assert(20, wallet_maker.get_confirmed_balance, expected_maker_balance)
     await time_out_assert(20, wallet_taker.get_confirmed_balance, expected_taker_balance)
 
@@ -431,7 +431,7 @@ async def test_nft_offer_sell_did_to_did(two_wallet_nodes: Any, trusted: Any) ->
     )
     metadata = Program.to(
         [
-            ("u", ["https://www.cactus.net/img/branding/cactus-logo.svg"]),
+            ("u", ["https://www.cactus-network.net/img/branding/cactus-logo.svg"]),
             ("h", "0xD4584AD463139FA8C0D9F68F4B59F185"),
         ]
     )
@@ -481,7 +481,7 @@ async def test_nft_offer_sell_did_to_did(two_wallet_nodes: Any, trusted: Any) ->
         wallet_node_taker.wallet_state_manager, wallet_taker, name="NFT WALLET TAKER", did_id=did_id_taker
     )
 
-    # maker create offer: NFT for xch
+    # maker create offer: NFT for cac
     trade_manager_maker = wallet_maker.wallet_state_manager.trade_manager
     trade_manager_taker = wallet_taker.wallet_state_manager.trade_manager
 
@@ -493,13 +493,13 @@ async def test_nft_offer_sell_did_to_did(two_wallet_nodes: Any, trusted: Any) ->
     nft_to_offer = coins_maker[0]
     nft_to_offer_info: Optional[PuzzleInfo] = match_puzzle(nft_to_offer.full_puzzle)
     nft_to_offer_asset_id: bytes32 = create_asset_id(nft_to_offer_info)  # type: ignore
-    xch_requested = 1000
+    cac_requested = 1000
     maker_fee = uint64(433)
 
-    offer_did_nft_for_xch = {nft_to_offer_asset_id: -1, wallet_maker.id(): xch_requested}
+    offer_did_nft_for_cac = {nft_to_offer_asset_id: -1, wallet_maker.id(): cac_requested}
 
     success, trade_make, error = await trade_manager_maker.create_offer_for_ids(
-        offer_did_nft_for_xch, {}, fee=maker_fee
+        offer_did_nft_for_cac, {}, fee=maker_fee
     )
 
     assert success is True
@@ -533,9 +533,9 @@ async def test_nft_offer_sell_did_to_did(two_wallet_nodes: Any, trusted: Any) ->
     await time_out_assert(20, len, 1, wallet_taker.wallet_state_manager.wallets[4].my_nft_coins)
     assert wallet_taker.wallet_state_manager.wallets[4].my_nft_coins[0].nft_id == nft_to_offer_asset_id
     # assert payments and royalties
-    expected_royalty = uint64(xch_requested * royalty_basis_pts / 10000)
-    expected_maker_balance = funds - 2 - maker_fee + xch_requested + expected_royalty
-    expected_taker_balance = funds - 1 - taker_fee - xch_requested - expected_royalty
+    expected_royalty = uint64(cac_requested * royalty_basis_pts / 10000)
+    expected_maker_balance = funds - 2 - maker_fee + cac_requested + expected_royalty
+    expected_taker_balance = funds - 1 - taker_fee - cac_requested - expected_royalty
     await time_out_assert(20, wallet_maker.get_confirmed_balance, expected_maker_balance)
     await time_out_assert(20, wallet_taker.get_confirmed_balance, expected_taker_balance)
 
@@ -613,7 +613,7 @@ async def test_nft_offer_sell_nft_for_cat(two_wallet_nodes: Any, trusted: Any) -
     )
     metadata = Program.to(
         [
-            ("u", ["https://www.cactus.net/img/branding/cactus-logo.svg"]),
+            ("u", ["https://www.cactus-network.net/img/branding/cactus-logo.svg"]),
             ("h", "0xD4584AD463139FA8C0D9F68F4B59F185"),
         ]
     )
@@ -640,7 +640,7 @@ async def test_nft_offer_sell_nft_for_cat(two_wallet_nodes: Any, trusted: Any) -
         wallet_node_taker.wallet_state_manager, wallet_taker, name="NFT WALLET TAKER"
     )
 
-    # maker create offer: NFT for xch
+    # maker create offer: NFT for cac
     trade_manager_maker = wallet_maker.wallet_state_manager.trade_manager
     trade_manager_taker = wallet_taker.wallet_state_manager.trade_manager
 
@@ -695,10 +695,10 @@ async def test_nft_offer_sell_nft_for_cat(two_wallet_nodes: Any, trusted: Any) -
     cats_requested = 1000
     maker_fee = uint64(433)
 
-    offer_did_nft_for_xch = {nft_to_offer_asset_id: -1, cat_wallet_maker.id(): cats_requested}
+    offer_did_nft_for_cac = {nft_to_offer_asset_id: -1, cat_wallet_maker.id(): cats_requested}
 
     success, trade_make, error = await trade_manager_maker.create_offer_for_ids(
-        offer_did_nft_for_xch, {}, fee=maker_fee
+        offer_did_nft_for_cac, {}, fee=maker_fee
     )
 
     assert success is True
@@ -805,7 +805,7 @@ async def test_nft_offer_request_nft_for_cat(two_wallet_nodes: Any, trusted: boo
     )
     metadata = Program.to(
         [
-            ("u", ["https://www.cactus.net/img/branding/cactus-logo.svg"]),
+            ("u", ["https://www.cactus-network.net/img/branding/cactus-logo.svg"]),
             ("h", "0xD4584AD463139FA8C0D9F68F4B59F185"),
         ]
     )
@@ -998,7 +998,7 @@ async def test_nft_offer_sell_cancel(two_wallet_nodes: Any, trusted: Any) -> Non
     )
     metadata = Program.to(
         [
-            ("u", ["https://www.cactus.net/img/branding/cactus-logo.svg"]),
+            ("u", ["https://www.cactus-network.net/img/branding/cactus-logo.svg"]),
             ("h", "0xD4584AD463139FA8C0D9F68F4B59F185"),
         ]
     )
@@ -1019,7 +1019,7 @@ async def test_nft_offer_sell_cancel(two_wallet_nodes: Any, trusted: Any) -> Non
 
     await time_out_assert(20, len, 1, nft_wallet_maker.my_nft_coins)
 
-    # maker create offer: NFT for xch
+    # maker create offer: NFT for cac
     trade_manager_maker = wallet_maker.wallet_state_manager.trade_manager
 
     coins_maker = nft_wallet_maker.my_nft_coins
@@ -1028,13 +1028,13 @@ async def test_nft_offer_sell_cancel(two_wallet_nodes: Any, trusted: Any) -> Non
     nft_to_offer = coins_maker[0]
     nft_to_offer_info: Optional[PuzzleInfo] = match_puzzle(nft_to_offer.full_puzzle)
     nft_to_offer_asset_id: bytes32 = create_asset_id(nft_to_offer_info)  # type: ignore
-    xch_requested = 1000
+    cac_requested = 1000
     maker_fee = uint64(433)
 
-    offer_did_nft_for_xch = {nft_to_offer_asset_id: -1, wallet_maker.id(): xch_requested}
+    offer_did_nft_for_cac = {nft_to_offer_asset_id: -1, wallet_maker.id(): cac_requested}
 
     success, trade_make, error = await trade_manager_maker.create_offer_for_ids(
-        offer_did_nft_for_xch, {}, fee=maker_fee
+        offer_did_nft_for_cac, {}, fee=maker_fee
     )
 
     FEE = uint64(2000000000000)
@@ -1118,7 +1118,7 @@ async def test_nft_offer_sell_cancel_in_batch(two_wallet_nodes: Any, trusted: An
     )
     metadata = Program.to(
         [
-            ("u", ["https://www.cactus.net/img/branding/cactus-logo.svg"]),
+            ("u", ["https://www.cactus-network.net/img/branding/cactus-logo.svg"]),
             ("h", "0xD4584AD463139FA8C0D9F68F4B59F185"),
         ]
     )
@@ -1140,7 +1140,7 @@ async def test_nft_offer_sell_cancel_in_batch(two_wallet_nodes: Any, trusted: An
 
     await time_out_assert(10, len, 1, nft_wallet_maker.my_nft_coins)
 
-    # maker create offer: NFT for xch
+    # maker create offer: NFT for cac
     trade_manager_maker = wallet_maker.wallet_state_manager.trade_manager
 
     coins_maker = nft_wallet_maker.my_nft_coins
@@ -1149,13 +1149,13 @@ async def test_nft_offer_sell_cancel_in_batch(two_wallet_nodes: Any, trusted: An
     nft_to_offer = coins_maker[0]
     nft_to_offer_info: Optional[PuzzleInfo] = match_puzzle(nft_to_offer.full_puzzle)
     nft_to_offer_asset_id: bytes32 = create_asset_id(nft_to_offer_info)  # type: ignore
-    xch_requested = 1000
+    cac_requested = 1000
     maker_fee = uint64(433)
 
-    offer_did_nft_for_xch = {nft_to_offer_asset_id: -1, wallet_maker.id(): xch_requested}
+    offer_did_nft_for_cac = {nft_to_offer_asset_id: -1, wallet_maker.id(): cac_requested}
 
     success, trade_make, error = await trade_manager_maker.create_offer_for_ids(
-        offer_did_nft_for_xch, {}, fee=maker_fee
+        offer_did_nft_for_cac, {}, fee=maker_fee
     )
 
     FEE = uint64(2000000000000)

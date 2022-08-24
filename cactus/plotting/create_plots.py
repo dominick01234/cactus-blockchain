@@ -5,7 +5,7 @@ from secrets import token_bytes
 from typing import Dict, List, Optional, Tuple
 
 from blspy import AugSchemeMPL, G1Element, PrivateKey
-from cactuspos import DiskPlotter
+from chiapos import DiskPlotter
 
 from cactus.daemon.keychain_proxy import KeychainProxy, connect_to_keychain_and_validate, wrap_local_keychain
 from cactus.plotting.util import stream_plot_info_ph, stream_plot_info_pk

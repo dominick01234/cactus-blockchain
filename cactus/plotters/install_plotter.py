@@ -4,8 +4,8 @@ from cactus.plotters.madmax import install_madmax
 
 
 def install_plotter(plotter, root_path):
-    if plotter == "cactuspos":
-        print("Cactuspos already installed. No action taken.")
+    if plotter == "chiapos":
+        print("Chiapos already installed. No action taken.")
         return
     elif plotter == "madmax":
         if not os.path.exists(root_path / "madmax-plotter/build/cactus_plot"):

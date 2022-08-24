@@ -16,7 +16,7 @@ from typing import Any, Callable, Dict, List, Optional, Tuple, Union
 
 from blspy import AugSchemeMPL, G1Element, G2Element, PrivateKey
 from cactus_rs import compute_merkle_set_root
-from cactusbip158 import PyBIP158
+from chiabip158 import PyBIP158
 
 from cactus.cmds.init_funcs import create_all_ssl, create_default_cactus_config
 from cactus.consensus.block_creation import unfinished_block_to_full_block
@@ -358,7 +358,7 @@ class BlockTools:
                 if pool_contract_puzzle_hash is None:
                     pool_pk = self.pool_pk
                 else:
-                    pool_address = encode_puzzle_hash(pool_contract_puzzle_hash, "xch")
+                    pool_address = encode_puzzle_hash(pool_contract_puzzle_hash, "cac")
 
                 plot_keys = PlotKeys(self.farmer_pk, pool_pk, pool_address)
             # No datetime in the filename, to get deterministic filenames and not re-plot
