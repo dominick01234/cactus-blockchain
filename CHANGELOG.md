@@ -61,7 +61,7 @@ for setuptools_scm/PEP 440 reasons.
 - Improved many tests
 - Remove `big_ints` list
 - Improved UX for `plotnft claim`
-- Upgrade `cactus-rs` to streamable support
+- Upgrade `chia-rs` to streamable support
 - Allow switching keys during sync
 - Optimize `get_hash` by not double converting
 - Don't re-hash the same objects
@@ -75,7 +75,7 @@ for setuptools_scm/PEP 440 reasons.
 - Don't convert `ConsensusConstants` to/from JSON
 - Move some class methods out of `Streamable`
 - Request header blocks, and new rate limits
-- Replaced the python implementation of `Coin` with the Rust native `Coin` from `cactus_rs`
+- Replaced the python implementation of `Coin` with the Rust native `Coin` from `chia_rs`
 - Watchdog==2.1.9 for bad file descriptor avoidance
 - Be specific about `*args` in `RpcServer` state changed methods
 - Make WalletUserStore.create_wallet() raise on failure, and return non-optional
@@ -336,7 +336,7 @@ There is a known issue where harvesters will not reconnect to the farmer automat
 - Consolidated socket library to aiohttp and removed websockets dependency
 - During node startup, missing blocks in the DB will throw an exception
 - Updated cryptography to 36.0.2
-- The rust implementation of CLVM is now called `cactus_rs` instead of `clvm_rs`.
+- The rust implementation of CLVM is now called `chia_rs` instead of `clvm_rs`.
 - Updated code to use improved rust interface `run_generator2`
 - Code improvements to prefer connecting to a local trusted node over untrusted nodes
 

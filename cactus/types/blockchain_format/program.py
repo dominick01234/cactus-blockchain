@@ -263,7 +263,7 @@ class SerializedProgram:
     def run_with_cost(self, max_cost: int, *args) -> Tuple[int, Program]:
         return self._run(max_cost, 0, *args)
 
-    # returns an optional error code and an optional SpendBundleConditions (from cactus_rs)
+    # returns an optional error code and an optional SpendBundleConditions (from chia_rs)
     # exactly one of those will hold a value
     def run_as_generator(
         self, max_cost: int, flags: int, *args

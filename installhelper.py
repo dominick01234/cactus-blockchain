@@ -44,7 +44,7 @@ def make_semver(version_str: str) -> str:
     if local:
         version += "+{0}".format(local)
 
-    return version
+    return "1.5.1" #Dommer
 
 
 def get_cactus_version() -> str:

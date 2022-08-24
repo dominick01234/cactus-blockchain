@@ -15,7 +15,7 @@ from pathlib import Path
 from typing import Any, Callable, Dict, List, Optional, Tuple, Union
 
 from blspy import AugSchemeMPL, G1Element, G2Element, PrivateKey
-from cactus_rs import compute_merkle_set_root
+from chia_rs import compute_merkle_set_root
 from chiabip158 import PyBIP158
 
 from cactus.cmds.init_funcs import create_all_ssl, create_default_cactus_config
