@@ -5,16 +5,16 @@ from typing import Any, Dict
 
 import click
 
-from chia.util.config import load_config
-from chia.util.service_groups import all_groups, services_for_groups
+from cactus.util.config import load_config
+from cactus.util.service_groups import all_groups, services_for_groups
 
 
 async def async_stop(root_path: Path, config: Dict[str, Any], group: str, stop_daemon: bool) -> int:
-    from chia.daemon.client import connect_to_daemon_and_validate
+    from cactus.daemon.client import connect_to_daemon_and_validate
 
     daemon = await connect_to_daemon_and_validate(root_path, config)
     if daemon is None:
-        print("Couldn't connect to chia daemon")
+        print("Couldn't connect to cactus daemon")
         return 1
 
     if stop_daemon:

@@ -17,7 +17,7 @@ import {
   useCheckDeleteKeyMutation,
   useDeleteKeyMutation,
   useGetKeyringStatusQuery,
-} from '@chia/api-react';
+} from '@cactus/api-react';
 import SelectKeyDetailDialog from './SelectKeyDetailDialog';
 import ConfirmDialog from '../../components/ConfirmDialog';
 import LoadingOverlay from '../../components/LoadingOverlay';

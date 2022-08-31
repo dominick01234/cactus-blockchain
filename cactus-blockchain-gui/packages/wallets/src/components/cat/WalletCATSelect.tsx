@@ -3,7 +3,7 @@ import { useRouteMatch, useHistory } from 'react-router-dom';
 import { Trans } from '@lingui/macro';
 import { Grid } from '@mui/material';
 import { Restore as RestoreIcon, Add as AddIcon } from '@mui/icons-material';
-import { Back, Flex } from '@chia/core';
+import { Back, Flex } from '@cactus/core';
 import WalletCreateCard from '../create/WalletCreateCard';
 
 export default function WalletCATSelect() {
@@ -22,7 +22,7 @@ export default function WalletCATSelect() {
     <Flex flexDirection="column" gap={3}>
       <Flex flexGrow={1}>
         <Back variant="h5" to="/dashboard/wallets/create">
-          <Trans>Chia Asset Token</Trans>
+          <Trans>Cactus Asset Token</Trans>
         </Back>
       </Flex>
       <Grid spacing={3} alignItems="stretch" container>

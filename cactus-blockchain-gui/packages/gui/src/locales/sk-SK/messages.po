@@ -6,13 +6,13 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: @lingui/cli\n"
 "Language: sk_SK\n"
-"Project-Id-Version: chia-blockchain\n"
+"Project-Id-Version: cactus-blockchain\n"
 "Report-Msgid-Bugs-To: \n"
 "PO-Revision-Date: 2022-08-04 12:02\n"
 "Last-Translator: \n"
 "Language-Team: Slovak\n"
 "Plural-Forms: nplurals=4; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 3;\n"
-"X-Crowdin-Project: chia-blockchain\n"
+"X-Crowdin-Project: cactus-blockchain\n"
 "X-Crowdin-Project-ID: 440660\n"
 "X-Crowdin-Language: sk\n"
 "X-Crowdin-File: /main/packages/gui/src/locales/en-US/messages.po\n"
@@ -39,8 +39,8 @@ msgid "+ Add a Plot"
 msgstr "+ Pridať pole"
 
 #: src/components/settings/ProfileAdd.tsx:91
-msgid "<0>Need some XCH?</0>"
-msgstr "<0>Potrebujete XCH?</0>"
+msgid "<0>Need some CAC?</0>"
+msgstr "<0>Potrebujete CAC?</0>"
 
 #: src/components/settings/ProfileAdd.tsx:99
 msgid "<0>Use one (1) mojo to create a Profile.</0>"
@@ -56,8 +56,8 @@ msgstr "Odporúča sa hodnota {0}"
 
 #: src/electron/main.tsx:607
 #: src/electron/main.tsx:694
-msgid "About Chia Blockchain"
-msgstr "O Chia blockchaine"
+msgid "About Cactus Blockchain"
+msgstr "O Cactus blockchaine"
 
 #: src/components/offers/NFTOfferViewer.tsx:750
 #: src/components/offers/OfferAcceptConfirmationDialog.tsx:23
@@ -211,8 +211,8 @@ msgid "Backup file is used to restore smart wallets."
 msgstr "Súbor so zálohou inteligentných peňaženiek."
 
 #: src/components/settings/ProfileAdd.tsx:103
-msgid "Balance: {standardBalance} XCH"
-msgstr "Zostatok: {standardBalance} XCH"
+msgid "Balance: {standardBalance} CAC"
+msgstr "Zostatok: {standardBalance} CAC"
 
 #: src/components/block/Block.jsx:277
 msgid "Base Farmer Reward Amount"
@@ -243,8 +243,8 @@ msgid "Block VDF Iterations"
 msgstr "Blok VDF iterácii"
 
 #: src/components/block/Block.jsx:296
-msgid "Block at height {0} in the Chia blockchain"
-msgstr "Blok s výškou {0} v Chia blockchaine"
+msgid "Block at height {0} in the Cactus blockchain"
+msgstr "Blok s výškou {0} v Cactus blockchaine"
 
 #: src/components/block/Block.jsx:122
 msgid "Block with hash {headerHash}"
@@ -363,12 +363,12 @@ msgid "Check Provenance on Spacescan.io"
 msgstr "Skontrolovať pôvod na Spacescan.io"
 
 #: src/electron/main.tsx:604
-msgid "Chia"
-msgstr "Chia"
+msgid "Cactus"
+msgstr "Cactus"
 
 #: src/electron/main.tsx:543
-msgid "Chia Blockchain Wiki"
-msgstr "Chia Blockchain Wiki"
+msgid "Cactus Blockchain Wiki"
+msgstr "Cactus Blockchain Wiki"
 
 #: src/components/app/AppSelectMode.tsx:155
 msgid "Choose Farming Mode"
@@ -561,8 +561,8 @@ msgid "Create an Offer"
 msgstr "Vytvoriť ponuku"
 
 #: src/components/offers/OfferManager.tsx:576
-msgid "Create an offer to exchange assets including XCH, tokens, and NFTs. View an offer to inspect and accept an offer made by another party."
-msgstr "Vytváranie ponúk na výmenu aktív vrátane XCH, tokenov a NFT. Prezeranie a prijímanie ponúk vytvorených inou stranou."
+msgid "Create an offer to exchange assets including CAC, tokens, and NFTs. View an offer to inspect and accept an offer made by another party."
+msgstr "Vytváranie ponúk na výmenu aktív vrátane CAC, tokenov a NFT. Prezeranie a prijímanie ponúk vytvorených inou stranou."
 
 #: src/components/offers/OfferManager.tsx:153
 msgid "Creates and submits a transaction on the blockchain that cancels the offer"
@@ -654,8 +654,8 @@ msgid "Deleting key"
 msgstr "Odstraňovanie kľúča"
 
 #: src/components/plot/add/PlotAddChoosePlotter.tsx:92
-msgid "Depending on your system configuration, you may find that an alternative plotter produces plots faster than the default Chia Proof of Space plotter. If unsure, use the default Chia Proof of Space plotter."
-msgstr "V závislosti od konfigurácie vášho systému možno zistíte, že alternatívny ploter vykresľuje polia rýchlejšie ako predvolený Chia Proof of Space ploter. Ak si nie ste istí, použite predvolený Chia Proof of Space ploter."
+msgid "Depending on your system configuration, you may find that an alternative plotter produces plots faster than the default Cactus Proof of Space plotter. If unsure, use the default Cactus Proof of Space plotter."
+msgstr "V závislosti od konfigurácie vášho systému možno zistíte, že alternatívny ploter vykresľuje polia rýchlejšie ako predvolený Cactus Proof of Space ploter. Ak si nie ste istí, použite predvolený Cactus Proof of Space ploter."
 
 #: src/components/settings/SettingsPanel.tsx:185
 msgid "Derivation Index"
@@ -821,8 +821,8 @@ msgid "Exclude final directory"
 msgstr "Vylúčiť cieľový adresár"
 
 #: src/components/nfts/gallery/NFTGalleryHero.tsx:17
-msgid "Explore the Chia ecosystem; discover and trade great NFTs"
-msgstr "Preskúmajte ekosystém Chia; objavte a obchodujte so skvelými NFT"
+msgid "Explore the Cactus ecosystem; discover and trade great NFTs"
+msgstr "Preskúmajte ekosystém Cactus; objavte a obchodujte so skvelými NFT"
 
 #: src/components/offers/utils.ts:175
 #: src/components/plot/PlotHarvester.tsx:118
@@ -1111,8 +1111,8 @@ msgstr "Výmenou za:"
 
 #: src/components/offers/NFTOfferEditor.tsx:102
 #: src/components/offers/OfferEditorConditionsPanel.tsx:463
-msgid "Including a fee in the offer can help expedite the transaction when the offer is accepted. The recommended minimum fee is 0.000005 XCH (5,000,000 mojos)"
-msgstr "Zahrnutie poplatku do ponuky môže pomôcť urýchliť transakciu, keď bude ponuka prijatá. Odporúčaný minimálny poplatok je 0,000005 XCH (5 000 000 mojos)"
+msgid "Including a fee in the offer can help expedite the transaction when the offer is accepted. The recommended minimum fee is 0.000005 CAC (5,000,000 mojos)"
+msgstr "Zahrnutie poplatku do ponuky môže pomôcť urýchliť transakciu, keď bude ponuka prijatá. Odporúčaný minimálny poplatok je 0,000005 CAC (5 000 000 mojos)"
 
 #: src/components/farm/FarmLatestBlockChallenges.tsx:19
 msgid "Index"
@@ -1167,16 +1167,16 @@ msgid "Join a Pool"
 msgstr "Pripojiť sa k združeniu"
 
 #: src/components/plot/add/PlotAddNFT.tsx:49
-msgid "Join a pool and get consistent XCH farming rewards. The average returns are the same, but it is much less volatile."
-msgstr "Pripojte sa k združeniu a získajte konzistentné farmárske XCH odmeny. Priemerný výnos je rovnaký, je však oveľa menej volatilný."
+msgid "Join a pool and get consistent CAC farming rewards. The average returns are the same, but it is much less volatile."
+msgstr "Pripojte sa k združeniu a získajte konzistentné farmárske CAC odmeny. Priemerný výnos je rovnaký, je však oveľa menej volatilný."
 
 #: src/components/plotNFT/PlotNFTAdd.tsx:63
-msgid "Join a pool and get consistent XCH farming rewards. The average returns are the same, but it is much less volatile. Assign plots to a plot NFT. You can easily switch pools without having to re-plot."
-msgstr "Pripojte sa k združeniu a získajte konzistentné farmárske XCH odmeny. Priemerný výnos je rovnaký, je však oveľa menej volatilný. Priraďte polia k NFT poľa. Môžete ľahko prepínať združenia bez nutnosti opakovaného vytvárania polí."
+msgid "Join a pool and get consistent CAC farming rewards. The average returns are the same, but it is much less volatile. Assign plots to a plot NFT. You can easily switch pools without having to re-plot."
+msgstr "Pripojte sa k združeniu a získajte konzistentné farmárske CAC odmeny. Priemerný výnos je rovnaký, je však oveľa menej volatilný. Priraďte polia k NFT poľa. Môžete ľahko prepínať združenia bez nutnosti opakovaného vytvárania polí."
 
 #: src/components/plot/add/PlotAddNFT.tsx:138
-msgid "Join a pool and get more consistent XCH farming rewards. Create a plot NFT and assign your new plots to a group."
-msgstr "Pripojte sa k združeniu a získajte konzistentnejšie farmárske XCH odmeny. Vytvorte NFT poľa a priraďte svoje nové polia do skupiny."
+msgid "Join a pool and get more consistent CAC farming rewards. Create a plot NFT and assign your new plots to a group."
+msgstr "Pripojte sa k združeniu a získajte konzistentnejšie farmárske CAC odmeny. Vytvorte NFT poľa a priraďte svoje nové polia do skupiny."
 
 #: src/components/app/AppSelectMode.tsx:143
 msgid "Join farming pools"
@@ -1436,8 +1436,8 @@ msgid "NFT details not available"
 msgstr "Detaily NFT nie sú k dispozícii"
 
 #: src/components/offers/NFTOfferEditor.tsx:256
-#~ msgid "NFT for XCH"
-#~ msgstr "NFT ➜ XCH"
+#~ msgid "NFT for CAC"
+#~ msgstr "NFT ➜ CAC"
 
 #: src/components/offers/NFTOfferPreview.tsx:56
 msgid "NFT identifier does not reference a valid NFT coin."
@@ -1548,8 +1548,8 @@ msgstr "Nepripojené"
 
 #: src/components/block/FarmManageFarmingRewards.tsx:163
 #: src/components/farm/FarmManageFarmingRewards.tsx:176
-msgid "Note that this does not change your pooling payout addresses. This only affects old format plots, and the 0.25XCH reward for pooling plots."
-msgstr "Toto však nezmení vaše platobné adresy združovania. Ovplyvňuje to iba polia v starom formáte, a odmenu 0,25 XCH za združovanie polí."
+msgid "Note that this does not change your pooling payout addresses. This only affects old format plots, and the 0.25CAC reward for pooling plots."
+msgstr "Toto však nezmení vaše platobné adresy združovania. Ovplyvňuje to iba polia v starom formáte, a odmenu 0,25 CAC za združovanie polí."
 
 #: src/components/plotNFT/PlotExternalNFTCard.tsx:117
 #: src/components/plotNFT/PlotNFTCard.tsx:158
@@ -1859,8 +1859,8 @@ msgid "Plots With Missing Keys"
 msgstr "Polia s chýbajúcimi kľúčmi"
 
 #: src/components/plot/overview/PlotOverviewHero.tsx:33
-msgid "Plots are allocated space on your hard drive used to farm and earn Chia.<0>Learn more</0>"
-msgstr "Polia sú priestory alokované na vašom pevnom disku používanom na ťažbu a zarábanie Chia. <0>Ďalšie informácie</0>"
+msgid "Plots are allocated space on your hard drive used to farm and earn Cactus.<0>Learn more</0>"
+msgstr "Polia sú priestory alokované na vašom pevnom disku používanom na ťažbu a zarábanie Cactus. <0>Ďalšie informácie</0>"
 
 #: src/components/plot/add/PlotAddChoosePlotter.tsx:103
 msgid "Plotter"
@@ -2055,8 +2055,8 @@ msgid "Recommended"
 msgstr "Odporúčané"
 
 #: src/components/settings/ProfileAdd.tsx:118
-msgid "Recommended: 0.000005 XCH"
-msgstr "Odporúčané: 0,000005 XCH"
+msgid "Recommended: 0.000005 CAC"
+msgstr "Odporúčané: 0,000005 CAC"
 
 #: src/components/plot/PlotHeader.tsx:75
 #: src/components/plot/overview/PlotOverviewHero.tsx:59
@@ -2205,8 +2205,8 @@ msgid "Self Pooling"
 msgstr "Sólo združovanie"
 
 #: src/components/plotNFT/select/PlotNFTSelectBase.tsx:104
-msgid "Self pool. When you win a block you will earn XCH rewards."
-msgstr "Osobné združenie. Keď vyhráte blok, získate XCH odmeny."
+msgid "Self pool. When you win a block you will earn CAC rewards."
+msgstr "Osobné združenie. Keď vyhráte blok, získate CAC odmeny."
 
 #: src/components/offers/NFTOfferEditor.tsx:367
 msgid "Sell an NFT"
@@ -2296,8 +2296,8 @@ msgid "Skips adding a final directory to harvester for farming"
 msgstr "Preskočiť pridanie cieľového adresára do zberača pre farmárčenie"
 
 #: src/components/pool/PoolHero.tsx:21
-msgid "Smooth out your XCH farming rewards by joining a pool."
-msgstr "Zjemnite si svoje farmárske XCH odmeny pripojením sa k združeniu."
+msgid "Smooth out your CAC farming rewards by joining a pool."
+msgstr "Zjemnite si svoje farmárske CAC odmeny pripojením sa k združeniu."
 
 #: src/components/plot/add/PlotAddNumberOfPlots.tsx:138
 msgid "Specify a value of 0 to use all available threads"
@@ -2329,8 +2329,8 @@ msgid "Status"
 msgstr "Stav"
 
 #: src/components/app/AppSelectMode.tsx:84
-msgid "Store and Send XCH"
-msgstr "Uložiť a odoslať XCH"
+msgid "Store and Send CAC"
+msgstr "Uložiť a odoslať CAC"
 
 #: src/components/app/AppPassPrompt.tsx:114
 msgid "Submit"
@@ -2397,8 +2397,8 @@ msgid "The NFT transfer transaction has been successfully submitted to the block
 msgstr "Transakcia prevodu NFT bola úspešne odoslaná do blockchainu."
 
 #: src/components/settings/SettingsPanel.tsx:187
-msgid "The derivation index sets the range of wallet addresses that the wallet scans the blockchain for. This number is generally higher if you have a lot of transactions or canceled offers for XCH, CATs, or NFTs. If you believe your balance is incorrect because it’s missing coins, then increasing the derivation index could help the wallet include the missing coins in the balance total."
-msgstr "Derivačný index nastavuje rozsah adries peňaženky, ktoré peňaženka vyhľadáva v blockchaine. Toto číslo je vo všeobecnosti vyššie, ak máte veľa transakcií alebo zrušených ponúk pre XCH, CAT alebo NFT. Ak sa domnievate, že váš zostatok je nesprávny, pretože v ňom chýbajú mince, potom zvýšenie derivačného indexu môže pomôcť peňaženke zahrnúť chýbajúce mince do celkového zostatku."
+msgid "The derivation index sets the range of wallet addresses that the wallet scans the blockchain for. This number is generally higher if you have a lot of transactions or canceled offers for CAC, CATs, or NFTs. If you believe your balance is incorrect because it’s missing coins, then increasing the derivation index could help the wallet include the missing coins in the balance total."
+msgstr "Derivačný index nastavuje rozsah adries peňaženky, ktoré peňaženka vyhľadáva v blockchaine. Toto číslo je vo všeobecnosti vyššie, ak máte veľa transakcií alebo zrušených ponúk pre CAC, CAT alebo NFT. Ak sa domnievate, že váš zostatok je nesprávny, pretože v ňom chýbajú mince, potom zvýšenie derivačného indexu môže pomôcť peňaženke zahrnúť chýbajúce mince do celkového zostatku."
 
 #: src/components/farm/FarmFullNodeConnections.tsx:95
 msgid "The full node that your farmer is connected to is below. <0>Learn more</0>"
@@ -2471,8 +2471,8 @@ msgid "The total transactions fees in this block. Rewarded to the farmer."
 msgstr "Celkové poplatky v tomto bloku idú ťažiarovi."
 
 #: src/components/plotNFT/PlotNFTPayoutInstructionsDialog.tsx:106
-msgid "These are the instructions for how the farmer wants to get paid. By default this will be an XCH address, but it can be set to any string with a size of less than 1024 characters, so it can represent another blockchain or payment system identifier."
-msgstr "Toto sú inštrukcie, ako chce farmár dostať zaplatené. V predvolenom nastavení to bude adresa XCH, ale dá sa nastaviť na ľubovoľný reťazec s veľkosťou menej ako 1024 znakov, takže môže predstavovať identifikátor iného blockchainu alebo platobného systému."
+msgid "These are the instructions for how the farmer wants to get paid. By default this will be an CAC address, but it can be set to any string with a size of less than 1024 characters, so it can represent another blockchain or payment system identifier."
+msgstr "Toto sú inštrukcie, ako chce farmár dostať zaplatené. V predvolenom nastavení to bude adresa CAC, ale dá sa nastaviť na ľubovoľný reťazec s veľkosťou menej ako 1024 znakov, takže môže predstavovať identifikátor iného blockchainu alebo platobného systému."
 
 #: src/components/plot/card/PlotCardPlotsFailedToOpen.tsx:15
 msgid "These plots are invalid, you might want to delete them."
@@ -2594,9 +2594,9 @@ msgstr "Celková ponúkaná suma"
 msgid "Total Amount Requested"
 msgstr "Celková požadovaná suma"
 
-#: src/components/farm/card/FarmCardTotalChiaFarmed.tsx:27
-msgid "Total Chia Farmed"
-msgstr "Celková vyťažená Chia"
+#: src/components/farm/card/FarmCardTotalCactusFarmed.tsx:27
+msgid "Total Cactus Farmed"
+msgstr "Celková vyťažená Cactus"
 
 #: src/components/plot/card/PlotCardTotalHarvesters.tsx:11
 msgid "Total Harvesters"
@@ -2849,8 +2849,8 @@ msgid "Would you like to transfer the specified NFT to a new owner?"
 msgstr "Chcete previesť špecifikovaný NFT na nového vlastníka?"
 
 #: src/components/offers/NFTOfferEditor.tsx:261
-#~ msgid "XCH for NFT"
-#~ msgstr "XCH ➜ NFT"
+#~ msgid "CAC for NFT"
+#~ msgstr "CAC ➜ NFT"
 
 #: src/components/plot/add/PlotAddChooseSize.tsx:48
 #: src/electron/main.tsx:362
@@ -2968,8 +2968,8 @@ msgstr "Vaša ponuka:"
 #: src/components/app/AppKeyringMigrator.tsx:239
 #: src/components/settings/ChangePassphrasePrompt.tsx:271
 #: src/components/settings/SetPassphrasePrompt.tsx:242
-msgid "Your passphrase can be stored in your system's secure credential store. Chia will be able to access your keys without prompting for your passphrase."
-msgstr "Vaša prístupová fráza môže byť uložená v bezpečnom úložisku poverení vášho systému. Chia bude mať prístup k vašim kľúčom bez výzvy na zadanie vašej prístupovej frázy."
+msgid "Your passphrase can be stored in your system's secure credential store. Cactus will be able to access your keys without prompting for your passphrase."
+msgstr "Vaša prístupová fráza môže byť uložená v bezpečnom úložisku poverení vášho systému. Cactus bude mať prístup k vašim kľúčom bez výzvy na zadanie vašej prístupovej frázy."
 
 #: src/components/settings/SettingsPanel.tsx:61
 msgid "Your passphrase has been set"

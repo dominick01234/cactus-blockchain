@@ -2,13 +2,13 @@ import React from 'react';
 import { get } from 'lodash';
 import { Controller, useFormContext } from 'react-hook-form';
 import { Trans } from '@lingui/macro';
-import { useGetFeeEstimateQuery } from '@chia/api-react';
+import { useGetFeeEstimateQuery } from '@cactus/api-react';
 import {
   Fee,
   Flex,
-  mojoToChiaLocaleString,
+  mojoToCactusLocaleString,
   useLocale,
-} from '@chia/core';
+} from '@cactus/core';
 import {
   FormControl,
   IconButton,
@@ -77,7 +77,7 @@ export default function EstimatedFee(props: FeeProps) {
   const offersAcceptsPerBlock = 500;
 
   const txCostEstimates = {
-      walletSendXCH: Math.floor(maxBlockCostCLVM / 1170),
+      walletSendCAC: Math.floor(maxBlockCostCLVM / 1170),
       createOffer: Math.floor(maxBlockCostCLVM / offersAcceptsPerBlock),
       sellNFT: Math.floor(maxBlockCostCLVM / 92),
       createPoolingWallet: Math.floor(maxBlockCostCLVM / 462)  // JOIN_POOL in GUI = create pooling wallet
@@ -87,7 +87,7 @@ export default function EstimatedFee(props: FeeProps) {
 
   function formatEst(number, multiplier, locale) {
     let num = (Math.round(number * multiplier * (10**(-4)))) * (10**(4));
-    let formatNum = mojoToChiaLocaleString(num, locale);
+    let formatNum = mojoToCactusLocaleString(num, locale);
     return (formatNum);
   }
 
@@ -125,7 +125,7 @@ export default function EstimatedFee(props: FeeProps) {
             >
               <Flex flexDirection="row" flexGrow={1} justifyContent="space-between" alignItems="center">
                 <Flex>
-                  <Trans>{option.estimate} TXCH</Trans>
+                  <Trans>{option.estimate} TCAC</Trans>
                 </Flex>
                 <Flex alignSelf="center">
                   <Trans><Typography color="textSecondary" fontSize="small">{option.time}</Typography></Trans>

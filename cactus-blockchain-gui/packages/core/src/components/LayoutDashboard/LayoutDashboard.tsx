@@ -15,7 +15,7 @@ import Flex from '../Flex';
 import Logo from '../Logo';
 import ToolbarSpacing from '../ToolbarSpacing';
 import Loading from '../Loading';
-import { useLogout, useGetLoggedInFingerprintQuery } from '@chia/api-react';
+import { useLogout, useGetLoggedInFingerprintQuery } from '@cactus/api-react';
 import { ExitToApp as ExitToAppIcon } from '@mui/icons-material';
 import Settings from '../Settings';
 import Tooltip from '../Tooltip';

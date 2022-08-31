@@ -7,29 +7,29 @@ from typing import Any, Dict, List, Optional, Set, Tuple, Union
 
 from typing_extensions import Literal
 
-from chia.protocols.wallet_protocol import CoinState
-from chia.server.ws_connection import WSChiaConnection
-from chia.types.blockchain_format.coin import Coin, coin_as_list
-from chia.types.blockchain_format.program import Program
-from chia.types.blockchain_format.sized_bytes import bytes32
-from chia.types.spend_bundle import SpendBundle
-from chia.util.db_wrapper import DBWrapper2
-from chia.util.hash import std_hash
-from chia.util.ints import uint32, uint64
-from chia.wallet.nft_wallet.nft_wallet import NFTWallet
-from chia.wallet.outer_puzzles import AssetType
-from chia.wallet.payment import Payment
-from chia.wallet.puzzle_drivers import PuzzleInfo
-from chia.wallet.trade_record import TradeRecord
-from chia.wallet.trading.offer import NotarizedPayment, Offer
-from chia.wallet.trading.trade_status import TradeStatus
-from chia.wallet.trading.trade_store import TradeStore
-from chia.wallet.transaction_record import TransactionRecord
-from chia.wallet.util.transaction_type import TransactionType
-from chia.wallet.util.wallet_types import WalletType
-from chia.wallet.wallet import Wallet
-from chia.wallet.wallet_coin_record import WalletCoinRecord
-from chia.wallet.puzzles.load_clvm import load_clvm
+from cactus.protocols.wallet_protocol import CoinState
+from cactus.server.ws_connection import WSCactusConnection
+from cactus.types.blockchain_format.coin import Coin, coin_as_list
+from cactus.types.blockchain_format.program import Program
+from cactus.types.blockchain_format.sized_bytes import bytes32
+from cactus.types.spend_bundle import SpendBundle
+from cactus.util.db_wrapper import DBWrapper2
+from cactus.util.hash import std_hash
+from cactus.util.ints import uint32, uint64
+from cactus.wallet.nft_wallet.nft_wallet import NFTWallet
+from cactus.wallet.outer_puzzles import AssetType
+from cactus.wallet.payment import Payment
+from cactus.wallet.puzzle_drivers import PuzzleInfo
+from cactus.wallet.trade_record import TradeRecord
+from cactus.wallet.trading.offer import NotarizedPayment, Offer
+from cactus.wallet.trading.trade_status import TradeStatus
+from cactus.wallet.trading.trade_store import TradeStore
+from cactus.wallet.transaction_record import TransactionRecord
+from cactus.wallet.util.transaction_type import TransactionType
+from cactus.wallet.util.wallet_types import WalletType
+from cactus.wallet.wallet import Wallet
+from cactus.wallet.wallet_coin_record import WalletCoinRecord
+from cactus.wallet.puzzles.load_clvm import load_clvm
 
 OFFER_MOD = load_clvm("settlement_payments.clvm")
 
@@ -38,12 +38,12 @@ class TradeManager:
     """
     This class is a driver for creating and accepting settlement_payments.clvm style offers.
 
-    By default, standard XCH is supported but to support other types of assets you must implement certain functions on
+    By default, standard CAC is supported but to support other types of assets you must implement certain functions on
     the asset's wallet as well as create a driver for its puzzle(s).  Here is a guide to integrating a new types of
     assets with this trade manager:
 
     Puzzle Drivers:
-      - See chia/wallet/outer_puzzles.py for a full description of how to build these
+      - See cactus/wallet/outer_puzzles.py for a full description of how to build these
       - The `solve` method must be able to be solved by a Solver that looks like this:
             Solver(
                 {
@@ -127,7 +127,7 @@ class TradeManager:
         return None
 
     async def coins_of_interest_farmed(
-        self, coin_state: CoinState, fork_height: Optional[uint32], peer: WSChiaConnection
+        self, coin_state: CoinState, fork_height: Optional[uint32], peer: WSCactusConnection
     ) -> None:
         """
         If both our coins and other coins in trade got removed that means that trade was successfully executed
@@ -242,7 +242,7 @@ class TradeManager:
                 new_ph = await wallet.wallet_state_manager.main_wallet.get_new_puzzlehash()
             else:
                 new_ph = await wallet.get_new_puzzlehash()
-            # This should probably not switch on whether or not we're spending a XCH but it has to for now
+            # This should probably not switch on whether or not we're spending a CAC but it has to for now
             if wallet.type() == WalletType.STANDARD_WALLET:
                 if fee_to_pay > coin.amount:
                     selected_coins: Set[Coin] = await wallet.select_coins(
@@ -321,7 +321,7 @@ class TradeManager:
                     new_ph = await wallet.wallet_state_manager.main_wallet.get_new_puzzlehash()
                 else:
                     new_ph = await wallet.get_new_puzzlehash()
-                # This should probably not switch on whether or not we're spending a XCH but it has to for now
+                # This should probably not switch on whether or not we're spending a CAC but it has to for now
                 if wallet.type() == WalletType.STANDARD_WALLET:
                     if fee_to_pay > coin.amount:
                         selected_coins: Set[Coin] = await wallet.select_coins(
@@ -448,7 +448,7 @@ class TradeManager:
             offer_dict_no_ints: Dict[Optional[bytes32], int] = {}
             for id, amount in offer_dict.items():
                 asset_id: Optional[bytes32] = None
-                # asset_id can either be none if asset is XCH or
+                # asset_id can either be none if asset is CAC or
                 # bytes32 if another asset (e.g. NFT, CAT)
                 if amount > 0:
                     # this is what we are receiving in the trade
@@ -495,7 +495,7 @@ class TradeManager:
 
                 offer_dict_no_ints[asset_id] = amount
 
-                if asset_id is not None and wallet is not None:  # if this asset is not XCH
+                if asset_id is not None and wallet is not None:  # if this asset is not CAC
                     if callable(getattr(wallet, "get_puzzle_info", None)):
                         puzzle_driver: PuzzleInfo = wallet.get_puzzle_info(asset_id)
                         if asset_id in driver_dict and driver_dict[asset_id] != puzzle_driver:
@@ -531,7 +531,7 @@ class TradeManager:
                     wallet = self.wallet_state_manager.wallets[id]
                 else:
                     wallet = await self.wallet_state_manager.get_wallet_for_asset_id(id.hex())
-                # This should probably not switch on whether or not we're spending XCH but it has to for now
+                # This should probably not switch on whether or not we're spending CAC but it has to for now
                 if wallet.type() == WalletType.STANDARD_WALLET:
                     tx = await wallet.generate_signed_transaction(
                         abs(offer_dict[id]),
@@ -590,7 +590,7 @@ class TradeManager:
             if exists is None:
                 await wsm.create_wallet_for_puzzle_info(offer.driver_dict[key])
 
-    async def check_offer_validity(self, offer: Offer, peer: WSChiaConnection) -> bool:
+    async def check_offer_validity(self, offer: Offer, peer: WSCactusConnection) -> bool:
         all_removals: List[Coin] = offer.bundle.removals()
         all_removal_names: List[bytes32] = [c.name() for c in all_removals]
         non_ephemeral_removals: List[Coin] = list(
@@ -694,7 +694,7 @@ class TradeManager:
     async def respond_to_offer(
         self,
         offer: Offer,
-        peer: WSChiaConnection,
+        peer: WSCactusConnection,
         fee: uint64 = uint64(0),
         min_coin_amount: Optional[uint64] = None,
     ) -> Union[Tuple[Literal[True], TradeRecord, None], Tuple[Literal[False], None, str]]:

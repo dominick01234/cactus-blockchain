@@ -5,17 +5,17 @@ import sys
 from multiprocessing import freeze_support
 from typing import Dict, List, Optional, Tuple
 
-from chia.consensus.constants import ConsensusConstants
-from chia.consensus.default_constants import DEFAULT_CONSTANTS
-from chia.full_node.full_node import FullNode
-from chia.full_node.full_node_api import FullNodeAPI
-from chia.rpc.full_node_rpc_api import FullNodeRpcApi
-from chia.server.outbound_message import NodeType
-from chia.server.start_service import RpcInfo, Service, async_run
-from chia.util.chia_logging import initialize_logging
-from chia.util.config import load_config, load_config_cli
-from chia.util.default_root import DEFAULT_ROOT_PATH
-from chia.util.ints import uint16
+from cactus.consensus.constants import ConsensusConstants
+from cactus.consensus.default_constants import DEFAULT_CONSTANTS
+from cactus.full_node.full_node import FullNode
+from cactus.full_node.full_node_api import FullNodeAPI
+from cactus.rpc.full_node_rpc_api import FullNodeRpcApi
+from cactus.server.outbound_message import NodeType
+from cactus.server.start_service import RpcInfo, Service, async_run
+from cactus.util.cactus_logging import initialize_logging
+from cactus.util.config import load_config, load_config_cli
+from cactus.util.default_root import DEFAULT_ROOT_PATH
+from cactus.util.ints import uint16
 
 # See: https://bugs.python.org/issue29288
 "".encode("idna")
@@ -86,10 +86,10 @@ async def async_main() -> int:
 
 def main() -> int:
     freeze_support()
-    if os.getenv("CHIA_INSTRUMENT_NODE", 0) != 0:
+    if os.getenv("CACTUS_INSTRUMENT_NODE", 0) != 0:
         import atexit
 
-        from chia.util.task_timing import start_task_instrumentation, stop_task_instrumentation
+        from cactus.util.task_timing import start_task_instrumentation, stop_task_instrumentation
 
         start_task_instrumentation()
         atexit.register(stop_task_instrumentation)

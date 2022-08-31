@@ -1,10 +1,10 @@
 import React from 'react';
 import { Trans } from '@lingui/macro';
-import { ConfirmDialog, More, useOpenDialog } from '@chia/core';
+import { ConfirmDialog, More, useOpenDialog } from '@cactus/core';
 import { Box, ListItemIcon, MenuItem, Typography } from '@mui/material';
 import { DeleteForever as DeleteForeverIcon } from '@mui/icons-material';
-import { useDeletePlotMutation } from '@chia/api-react';
-import type { Plot } from '@chia/api';
+import { useDeletePlotMutation } from '@cactus/api-react';
+import type { Plot } from '@cactus/api';
 
 export type PlotActionProps = {
   plot: Plot;

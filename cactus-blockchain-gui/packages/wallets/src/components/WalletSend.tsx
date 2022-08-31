@@ -4,7 +4,7 @@ import {
   useGetSyncStatusQuery,
   useSendTransactionMutation,
   useFarmBlockMutation,
-} from '@chia/api-react';
+} from '@cactus/api-react';
 import {
   Amount,
   ButtonLoading,
@@ -14,11 +14,11 @@ import {
   Flex,
   Card,
   useOpenDialog,
-  chiaToMojo,
+  cactusToMojo,
   getTransactionResult,
   useIsSimulator,
   TooltipIcon,
-} from '@chia/core';
+} from '@cactus/core';
 import isNumeric from 'validator/es/lib/isNumeric';
 import { useForm, useWatch } from 'react-hook-form';
 import {
@@ -100,10 +100,10 @@ export default function WalletSend(props: SendCardProps) {
 
     let address = data.address;
     if (address.includes('colour')) {
-      throw new Error(t`Cannot send chia to coloured address. Please enter a chia address.`);
+      throw new Error(t`Cannot send cactus to coloured address. Please enter a cactus address.`);
     }
 
-    if (address.slice(0, 12) === 'chia_addr://') {
+    if (address.slice(0, 12) === 'cactus_addr://') {
       address = address.slice(12);
     }
     if (address.startsWith('0x') || address.startsWith('0X')) {
@@ -113,8 +113,8 @@ export default function WalletSend(props: SendCardProps) {
     const response = await sendTransaction({
       walletId,
       address,
-      amount: chiaToMojo(amount),
-      fee: chiaToMojo(fee),
+      amount: cactusToMojo(amount),
+      fee: cactusToMojo(fee),
       waitForConfirmation: true,
     }).unwrap();
 
@@ -180,7 +180,7 @@ export default function WalletSend(props: SendCardProps) {
                 data-testid="WalletSend-fee"
                 fullWidth
                 required
-                txType="walletSendXCH"
+                txType="walletSendCAC"
               />
             </Grid>
           </Grid>

@@ -1,5 +1,5 @@
 enum Unit {
-  CHIA = 'chia',
+  CACTUS = 'cactus',
   MOJO = 'mojo',
   CAT = 'cat',
 }

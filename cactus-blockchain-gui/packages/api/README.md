@@ -1,10 +1,10 @@
-# @chia/api
+# @cactus/api
 
-![Alt text](https://www.chia.net/img/chia_logo.svg)
+![Alt text](https://www.cactus-network.net/img/cactus_logo.svg)
 
-This library provides support for TypeScript/JavaScript [Chia](https://www.chia.net) apps to access the [Chia Blockchain RPC](https://github.com/Chia-Network/chia-blockchain/wiki/RPC-Interfaces), by making it easier to perform the following actions:
+This library provides support for TypeScript/JavaScript [Cactus](https://www.cactus-network.net) apps to access the [Cactus Blockchain RPC](https://github.com/Cactus-Network/cactus-blockchain/wiki/RPC-Interfaces), by making it easier to perform the following actions:
 
-- Making requests to the Chia Blockchain RPC.
+- Making requests to the Cactus Blockchain RPC.
 - Catch responses and errors with standard try/catch and async/await syntax.
 - Catch error when the request has a timeout. Each request has a default timeout of 10 minutes.
 - Auto-connect to daemon when you send the first request.
@@ -15,7 +15,7 @@ This library provides support for TypeScript/JavaScript [Chia](https://www.chia.
 ## Example
 
 ```ts
-import Client, { Wallet } from '@chia/api';
+import Client, { Wallet } from '@cactus/api';
 import Websocket from 'ws';
 import sleep from 'sleep-promise';
 

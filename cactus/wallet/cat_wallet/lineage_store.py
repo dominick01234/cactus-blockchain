@@ -1,9 +1,9 @@
 import logging
 from typing import Dict, Optional
 
-from chia.types.blockchain_format.sized_bytes import bytes32
-from chia.util.db_wrapper import DBWrapper2
-from chia.wallet.lineage_proof import LineageProof
+from cactus.types.blockchain_format.sized_bytes import bytes32
+from cactus.util.db_wrapper import DBWrapper2
+from cactus.wallet.lineage_proof import LineageProof
 
 log = logging.getLogger(__name__)
 

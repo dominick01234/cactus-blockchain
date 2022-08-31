@@ -13,7 +13,7 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { Tooltip } from '@mui/material';
 import HelpIcon from '@mui/icons-material/Help';
-import { AlertDialog, Card, Flex, chiaToMojo, mojoToChiaLocaleString } from '@chia/core';
+import { AlertDialog, Card, Flex, cactusToMojo, mojoToCactusLocaleString } from '@cactus/core';
 import {
   send_transaction,
   rl_set_user_info_action,
@@ -239,9 +239,9 @@ const IncompleteCard = (props) => {
 
   function submit() {
     const ip_val = ip_input.value;
-    const hexcheck = /[\da-f]+$/gi;
+    const hecaceck = /[\da-f]+$/gi;
 
-    if (!hexcheck.test(ip_val) || ip_val.value === '') {
+    if (!hecaceck.test(ip_val) || ip_val.value === '') {
       dispatch(openDialog('Please enter a valid info packet'));
       return;
     }
@@ -250,17 +250,17 @@ const IncompleteCard = (props) => {
     const ip_debuf = ip_unhex.toString('utf8');
     const ip_parsed = JSON.parse(ip_debuf);
     const interval_input = ip_parsed.interval;
-    const chiaper_input = ip_parsed.limit;
+    const cactusper_input = ip_parsed.limit;
     const origin_input = ip_parsed.origin_string;
     const admin_pubkey_input = ip_parsed.admin_pubkey;
     const interval_value = Number.parseInt(Number(interval_input));
-    const chiaper_value = Number.parseInt(Number(chiaper_input));
+    const cactusper_value = Number.parseInt(Number(cactusper_input));
     const origin_parsed = JSON.parse(origin_input);
     dispatch(
       rl_set_user_info_action(
         id,
         interval_value,
-        chiaper_value,
+        cactusper_value,
         origin_parsed,
         admin_pubkey_input,
       ),
@@ -398,8 +398,8 @@ const RLDetailsCard = (props) => {
             <Box flexGrow={1}>
               <Typography variant="subtitle1">
                 <Trans>
-                  Spending Limit (chia per interval):{' '}
-                  {mojoToChiaLocaleString(limit)}
+                  Spending Limit (cactus per interval):{' '}
+                  {mojoToCactusLocaleString(limit)}
                 </Trans>
               </Typography>
             </Box>
@@ -445,8 +445,8 @@ const RLDetailsCard = (props) => {
             <Box flexGrow={1}>
               <Typography variant="subtitle1">
                 <Trans>
-                  Spending Limit (chia per interval):{' '}
-                  {mojoToChiaLocaleString(limit)}
+                  Spending Limit (cactus per interval):{' '}
+                  {mojoToCactusLocaleString(limit)}
                 </Trans>
               </Typography>
             </Box>
@@ -511,7 +511,7 @@ const BalanceCardSubSection = (props) => {
         </Box>
         <Box>
           <Typography variant="subtitle1">
-            {mojoToChiaLocaleString(props.balance)} {currencyCode}
+            {mojoToCactusLocaleString(props.balance)} {currencyCode}
           </Typography>
         </Box>
       </Box>
@@ -651,8 +651,8 @@ const SendCard = (props) => {
       );
       return;
     }
-    const amount = chiaToMojo(amount_input.value);
-    const fee = chiaToMojo(fee_input.value);
+    const amount = cactusToMojo(amount_input.value);
+    const fee = cactusToMojo(fee_input.value);
 
     if (address.startsWith('0x') || address.startsWith('0X')) {
       address = address.slice(2);

@@ -20,14 +20,14 @@ import {
   TableControlled,
   TooltipIcon,
   useOpenDialog,
-  chiaToMojo,
+  cactusToMojo,
   useCurrencyCode,
   useSerializedNavigationState,
   useShowSaveDialog,
   Tooltip,
   LayoutDashboardSub,
-} from '@chia/core';
-import { OfferSummaryRecord, OfferTradeRecord } from '@chia/api';
+} from '@cactus/core';
+import { OfferSummaryRecord, OfferTradeRecord } from '@cactus/api';
 import {
   Box,
   Checkbox,
@@ -50,12 +50,12 @@ import {
   Reply as Share,
   Visibility,
 } from '@mui/icons-material';
-import { Offers } from '@chia/icons';
+import { Offers } from '@cactus/icons';
 import {
   useCancelOfferMutation,
   useGetOfferDataMutation,
   useGetWalletsQuery,
-} from '@chia/api-react';
+} from '@cactus/api-react';
 import {
   colorForOfferState,
   displayStringForOfferState,
@@ -99,9 +99,9 @@ function ConfirmOfferCancellation(props: ConfirmOfferCancellationProps) {
   }
 
   async function handleConfirm() {
-    const { fee: xchFee } = methods.getValues();
+    const { fee: cacFee } = methods.getValues();
 
-    const fee = cancelWithTransaction ? chiaToMojo(xchFee) : new BigNumber(0);
+    const fee = cancelWithTransaction ? cactusToMojo(cacFee) : new BigNumber(0);
 
     onClose([true, { cancelWithTransaction, cancellationFee: fee }]);
   }
@@ -254,7 +254,7 @@ function OfferList(props: OfferListProps) {
   const [saveOffer] = useSaveOfferFile();
   const { data: wallets, isLoading: isLoadingWallets } = useGetWalletsQuery();
   const { lookupByAssetId } = useAssetIdName();
-  const testnet = useCurrencyCode() === 'TXCH';
+  const testnet = useCurrencyCode() === 'TCAC';
   const openDialog = useOpenDialog();
   const { navigate } = useSerializedNavigationState();
   const {
@@ -574,7 +574,7 @@ export function OfferManager() {
               <Offers color="primary" fontSize="extraLarge" />
               <Typography variant="body1">
                 <Trans>
-                  Create an offer to exchange assets including XCH, tokens, and
+                  Create an offer to exchange assets including CAC, tokens, and
                   NFTs. View an offer to inspect and accept an offer made by
                   another party.
                 </Trans>
@@ -641,7 +641,7 @@ export function CreateOffer() {
   const locationState = getLocationState(); // For cases where we know that the state has been serialized
   const openDialog = useOpenDialog();
   const [saveOffer] = useSaveOfferFile();
-  const testnet = useCurrencyCode() === 'TXCH';
+  const testnet = useCurrencyCode() === 'TCAC';
 
   async function handleOfferCreated(obj: { offerRecord: any; offerData: any }) {
     const { offerRecord, offerData } = obj;

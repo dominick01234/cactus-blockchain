@@ -1,4 +1,4 @@
-import { toBech32m, fromBech32m } from '@chia/api';
+import { toBech32m, fromBech32m } from '@cactus/api';
 
 function stripHexPrefix(hex: string) {
   if (hex.startsWith('0x') || hex.startsWith('0X')) {
@@ -8,7 +8,7 @@ function stripHexPrefix(hex: string) {
 }
 
 export function didToDIDId(did: string): string {
-  return toBech32m(stripHexPrefix(did), 'did:chia:');
+  return toBech32m(stripHexPrefix(did), 'did:cactus:');
 }
 
 export function didFromDIDId(didId: string): string | undefined {

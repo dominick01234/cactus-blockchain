@@ -3,7 +3,7 @@ import { useRouteMatch, useHistory } from 'react-router-dom';
 import { Trans } from '@lingui/macro';
 import { Grid } from '@mui/material';
 import { Restore as RestoreIcon, Add as AddIcon } from '@mui/icons-material';
-import { Back, Flex } from '@chia/core';
+import { Back, Flex } from '@cactus/core';
 import WalletCreateCard from '../create/WalletCreateCard';
 
 export default function WalletDIDSelect() {

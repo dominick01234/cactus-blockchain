@@ -2,8 +2,8 @@ const units = require('../../util/units');
 
 describe('units', () => {
   describe('#getUnit', () => {
-    it('gets unit of chia', () => {
-      const result = units.getUnit('chia');
+    it('gets unit of cactus', () => {
+      const result = units.getUnit('cactus');
 
       expect(result).toBe(1);
     });
@@ -18,11 +18,11 @@ describe('units', () => {
       expect(result).toBe(1e-9);
     });
     it('supports uppercase characters', () => {
-      const result = units.getUnit('CHIA');
+      const result = units.getUnit('CACTUS');
 
       expect(result).toBe(1);
     });
-    it('gets unit of chia using alias', () => {
+    it('gets unit of cactus using alias', () => {
       const result = units.getUnit('ch');
 
       expect(result).toBe(1);
@@ -46,8 +46,8 @@ describe('units', () => {
     });
   });
   describe('#getDisplay', () => {
-    it('gets display of chia', () => {
-      const result = units.getDisplay('chia');
+    it('gets display of cactus', () => {
+      const result = units.getDisplay('cactus');
 
       expect(result).toEqual({
         format: '{amount} CH',
@@ -87,13 +87,13 @@ describe('units', () => {
       expect(result).toEqual(1);
     });
     it('modifies an existing unit', () => {
-      units.setUnit('chia', 9);
+      units.setUnit('cactus', 9);
 
-      const result = units.getUnit('chia');
+      const result = units.getUnit('cactus');
 
       expect(result).toEqual(9);
 
-      units.setUnit('chia', 1);
+      units.setUnit('cactus', 1);
     });
   });
   describe('#setDisplay', () => {
@@ -111,15 +111,15 @@ describe('units', () => {
       });
     });
     it('updates an existing display', () => {
-      units.setDisplay('chia', {
-        format: '{amount} TXCH',
+      units.setDisplay('cactus', {
+        format: '{amount} TCAC',
         fractionDigits: 0,
       });
 
-      const result = units.getDisplay('chia');
+      const result = units.getDisplay('cactus');
 
       expect(result).toEqual({
-        format: '{amount} TXCH',
+        format: '{amount} TCAC',
         fractionDigits: 0,
       });
     });

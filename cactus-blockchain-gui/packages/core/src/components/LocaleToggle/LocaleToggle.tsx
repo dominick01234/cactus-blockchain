@@ -36,7 +36,7 @@ export default function LocaleToggle(props) {
     handleClose();
 
     openExternal(
-      'https://github.com/Chia-Network/chia-blockchain-gui/tree/main/src/locales/README.md',
+      'https://github.com/Cactus-Network/cactus-blockchain-gui/tree/main/src/locales/README.md',
     );
   }
 

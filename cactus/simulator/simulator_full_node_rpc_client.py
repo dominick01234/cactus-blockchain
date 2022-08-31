@@ -1,12 +1,12 @@
 from typing import Dict, List, Tuple
 
-from chia.rpc.full_node_rpc_client import FullNodeRpcClient
-from chia.types.blockchain_format.sized_bytes import bytes32
-from chia.types.coin_record import CoinRecord
-from chia.types.full_block import FullBlock
-from chia.util.bech32m import encode_puzzle_hash
-from chia.util.byte_types import hexstr_to_bytes
-from chia.util.ints import uint128
+from cactus.rpc.full_node_rpc_client import FullNodeRpcClient
+from cactus.types.blockchain_format.sized_bytes import bytes32
+from cactus.types.coin_record import CoinRecord
+from cactus.types.full_block import FullBlock
+from cactus.util.bech32m import encode_puzzle_hash
+from cactus.util.byte_types import hexstr_to_bytes
+from cactus.util.ints import uint128
 
 
 class SimulatorFullNodeRpcClient(FullNodeRpcClient):
@@ -15,7 +15,7 @@ class SimulatorFullNodeRpcClient(FullNodeRpcClient):
         return [FullBlock.from_json_dict(block) for block in json_blocks]
 
     async def farm_block(self, target_ph: bytes32, number_of_blocks: int = 1, guarantee_tx_block: bool = False) -> int:
-        address = encode_puzzle_hash(target_ph, "txch")
+        address = encode_puzzle_hash(target_ph, "tcac")
         request_args = {"address": address, "blocks": number_of_blocks, "guarantee_tx_block": guarantee_tx_block}
         new_height: int = (await self.fetch("farm_block", request_args))["new_peak_height"]
         return new_height

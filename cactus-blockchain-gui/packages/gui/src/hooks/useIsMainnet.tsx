@@ -1,4 +1,4 @@
-import { useGetNetworkInfoQuery } from '@chia/api-react';
+import { useGetNetworkInfoQuery } from '@cactus/api-react';
 
 export default function useIsMainnet(): boolean | undefined {
   const { data: networkInfo, isLoading } = useGetNetworkInfoQuery(); 
@@ -8,5 +8,5 @@ export default function useIsMainnet(): boolean | undefined {
     return undefined;
   }
 
-  return networkPrefix.toLowerCase() === 'xch';
+  return networkPrefix.toLowerCase() === 'cac';
 }

@@ -10,7 +10,7 @@ import {
 } from '@mui/material';
 import { useWatch, useFormContext } from 'react-hook-form';
 import TextField, { TextFieldProps } from '../TextField';
-import chiaToMojo from '../../utils/chiaToMojo';
+import cactusToMojo from '../../utils/cactusToMojo';
 import catToMojo from '../../utils/catToMojo';
 import useCurrencyCode from '../../hooks/useCurrencyCode';
 import FormatLargeNumber from '../FormatLargeNumber';
@@ -63,9 +63,9 @@ export default function Amount(props: AmountProps) {
   const correctedValue = value && value[0] === '.' ? `0${value}` : value;
 
   const currencyCode = symbol === undefined ? defaultCurrencyCode : symbol;
-  const isChiaCurrency = ['XCH', 'TXCH'].includes(currencyCode);
-  const mojo = isChiaCurrency
-    ? chiaToMojo(correctedValue)
+  const isCactusCurrency = ['CAC', 'TCAC'].includes(currencyCode);
+  const mojo = isCactusCurrency
+    ? cactusToMojo(correctedValue)
     : catToMojo(correctedValue);
 
   return (
@@ -78,7 +78,7 @@ export default function Amount(props: AmountProps) {
           spellCheck: false,
           inputComponent: NumberFormatCustom as any,
           inputProps: {
-            decimalScale: isChiaCurrency ? 12 : 3,
+            decimalScale: isCactusCurrency ? 12 : 3,
             "data-testid": dataTestid,
           },
           endAdornment: (

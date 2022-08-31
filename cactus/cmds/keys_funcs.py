@@ -7,19 +7,19 @@ from enum import Enum
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple, Union
 
-from chia.consensus.coinbase import create_puzzlehash_for_pk
-from chia.cmds.passphrase_funcs import obtain_current_passphrase
-from chia.daemon.client import connect_to_daemon_and_validate
-from chia.daemon.keychain_proxy import KeychainProxy, connect_to_keychain_and_validate, wrap_local_keychain
-from chia.util.bech32m import encode_puzzle_hash
-from chia.util.errors import KeychainNotSet
-from chia.util.config import load_config
-from chia.util.default_root import DEFAULT_ROOT_PATH
-from chia.util.errors import KeychainException
-from chia.util.ints import uint32
-from chia.util.keychain import Keychain, bytes_to_mnemonic, generate_mnemonic, mnemonic_to_seed
-from chia.util.keyring_wrapper import KeyringWrapper
-from chia.wallet.derive_keys import (
+from cactus.consensus.coinbase import create_puzzlehash_for_pk
+from cactus.cmds.passphrase_funcs import obtain_current_passphrase
+from cactus.daemon.client import connect_to_daemon_and_validate
+from cactus.daemon.keychain_proxy import KeychainProxy, connect_to_keychain_and_validate, wrap_local_keychain
+from cactus.util.bech32m import encode_puzzle_hash
+from cactus.util.errors import KeychainNotSet
+from cactus.util.config import load_config
+from cactus.util.default_root import DEFAULT_ROOT_PATH
+from cactus.util.errors import KeychainException
+from cactus.util.ints import uint32
+from cactus.util.keychain import Keychain, bytes_to_mnemonic, generate_mnemonic, mnemonic_to_seed
+from cactus.util.keyring_wrapper import KeyringWrapper
+from cactus.wallet.derive_keys import (
     master_sk_to_farmer_sk,
     master_sk_to_pool_sk,
     master_sk_to_wallet_sk,
@@ -48,7 +48,7 @@ def generate_and_print():
     mnemonic = generate_mnemonic()
     print("Generating private key. Mnemonic (24 secret words):")
     print(mnemonic)
-    print("Note that this key has not been added to the keychain. Run chia keys add")
+    print("Note that this key has not been added to the keychain. Run cactus keys add")
     return mnemonic
 
 
@@ -143,7 +143,7 @@ def derive_sk_from_hd_path(master_sk: PrivateKey, hd_path_root: str) -> Tuple[Pr
     and returns the derived key and the HD path that was used to derive it.
     """
 
-    from chia.wallet.derive_keys import _derive_path, _derive_path_unhardened
+    from cactus.wallet.derive_keys import _derive_path, _derive_path_unhardened
 
     class DerivationType(Enum):
         NONOBSERVER = 0
@@ -201,12 +201,12 @@ def verify(message: str, public_key: str, signature: str):
 
 
 async def migrate_keys(root_path: Path, forced: bool = False) -> bool:
-    from chia.util.keyring_wrapper import KeyringWrapper
-    from chia.util.misc import prompt_yes_no
+    from cactus.util.keyring_wrapper import KeyringWrapper
+    from cactus.util.misc import prompt_yes_no
 
     deprecation_message = (
         "\nLegacy keyring support is deprecated and will be removed in an upcoming version. "
-        "You need to migrate your keyring to continue using Chia.\n"
+        "You need to migrate your keyring to continue using Cactus.\n"
     )
 
     # Check if the keyring needs a full migration (i.e. if it's using the old keyring)
@@ -250,7 +250,7 @@ async def migrate_keys(root_path: Path, forced: bool = False) -> bool:
             print()
             if not prompt_yes_no("Migrate these keys?"):
                 await keychain_proxy.close()
-                print("Migration aborted, can't run any chia commands.")
+                print("Migration aborted, can't run any cactus commands.")
                 return False
 
             for sk, seed_bytes in keys_to_migrate:
@@ -311,7 +311,7 @@ def _search_derived(
     the provided search terms.
     """
 
-    from chia.wallet.derive_keys import _derive_path, _derive_path_unhardened
+    from cactus.wallet.derive_keys import _derive_path, _derive_path_unhardened
 
     class DerivedSearchResultType(Enum):
         PUBLIC_KEY = "public key"
@@ -612,7 +612,7 @@ def derive_child_key(
     Derive child keys from the provided master key.
     """
 
-    from chia.wallet.derive_keys import _derive_path, _derive_path_unhardened
+    from cactus.wallet.derive_keys import _derive_path, _derive_path_unhardened
 
     derivation_root_sk: Optional[PrivateKey] = None
     hd_path_root: Optional[str] = None

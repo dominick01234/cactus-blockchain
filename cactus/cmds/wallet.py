@@ -3,9 +3,9 @@ from typing import Any, Dict, Optional, Tuple
 
 import click
 
-from chia.cmds.plotnft import validate_fee
-from chia.wallet.transaction_sorting import SortKey
-from chia.wallet.util.wallet_types import WalletType
+from cactus.cmds.plotnft import validate_fee
+from cactus.wallet.transaction_sorting import SortKey
+from cactus.wallet.util.wallet_types import WalletType
 
 
 @click.group("wallet", short_help="Manage your wallet")
@@ -30,7 +30,7 @@ def get_transaction_cmd(wallet_rpc_port: Optional[int], fingerprint: int, id: in
     extra_params = {"id": id, "tx_id": tx_id, "verbose": verbose}
     import asyncio
     from .wallet_funcs import get_transaction
-    from chia.cmds.cmds_util import execute_with_wallet
+    from cactus.cmds.cmds_util import execute_with_wallet
 
     asyncio.run(execute_with_wallet(wallet_rpc_port, fingerprint, extra_params, get_transaction))
 
@@ -111,7 +111,7 @@ def get_transactions_cmd(
 
     import asyncio
     from .wallet_funcs import get_transactions
-    from chia.cmds.cmds_util import execute_with_wallet
+    from cactus.cmds.cmds_util import execute_with_wallet
 
     asyncio.run(execute_with_wallet(wallet_rpc_port, fingerprint, extra_params, get_transactions))
 
@@ -124,7 +124,7 @@ def get_transactions_cmd(
     sys.stdout.close()
 
 
-@wallet_cmd.command("send", short_help="Send chia to another wallet")
+@wallet_cmd.command("send", short_help="Send cactus to another wallet")
 @click.option(
     "-wp",
     "--wallet-rpc-port",
@@ -134,25 +134,25 @@ def get_transactions_cmd(
 )
 @click.option("-f", "--fingerprint", help="Set the fingerprint to specify which wallet to use", type=int)
 @click.option("-i", "--id", help="Id of the wallet to use", type=int, default=1, show_default=True, required=True)
-@click.option("-a", "--amount", help="How much chia to send, in XCH", type=str, required=True)
+@click.option("-a", "--amount", help="How much cactus to send, in CAC", type=str, required=True)
 @click.option("-e", "--memo", help="Additional memo for the transaction", type=str, default=None)
 @click.option(
     "-m",
     "--fee",
-    help="Set the fees for the transaction, in XCH",
+    help="Set the fees for the transaction, in CAC",
     type=str,
     default="0",
     show_default=True,
     required=True,
 )
-@click.option("-t", "--address", help="Address to send the XCH", type=str, required=True)
+@click.option("-t", "--address", help="Address to send the CAC", type=str, required=True)
 @click.option(
     "-o", "--override", help="Submits transaction without checking for unusual values", is_flag=True, default=False
 )
 @click.option(
     "-ma",
     "--min_coin_amount",
-    help="Ignore coins worth less then this much XCH or CAT units",
+    help="Ignore coins worth less then this much CAC or CAT units",
     type=str,
     required=False,
     default="0",
@@ -179,7 +179,7 @@ def send_cmd(
     }
     import asyncio
     from .wallet_funcs import send
-    from chia.cmds.cmds_util import execute_with_wallet
+    from cactus.cmds.cmds_util import execute_with_wallet
 
     asyncio.run(execute_with_wallet(wallet_rpc_port, fingerprint, extra_params, send))
 
@@ -203,7 +203,7 @@ def send_cmd(
 def show_cmd(wallet_rpc_port: Optional[int], fingerprint: int, wallet_type: Optional[str]) -> None:
     import asyncio
     from .wallet_funcs import print_balances
-    from chia.cmds.cmds_util import execute_with_wallet
+    from cactus.cmds.cmds_util import execute_with_wallet
 
     args: Dict[str, Any] = {}
     if wallet_type is not None:
@@ -235,7 +235,7 @@ def get_address_cmd(wallet_rpc_port: Optional[int], id, fingerprint: int, new_ad
     extra_params = {"id": id, "new_address": new_address}
     import asyncio
     from .wallet_funcs import get_address
-    from chia.cmds.cmds_util import execute_with_wallet
+    from cactus.cmds.cmds_util import execute_with_wallet
 
     asyncio.run(execute_with_wallet(wallet_rpc_port, fingerprint, extra_params, get_address))
 
@@ -256,7 +256,7 @@ def delete_unconfirmed_transactions_cmd(wallet_rpc_port: Optional[int], id, fing
     extra_params = {"id": id}
     import asyncio
     from .wallet_funcs import delete_unconfirmed_transactions
-    from chia.cmds.cmds_util import execute_with_wallet
+    from cactus.cmds.cmds_util import execute_with_wallet
 
     asyncio.run(execute_with_wallet(wallet_rpc_port, fingerprint, extra_params, delete_unconfirmed_transactions))
 
@@ -274,7 +274,7 @@ def get_derivation_index_cmd(wallet_rpc_port: Optional[int], fingerprint: int) -
     extra_params: Dict[str, Any] = {}
     import asyncio
     from .wallet_funcs import get_derivation_index
-    from chia.cmds.cmds_util import execute_with_wallet
+    from cactus.cmds.cmds_util import execute_with_wallet
 
     asyncio.run(execute_with_wallet(wallet_rpc_port, fingerprint, extra_params, get_derivation_index))
 
@@ -297,7 +297,7 @@ def update_derivation_index_cmd(wallet_rpc_port: Optional[int], fingerprint: int
     extra_params = {"index": index}
     import asyncio
     from .wallet_funcs import update_derivation_index
-    from chia.cmds.cmds_util import execute_with_wallet
+    from cactus.cmds.cmds_util import execute_with_wallet
 
     asyncio.run(execute_with_wallet(wallet_rpc_port, fingerprint, extra_params, update_derivation_index))
 
@@ -332,12 +332,12 @@ def add_token_cmd(wallet_rpc_port: Optional[int], asset_id: str, token_name: str
     extra_params = {"asset_id": asset_id, "token_name": token_name}
     import asyncio
     from .wallet_funcs import add_token
-    from chia.cmds.cmds_util import execute_with_wallet
+    from cactus.cmds.cmds_util import execute_with_wallet
 
     asyncio.run(execute_with_wallet(wallet_rpc_port, fingerprint, extra_params, add_token))
 
 
-@wallet_cmd.command("make_offer", short_help="Create an offer of XCH/CATs for XCH/CATs")
+@wallet_cmd.command("make_offer", short_help="Create an offer of CAC/CATs for CAC/CATs")
 @click.option(
     "-wp",
     "--wallet-rpc-port",
@@ -368,7 +368,7 @@ def make_offer_cmd(
     extra_params = {"offers": offer, "requests": request, "filepath": filepath, "fee": fee}
     import asyncio
     from .wallet_funcs import make_offer
-    from chia.cmds.cmds_util import execute_with_wallet
+    from cactus.cmds.cmds_util import execute_with_wallet
 
     asyncio.run(execute_with_wallet(wallet_rpc_port, fingerprint, extra_params, make_offer))
 
@@ -415,7 +415,7 @@ def get_offers_cmd(
     }
     import asyncio
     from .wallet_funcs import get_offers
-    from chia.cmds.cmds_util import execute_with_wallet
+    from cactus.cmds.cmds_util import execute_with_wallet
 
     asyncio.run(execute_with_wallet(wallet_rpc_port, fingerprint, extra_params, get_offers))
 
@@ -438,7 +438,7 @@ def take_offer_cmd(
     extra_params = {"file": path_or_hex, "examine_only": examine_only, "fee": fee}
     import asyncio
     from .wallet_funcs import take_offer
-    from chia.cmds.cmds_util import execute_with_wallet
+    from cactus.cmds.cmds_util import execute_with_wallet
 
     asyncio.run(execute_with_wallet(wallet_rpc_port, fingerprint, extra_params, take_offer))
 
@@ -459,7 +459,7 @@ def cancel_offer_cmd(wallet_rpc_port: Optional[int], fingerprint: int, id: str, 
     extra_params = {"id": id, "insecure": insecure, "fee": fee}
     import asyncio
     from .wallet_funcs import cancel_offer
-    from chia.cmds.cmds_util import execute_with_wallet
+    from cactus.cmds.cmds_util import execute_with_wallet
 
     asyncio.run(execute_with_wallet(wallet_rpc_port, fingerprint, extra_params, cancel_offer))
 
@@ -490,7 +490,7 @@ def did_cmd():
 @click.option(
     "-m",
     "--fee",
-    help="Set the fees per transaction, in XCH.",
+    help="Set the fees per transaction, in CAC.",
     type=str,
     default="0",
     show_default=True,
@@ -501,7 +501,7 @@ def did_create_wallet_cmd(
 ) -> None:
     import asyncio
     from .wallet_funcs import create_did_wallet
-    from chia.cmds.cmds_util import execute_with_wallet
+    from cactus.cmds.cmds_util import execute_with_wallet
 
     extra_params = {"amount": amount, "fee": fee, "name": name}
     asyncio.run(execute_with_wallet(wallet_rpc_port, fingerprint, extra_params, create_did_wallet))
@@ -521,7 +521,7 @@ def did_create_wallet_cmd(
 def did_wallet_name_cmd(wallet_rpc_port: Optional[int], fingerprint: int, id: int, name: str) -> None:
     import asyncio
     from .wallet_funcs import did_set_wallet_name
-    from chia.cmds.cmds_util import execute_with_wallet
+    from cactus.cmds.cmds_util import execute_with_wallet
 
     extra_params = {"wallet_id": id, "name": name}
     asyncio.run(execute_with_wallet(wallet_rpc_port, fingerprint, extra_params, did_set_wallet_name))
@@ -540,7 +540,7 @@ def did_wallet_name_cmd(wallet_rpc_port: Optional[int], fingerprint: int, id: in
 def did_get_did_cmd(wallet_rpc_port: Optional[int], fingerprint: int, id: int) -> None:
     import asyncio
     from .wallet_funcs import get_did
-    from chia.cmds.cmds_util import execute_with_wallet
+    from cactus.cmds.cmds_util import execute_with_wallet
 
     extra_params = {"did_wallet_id": id}
     asyncio.run(execute_with_wallet(wallet_rpc_port, fingerprint, extra_params, get_did))
@@ -567,7 +567,7 @@ def nft_wallet_create_cmd(
 ) -> None:
     import asyncio
     from .wallet_funcs import create_nft_wallet
-    from chia.cmds.cmds_util import execute_with_wallet
+    from cactus.cmds.cmds_util import execute_with_wallet
 
     extra_params: Dict[str, Any] = {"did_id": did_id, "name": name}
     asyncio.run(execute_with_wallet(wallet_rpc_port, fingerprint, extra_params, create_nft_wallet))
@@ -597,7 +597,7 @@ def nft_wallet_create_cmd(
 @click.option(
     "-m",
     "--fee",
-    help="Set the fees per transaction, in XCH.",
+    help="Set the fees per transaction, in CAC.",
     type=str,
     default="0",
     show_default=True,
@@ -631,7 +631,7 @@ def nft_mint_cmd(
 ) -> None:
     import asyncio
     from .wallet_funcs import mint_nft
-    from chia.cmds.cmds_util import execute_with_wallet
+    from cactus.cmds.cmds_util import execute_with_wallet
 
     if metadata_uris is None:
         metadata_uris_list = []
@@ -679,7 +679,7 @@ def nft_mint_cmd(
 @click.option(
     "-m",
     "--fee",
-    help="Set the fees per transaction, in XCH.",
+    help="Set the fees per transaction, in CAC.",
     type=str,
     default="0",
     show_default=True,
@@ -697,7 +697,7 @@ def nft_add_uri_cmd(
 ) -> None:
     import asyncio
     from .wallet_funcs import add_uri_to_nft
-    from chia.cmds.cmds_util import execute_with_wallet
+    from cactus.cmds.cmds_util import execute_with_wallet
 
     extra_params = {
         "wallet_id": id,
@@ -725,7 +725,7 @@ def nft_add_uri_cmd(
 @click.option(
     "-m",
     "--fee",
-    help="Set the fees per transaction, in XCH.",
+    help="Set the fees per transaction, in CAC.",
     type=str,
     default="0",
     show_default=True,
@@ -741,7 +741,7 @@ def nft_transfer_cmd(
 ) -> None:
     import asyncio
     from .wallet_funcs import transfer_nft
-    from chia.cmds.cmds_util import execute_with_wallet
+    from cactus.cmds.cmds_util import execute_with_wallet
 
     extra_params = {
         "wallet_id": id,
@@ -765,7 +765,7 @@ def nft_transfer_cmd(
 def nft_list_cmd(wallet_rpc_port: Optional[int], fingerprint: int, id: int) -> None:
     import asyncio
     from .wallet_funcs import list_nfts
-    from chia.cmds.cmds_util import execute_with_wallet
+    from cactus.cmds.cmds_util import execute_with_wallet
 
     extra_params = {"wallet_id": id}
     asyncio.run(execute_with_wallet(wallet_rpc_port, fingerprint, extra_params, list_nfts))
@@ -786,7 +786,7 @@ def nft_list_cmd(wallet_rpc_port: Optional[int], fingerprint: int, id: int) -> N
 @click.option(
     "-m",
     "--fee",
-    help="Set the fees per transaction, in XCH.",
+    help="Set the fees per transaction, in CAC.",
     type=str,
     default="0",
     show_default=True,
@@ -802,7 +802,7 @@ def nft_set_did_cmd(
 ) -> None:
     import asyncio
     from .wallet_funcs import set_nft_did
-    from chia.cmds.cmds_util import execute_with_wallet
+    from cactus.cmds.cmds_util import execute_with_wallet
 
     extra_params = {
         "wallet_id": id,
@@ -830,7 +830,7 @@ def nft_get_info_cmd(
 ) -> None:
     import asyncio
     from .wallet_funcs import get_nft_info
-    from chia.cmds.cmds_util import execute_with_wallet
+    from cactus.cmds.cmds_util import execute_with_wallet
 
     extra_params = {
         "nft_coin_id": nft_coin_id,

@@ -1,10 +1,10 @@
 import React from 'react';
 import { Trans } from '@lingui/macro';
-import { Loading, State, StateIndicator } from '@chia/core';
-import { useGetSyncStatusQuery } from '@chia/api-react';
+import { Loading, State, StateIndicator } from '@cactus/core';
+import { useGetSyncStatusQuery } from '@cactus/api-react';
 import { Box, Typography } from '@mui/material';
 import getWalletSyncingStatus from '../utils/getWalletSyncingStatus';
-import { SyncingStatus } from '@chia/api';
+import { SyncingStatus } from '@cactus/api';
 import WalletStatusHeight from './WalletStatusHeight';
 
 export type WalletStatusProps = {

@@ -1,4 +1,4 @@
-import { SyncingStatus } from '@chia/api';
+import { SyncingStatus } from '@cactus/api';
 
 export default function getWalletSyncingStatus(walletState) {
   const { syncing, synced } = walletState;

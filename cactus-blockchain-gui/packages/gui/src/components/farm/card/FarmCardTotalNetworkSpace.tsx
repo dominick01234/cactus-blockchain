@@ -1,7 +1,7 @@
 import React from 'react';
 import { Trans } from '@lingui/macro';
-import { FormatBytes, CardSimple } from '@chia/core';
-import { useGetBlockchainStateQuery } from '@chia/api-react';
+import { FormatBytes, CardSimple } from '@cactus/core';
+import { useGetBlockchainStateQuery } from '@cactus/api-react';
 
 export default function FarmCardTotalNetworkSpace() {
   const { data, isLoading, error } = useGetBlockchainStateQuery();

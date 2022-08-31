@@ -7,11 +7,11 @@ import {
   Loading,
   Flex,
   TooltipIcon,
-} from '@chia/core';
+} from '@cactus/core';
 import {
   useGetCurrentAddressQuery,
   useGetNextAddressMutation,
-} from '@chia/api-react';
+} from '@cactus/api-react';
 import {
   Box,
   TextField,

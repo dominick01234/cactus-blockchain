@@ -4,17 +4,17 @@ from typing import Any, AsyncIterator, Awaitable, Callable, Dict, Optional, Tupl
 
 from aiohttp import ClientConnectorError
 
-from chia.rpc.farmer_rpc_client import FarmerRpcClient
-from chia.rpc.full_node_rpc_client import FullNodeRpcClient
-from chia.rpc.harvester_rpc_client import HarvesterRpcClient
-from chia.rpc.rpc_client import RpcClient
-from chia.rpc.wallet_rpc_client import WalletRpcClient
-from chia.types.blockchain_format.sized_bytes import bytes32
-from chia.types.mempool_submission_status import MempoolSubmissionStatus
-from chia.util.config import load_config
-from chia.util.default_root import DEFAULT_ROOT_PATH
-from chia.util.ints import uint16
-from chia.wallet.transaction_record import TransactionRecord
+from cactus.rpc.farmer_rpc_client import FarmerRpcClient
+from cactus.rpc.full_node_rpc_client import FullNodeRpcClient
+from cactus.rpc.harvester_rpc_client import HarvesterRpcClient
+from cactus.rpc.rpc_client import RpcClient
+from cactus.rpc.wallet_rpc_client import WalletRpcClient
+from cactus.types.blockchain_format.sized_bytes import bytes32
+from cactus.types.mempool_submission_status import MempoolSubmissionStatus
+from cactus.util.config import load_config
+from cactus.util.default_root import DEFAULT_ROOT_PATH
+from cactus.util.ints import uint16
+from cactus.wallet.transaction_record import TransactionRecord
 
 NODE_TYPES: Dict[str, Type[RpcClient]] = {
     "farmer": FarmerRpcClient,
@@ -30,7 +30,7 @@ def transaction_submitted_msg(tx: TransactionRecord) -> str:
 
 
 def transaction_status_msg(fingerprint: int, tx_id: bytes32) -> str:
-    return f"Run 'chia wallet get_transaction -f {fingerprint} -tx 0x{tx_id}' to get status"
+    return f"Run 'cactus wallet get_transaction -f {fingerprint} -tx 0x{tx_id}' to get status"
 
 
 async def validate_client_connection(
@@ -95,7 +95,7 @@ async def get_wallet(wallet_client: WalletRpcClient, fingerprint: Optional[int])
     else:
         fingerprints = await wallet_client.get_public_keys()
     if len(fingerprints) == 0:
-        print("No keys loaded. Run 'chia keys generate' or import a key")
+        print("No keys loaded. Run 'cactus keys generate' or import a key")
         return None
     if len(fingerprints) == 1:
         fingerprint = fingerprints[0]

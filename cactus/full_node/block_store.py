@@ -4,16 +4,16 @@ from typing import Dict, List, Optional, Tuple, Any, Union, Sequence
 
 import zstd
 
-from chia.consensus.block_record import BlockRecord
-from chia.types.blockchain_format.program import SerializedProgram
-from chia.types.blockchain_format.sized_bytes import bytes32
-from chia.types.full_block import FullBlock
-from chia.types.weight_proof import SubEpochChallengeSegment, SubEpochSegments
-from chia.util.db_wrapper import DBWrapper2
-from chia.util.errors import Err
-from chia.util.full_block_utils import generator_from_block
-from chia.util.ints import uint32
-from chia.util.lru_cache import LRUCache
+from cactus.consensus.block_record import BlockRecord
+from cactus.types.blockchain_format.program import SerializedProgram
+from cactus.types.blockchain_format.sized_bytes import bytes32
+from cactus.types.full_block import FullBlock
+from cactus.types.weight_proof import SubEpochChallengeSegment, SubEpochSegments
+from cactus.util.db_wrapper import DBWrapper2
+from cactus.util.errors import Err
+from cactus.util.full_block_utils import generator_from_block
+from cactus.util.ints import uint32
+from cactus.util.lru_cache import LRUCache
 
 log = logging.getLogger(__name__)
 
@@ -56,7 +56,7 @@ class BlockStore:
                 await conn.execute("CREATE TABLE IF NOT EXISTS current_peak(key int PRIMARY KEY, hash blob)")
 
                 # If any of these indices are altered, they should also be altered
-                # in the chia/cmds/db_upgrade.py file
+                # in the cactus/cmds/db_upgrade.py file
                 log.info("DB: Creating index height")
                 await conn.execute("CREATE INDEX IF NOT EXISTS height on full_blocks(height)")
 
@@ -68,7 +68,7 @@ class BlockStore:
                 )
 
                 # If any of these indices are altered, they should also be altered
-                # in the chia/cmds/db_upgrade.py file
+                # in the cactus/cmds/db_upgrade.py file
                 log.info("DB: Creating index is_fully_compactified")
                 await conn.execute(
                     "CREATE INDEX IF NOT EXISTS is_fully_compactified ON"

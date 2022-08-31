@@ -2,18 +2,18 @@ import pathlib
 import sys
 from typing import Dict, Optional
 
-from chia.consensus.constants import ConsensusConstants
-from chia.consensus.default_constants import DEFAULT_CONSTANTS
-from chia.farmer.farmer import Farmer
-from chia.farmer.farmer_api import FarmerAPI
-from chia.rpc.farmer_rpc_api import FarmerRpcApi
-from chia.server.outbound_message import NodeType
-from chia.server.start_service import RpcInfo, Service, async_run
-from chia.types.peer_info import PeerInfo
-from chia.util.chia_logging import initialize_logging
-from chia.util.config import load_config, load_config_cli
-from chia.util.default_root import DEFAULT_ROOT_PATH
-from chia.util.keychain import Keychain
+from cactus.consensus.constants import ConsensusConstants
+from cactus.consensus.default_constants import DEFAULT_CONSTANTS
+from cactus.farmer.farmer import Farmer
+from cactus.farmer.farmer_api import FarmerAPI
+from cactus.rpc.farmer_rpc_api import FarmerRpcApi
+from cactus.server.outbound_message import NodeType
+from cactus.server.start_service import RpcInfo, Service, async_run
+from cactus.types.peer_info import PeerInfo
+from cactus.util.cactus_logging import initialize_logging
+from cactus.util.config import load_config, load_config_cli
+from cactus.util.default_root import DEFAULT_ROOT_PATH
+from cactus.util.keychain import Keychain
 
 # See: https://bugs.python.org/issue29288
 "".encode("idna")

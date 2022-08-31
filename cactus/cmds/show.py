@@ -1,7 +1,7 @@
 from typing import Optional
 import click
 
-from chia.cmds.show_funcs import show_async
+from cactus.cmds.show_funcs import show_async
 
 
 @click.command("show", short_help="Show node information", no_args_is_help=True)
@@ -49,13 +49,13 @@ def show_cmd(
     import asyncio
 
     if connections:
-        print("'chia show -c' has been renamed to 'chia peer -c' ")
+        print("'cactus show -c' has been renamed to 'cactus peer -c' ")
     if add_connection != "":
-        print("'chia show -a' has been renamed to 'chia peer -a' ")
+        print("'cactus show -a' has been renamed to 'cactus peer -a' ")
     if remove_connection != "":
-        print("'chia show -r' has been renamed to 'chia peer -r' ")
+        print("'cactus show -r' has been renamed to 'cactus peer -r' ")
     if wallet_rpc_port is not None:
-        print("'chia show -wp' is not used, please remove it from your command.")
+        print("'cactus show -wp' is not used, please remove it from your command.")
     asyncio.run(
         show_async(
             rpc_port,

@@ -2,9 +2,9 @@ import argparse
 import binascii
 import os
 from enum import Enum
-from chia.plotters.bladebit import get_bladebit_install_info, plot_bladebit, install_bladebit
-from chia.plotters.chiapos import get_chiapos_install_info, plot_chia
-from chia.plotters.madmax import get_madmax_install_info, plot_madmax, install_madmax
+from cactus.plotters.bladebit import get_bladebit_install_info, plot_bladebit, install_bladebit
+from cactus.plotters.chiapos import get_chiapos_install_info, plot_cactus
+from cactus.plotters.madmax import get_madmax_install_info, plot_madmax, install_madmax
 from pathlib import Path
 from typing import Any, Dict, Optional
 
@@ -38,7 +38,7 @@ class Options(Enum):
     CONNECT_TO_DAEMON = 26
 
 
-chia_plotter = [
+cactus_plotter = [
     Options.TMP_DIR,
     Options.TMP_DIR2,
     Options.FINAL_DIR,
@@ -318,7 +318,7 @@ def install_plotter(plotter, root_path):
         print("Chiapos already installed. No action taken.")
         return
     elif plotter == "madmax":
-        if not os.path.exists(root_path / "madmax-plotter/build/chia_plot"):
+        if not os.path.exists(root_path / "madmax-plotter/build/cactus_plot"):
             print("Installing madmax plotter.")
             try:
                 install_madmax(root_path)
@@ -343,8 +343,8 @@ def install_plotter(plotter, root_path):
 
 
 def call_plotters(root_path: Path, args):
-    # Add `plotters` section in CHIA_ROOT.
-    chia_root_path = root_path
+    # Add `plotters` section in CACTUS_ROOT.
+    cactus_root_path = root_path
     root_path = get_plotters_root_path(root_path)
     if not root_path.is_dir():
         if os.path.exists(root_path):
@@ -354,14 +354,14 @@ def call_plotters(root_path: Path, args):
                 print(f"Exception deleting old root path: {type(e)} {e}.")
 
     if not os.path.exists(root_path):
-        print(f"Creating plotters folder within CHIA_ROOT: {root_path}")
+        print(f"Creating plotters folder within CACTUS_ROOT: {root_path}")
         try:
             os.mkdir(root_path)
         except Exception as e:
             print(f"Cannot create plotters root path {root_path} {type(e)} {e}.")
     plotters = argparse.ArgumentParser(description="Available options.")
     subparsers = plotters.add_subparsers(help="Available options", dest="plotter")
-    build_parser(subparsers, root_path, chia_plotter, "chiapos", "Chiapos Plotter")
+    build_parser(subparsers, root_path, cactus_plotter, "chiapos", "Chiapos Plotter")
     build_parser(subparsers, root_path, madmax_plotter, "madmax", "Madmax Plotter")
     build_parser(subparsers, root_path, bladebit_plotter, "bladebit", "Bladebit Plotter")
     install_parser = subparsers.add_parser("install", description="Install custom plotters.")
@@ -371,11 +371,11 @@ def call_plotters(root_path: Path, args):
     args = plotters.parse_args(args)
 
     if args.plotter == "chiapos":
-        plot_chia(args, chia_root_path)
+        plot_cactus(args, cactus_root_path)
     if args.plotter == "madmax":
-        plot_madmax(args, chia_root_path, root_path)
+        plot_madmax(args, cactus_root_path, root_path)
     if args.plotter == "bladebit":
-        plot_bladebit(args, chia_root_path, root_path)
+        plot_bladebit(args, cactus_root_path, root_path)
     if args.plotter == "install":
         install_plotter(args.install_plotter, root_path)
 

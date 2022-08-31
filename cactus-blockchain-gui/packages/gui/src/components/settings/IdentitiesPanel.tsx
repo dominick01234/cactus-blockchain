@@ -1,12 +1,12 @@
 import React, { useMemo } from 'react';
 import { useNavigate, useParams } from 'react-router';
-import { CardListItem, Flex, Truncate } from '@chia/core';
+import { CardListItem, Flex, Truncate } from '@cactus/core';
 import { Box, Card, CardContent, Typography } from '@mui/material';
 import styled from 'styled-components';
 import { orderBy } from 'lodash';
 
-import { useGetDIDQuery, useGetWalletsQuery } from '@chia/api-react';
-import { WalletType } from '@chia/api';
+import { useGetDIDQuery, useGetWalletsQuery } from '@cactus/api-react';
+import { WalletType } from '@cactus/api';
 import { didToDIDId } from '../../util/dids';
 
 const StyledRoot = styled(Box)`

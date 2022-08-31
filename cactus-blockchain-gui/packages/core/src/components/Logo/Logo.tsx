@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Box, BoxProps } from '@mui/material';
-import { Chia } from '@chia/icons';
+import { Cactus } from '@cactus/icons';
 
-const StyledChia = styled(Chia)`
+const StyledCactus = styled(Cactus)`
   max-width: 100%;
   width: auto;
   height: auto;
@@ -12,7 +12,7 @@ const StyledChia = styled(Chia)`
 export default function Logo(props: BoxProps) {
   return (
     <Box {...props}>
-      <StyledChia />
+      <StyledCactus />
     </Box>
   );
 }

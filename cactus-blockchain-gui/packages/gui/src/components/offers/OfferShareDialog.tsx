@@ -10,8 +10,8 @@ import {
   useOpenDialog,
   useShowError,
   useOpenExternal,
-} from '@chia/core';
-import { OfferTradeRecord, toBech32m } from '@chia/api';
+} from '@cactus/core';
+import { OfferTradeRecord, toBech32m } from '@cactus/api';
 import {
   Button,
   Checkbox,
@@ -73,7 +73,7 @@ type CommonDialogProps = {
 
 type OfferShareServiceDialogProps = CommonOfferProps & CommonDialogProps;
 
-const testnetDummyHost = 'offers-api-sim.chia.net';
+const testnetDummyHost = 'offers-api-sim.cactus-network.net';
 
 const OfferSharingProviders: {
   [key in OfferSharingService]: OfferSharingProvider;
@@ -243,7 +243,7 @@ async function postToOfferBin(
   console.log('OfferBin upload completed');
 
   if (testnet) {
-    return 'https://www.chia.net/offers';
+    return 'https://www.cactus-network.net/offers';
   }
 
   const { hash } = JSON.parse(responseBody);
@@ -253,7 +253,7 @@ async function postToOfferBin(
 
 enum HashgreenErrorCodes {
   OFFERED_AMOUNT_TOO_SMALL = 40020, // The offered amount is too small
-  MARKET_NOT_FOUND = 50029, // Pairing doesn't exist e.g. XCH/RandoCoin
+  MARKET_NOT_FOUND = 50029, // Pairing doesn't exist e.g. CAC/RandoCoin
   OFFER_FILE_EXISTS = 50037, // Offer already shared
   COINS_ALREADY_COMMITTED = 50041, // Coins in the offer are already committed in another offer
 }
@@ -294,7 +294,7 @@ async function postToHashgreen(
     console.log('Hashgreen upload completed');
 
     if (testnet) {
-      return 'https://www.chia.net/offers';
+      return 'https://www.cactus-network.net/offers';
     }
 
     const jsonObj = JSON.parse(responseBody);
@@ -356,7 +356,7 @@ type KeybaseCLIRequest = {
   channelName: string;
 };
 
-const KeybaseTeamName = 'chia_offers';
+const KeybaseTeamName = 'cactus_offers';
 const KeybaseChannelName = 'offers-trading';
 
 async function execKeybaseCLI(request: KeybaseCLIRequest): Promise<boolean> {
@@ -869,7 +869,7 @@ function OfferShareKeybaseDialog(props: OfferShareServiceDialogProps) {
   const [isSubmitting, setIsSubmitting] = React.useState(false);
   const [isJoiningTeam, setIsJoiningTeam] = React.useState(false);
   const [shared, setShared] = React.useState(false);
-  const teamName = testnet ? 'testxchoffersdev' : KeybaseTeamName;
+  const teamName = testnet ? 'testcacoffersdev' : KeybaseTeamName;
   const channelName = testnet ? 'offers' : KeybaseChannelName;
 
   function handleClose() {

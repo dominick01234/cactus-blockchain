@@ -1,18 +1,18 @@
 from enum import Enum
 from typing import Any, Dict, Set
 
-from chia.util.bech32m import bech32_decode, convertbits
-from chia.util.config import selected_network_address_prefix
+from cactus.util.bech32m import bech32_decode, convertbits
+from cactus.util.config import selected_network_address_prefix
 
 
 class AddressType(Enum):
-    XCH = "xch"
+    CAC = "cac"
     NFT = "nft"
-    DID = "did:chia:"
+    DID = "did:cactus:"
 
     def hrp(self, config: Dict[str, Any]) -> str:
-        if self == AddressType.XCH:
-            # Special case to map XCH to the current network's address prefix
+        if self == AddressType.CAC:
+            # Special case to map CAC to the current network's address prefix
             return selected_network_address_prefix(config)
         return self.value
 

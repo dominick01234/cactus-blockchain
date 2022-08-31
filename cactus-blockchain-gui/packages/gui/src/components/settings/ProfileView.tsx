@@ -6,16 +6,16 @@ import {
   Suspender,
   Tooltip,
   truncateValue,
-} from '@chia/core';
+} from '@cactus/core';
 import { Box, Card, TextField, Typography } from '@mui/material';
 import styled from 'styled-components';
 import { useParams } from 'react-router-dom';
-import { fromBech32m } from '@chia/api';
+import { fromBech32m } from '@cactus/api';
 import {
   useGetDIDQuery,
   useGetDIDNameQuery,
   useSetDIDNameMutation,
-} from '@chia/api-react';
+} from '@cactus/api-react';
 import { stripHexPrefix } from '../../util/utils';
 import { didToDIDId } from '../../util/dids';
 

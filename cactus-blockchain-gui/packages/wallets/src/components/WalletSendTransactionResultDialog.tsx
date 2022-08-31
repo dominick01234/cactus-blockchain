@@ -3,7 +3,7 @@ import { Trans } from '@lingui/macro';
 import {
   AlertDialog,
   Flex,
-} from '@chia/core';
+} from '@cactus/core';
 
 type WalletSendTransactionResultDialogProps = {
   success: boolean;

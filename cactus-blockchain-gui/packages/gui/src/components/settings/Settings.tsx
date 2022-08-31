@@ -1,7 +1,7 @@
 import React from 'react';
 import { Trans } from '@lingui/macro';
 import { Routes, Route, useNavigate, useMatch } from 'react-router-dom';
-import { Flex, LayoutDashboardSub } from '@chia/core';
+import { Flex, LayoutDashboardSub } from '@cactus/core';
 import { Typography, Tab, Tabs } from '@mui/material';
 import SettingsGeneral from './SettingsGeneral';
 import SettingsProfiles from './SettingsProfiles';

@@ -5,7 +5,7 @@ import unicodedata
 
 from bitstring import BitArray  # pyright: reportMissingImports=false
 from blspy import AugSchemeMPL, G1Element, PrivateKey  # pyright: reportMissingImports=false
-from chia.util.errors import (
+from cactus.util.errors import (
     KeychainNotSet,
     KeychainKeyDataMismatch,
     KeychainFingerprintExists,
@@ -13,10 +13,10 @@ from chia.util.errors import (
     KeychainSecretsMissing,
     KeychainUserNotFound,
 )
-from chia.util.hash import std_hash
-from chia.util.ints import uint32
-from chia.util.keyring_wrapper import KeyringWrapper
-from chia.util.streamable import streamable, Streamable
+from cactus.util.hash import std_hash
+from cactus.util.ints import uint32
+from cactus.util.keyring_wrapper import KeyringWrapper
+from cactus.util.streamable import streamable, Streamable
 from dataclasses import dataclass
 from hashlib import pbkdf2_hmac
 from pathlib import Path
@@ -26,8 +26,8 @@ from typing import Any, Dict, List, Optional, Tuple
 from typing_extensions import final
 
 CURRENT_KEY_VERSION = "1.8"
-DEFAULT_USER = f"user-chia-{CURRENT_KEY_VERSION}"  # e.g. user-chia-1.8
-DEFAULT_SERVICE = f"chia-{DEFAULT_USER}"  # e.g. chia-user-chia-1.8
+DEFAULT_USER = f"user-cactus-{CURRENT_KEY_VERSION}"  # e.g. user-cactus-1.8
+DEFAULT_SERVICE = f"cactus-{DEFAULT_USER}"  # e.g. cactus-user-cactus-1.8
 MAX_KEYS = 100
 MIN_PASSPHRASE_LEN = 8
 

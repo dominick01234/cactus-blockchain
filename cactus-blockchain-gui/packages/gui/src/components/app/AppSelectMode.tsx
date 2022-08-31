@@ -1,13 +1,13 @@
 import React from 'react';
 import { Trans } from '@lingui/macro';
 import styled from 'styled-components';
-import { Button, Flex, Logo, Card, useMode, Mode } from '@chia/core';
+import { Button, Flex, Logo, Card, useMode, Mode } from '@cactus/core';
 import {
   AccountBalanceWallet as AccountBalanceWalletIcon,
   Settings as SettingsIcon,
   Check as CheckIcon,
 } from '@mui/icons-material';
-import { Farming as FarmingIcon } from '@chia/icons';
+import { Farming as FarmingIcon } from '@cactus/icons';
 import { Box, Typography, Container, Grid } from '@mui/material';
 
 const StyledCheckIcon = styled(CheckIcon)`
@@ -81,7 +81,7 @@ export default function AppSelectMode() {
                     <Flex gap={1} alignItems="center">
                       <StyledCheckIcon color="primary" />
                       <Typography variant="body2">
-                        <Trans>Store and Send XCH</Trans>
+                        <Trans>Store and Send CAC</Trans>
                       </Typography>
                     </Flex>
                     <Flex gap={1} alignItems="center">

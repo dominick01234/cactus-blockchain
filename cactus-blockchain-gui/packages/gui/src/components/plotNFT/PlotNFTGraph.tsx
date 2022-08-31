@@ -3,7 +3,7 @@ import { linearGradientDef } from '@nivo/core';
 import { t } from '@lingui/macro';
 import { ResponsiveLine } from '@nivo/line';
 import { Typography, Paper } from '@mui/material';
-import { Flex } from '@chia/core';
+import { Flex } from '@cactus/core';
 import styled from 'styled-components';
 
 const StyledRoot = styled.div`

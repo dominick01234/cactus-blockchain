@@ -2,12 +2,12 @@ import React, { useMemo, useState, useEffect } from 'react';
 import { Trans } from '@lingui/macro';
 import { useForm } from 'react-hook-form';
 import styled from 'styled-components';
-import { Button, Flex, Form, TextField, Loading } from '@chia/core';
-import { fromBech32m } from '@chia/api';
+import { Button, Flex, Form, TextField, Loading } from '@cactus/core';
+import { fromBech32m } from '@cactus/api';
 import {
   useSetRewardTargetsMutation,
   useGetRewardTargetsQuery,
-} from '@chia/api-react';
+} from '@cactus/api-react';
 import {
   Alert,
   Dialog,
@@ -176,7 +176,7 @@ export default function FarmManageFarmingRewards(props: Props) {
                   <Trans>
                     Note that this does not change your pooling payout
                     addresses. This only affects old format plots, and the
-                    0.25XCH reward for pooling plots.
+                    0.25CAC reward for pooling plots.
                   </Trans>
                 </Typography>
               </>

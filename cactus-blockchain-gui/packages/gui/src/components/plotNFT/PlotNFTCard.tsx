@@ -16,8 +16,8 @@ import {
   Link,
   ConfirmDialog,
   useOpenDialog,
-  mojoToChiaLocaleString,
-} from '@chia/core';
+  mojoToCactusLocaleString,
+} from '@cactus/core';
 import {
   Box,
   Grid,
@@ -32,8 +32,8 @@ import {
   Link as LinkIcon,
   Payment as PaymentIcon,
 } from '@mui/icons-material';
-import { Plot as PlotIcon } from '@chia/icons';
-import { useDeleteUnconfirmedTransactionsMutation } from '@chia/api-react';
+import { Plot as PlotIcon } from '@cactus/icons';
+import { useDeleteUnconfirmedTransactionsMutation } from '@cactus/api-react';
 import type PlotNFT from '../../types/PlotNFT';
 import PlotNFTName from './PlotNFTName';
 import PlotNFTStatus from './PlotNFTState';
@@ -148,7 +148,7 @@ export default function PlotNFTCard(props: Props) {
       label: <Trans>Unclaimed Rewards</Trans>,
       value: (
         <UnitFormat
-          value={mojoToChiaLocaleString(balance)}
+          value={mojoToCactusLocaleString(balance)}
           state={State.SUCCESS}
         />
       ),

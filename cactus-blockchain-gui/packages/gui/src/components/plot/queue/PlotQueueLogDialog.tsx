@@ -8,8 +8,8 @@ import {
   LinearProgress,
   Typography,
 } from '@mui/material';
-import { Button, Flex, Log } from '@chia/core';
-import { useGetPlotQueueQuery, useThrottleQuery } from '@chia/api-react';
+import { Button, Flex, Log } from '@cactus/core';
+import { useGetPlotQueueQuery, useThrottleQuery } from '@cactus/api-react';
 import styled from 'styled-components';
 
 const StyledLinearProgress = styled(LinearProgress)`

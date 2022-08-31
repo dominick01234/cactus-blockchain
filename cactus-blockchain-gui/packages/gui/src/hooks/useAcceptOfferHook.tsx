@@ -1,14 +1,14 @@
 import React from 'react';
 import BigNumber from 'bignumber.js';
 import { Trans, t } from '@lingui/macro';
-import { OfferSummaryRecord } from '@chia/api';
-import { useTakeOfferMutation } from '@chia/api-react';
+import { OfferSummaryRecord } from '@cactus/api';
+import { useTakeOfferMutation } from '@cactus/api-react';
 import {
   AlertDialog,
-  chiaToMojo,
+  cactusToMojo,
   useOpenDialog,
   useShowError,
-} from '@chia/core';
+} from '@cactus/core';
 import useAssetIdName from './useAssetIdName';
 import OfferAcceptConfirmationDialog from '../components/offers/OfferAcceptConfirmationDialog';
 import OfferAsset from '../components/offers/OfferAsset';
@@ -35,7 +35,7 @@ export default function useAcceptOfferHook(): [AcceptOfferHook] {
     onUpdate: (accepting: boolean) => void,
     onSuccess: () => void,
   ): Promise<void> {
-    const feeInMojos: BigNumber = fee ? chiaToMojo(fee) : new BigNumber(0);
+    const feeInMojos: BigNumber = fee ? cactusToMojo(fee) : new BigNumber(0);
     const offeredUnknownCATs: string[] = Object.entries(offerSummary.offered)
       .filter(
         ([assetId]) =>

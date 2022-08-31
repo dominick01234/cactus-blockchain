@@ -7,55 +7,55 @@ from typing import Any, Dict, List, Optional, Set, Tuple, Union
 
 from blspy import G1Element, PrivateKey
 
-from chia.consensus.block_rewards import calculate_base_farmer_reward
-from chia.pools.pool_wallet import PoolWallet
-from chia.pools.pool_wallet_info import FARMING_TO_POOL, PoolState, PoolWalletInfo, create_pool_state
-from chia.protocols.protocol_message_types import ProtocolMessageTypes
-from chia.protocols.wallet_protocol import CoinState
-from chia.rpc.rpc_server import Endpoint, EndpointResult
-from chia.server.outbound_message import NodeType, make_msg
-from chia.server.ws_connection import WSChiaConnection
-from chia.simulator.simulator_protocol import FarmNewBlockProtocol
-from chia.types.announcement import Announcement
-from chia.types.blockchain_format.coin import Coin, coin_as_list
-from chia.types.blockchain_format.program import Program
-from chia.types.blockchain_format.sized_bytes import bytes32
-from chia.types.coin_spend import CoinSpend
-from chia.types.spend_bundle import SpendBundle
-from chia.util.bech32m import decode_puzzle_hash, encode_puzzle_hash
-from chia.util.byte_types import hexstr_to_bytes
-from chia.util.config import load_config
-from chia.util.errors import KeychainIsLocked
-from chia.util.ints import uint8, uint32, uint64, uint16
-from chia.util.keychain import bytes_to_mnemonic, generate_mnemonic
-from chia.util.path import path_from_root
-from chia.util.ws_message import WsRpcMessage, create_payload_dict
-from chia.wallet.cat_wallet.cat_constants import DEFAULT_CATS
-from chia.wallet.cat_wallet.cat_wallet import CATWallet
-from chia.wallet.derive_keys import (
+from cactus.consensus.block_rewards import calculate_base_farmer_reward
+from cactus.pools.pool_wallet import PoolWallet
+from cactus.pools.pool_wallet_info import FARMING_TO_POOL, PoolState, PoolWalletInfo, create_pool_state
+from cactus.protocols.protocol_message_types import ProtocolMessageTypes
+from cactus.protocols.wallet_protocol import CoinState
+from cactus.rpc.rpc_server import Endpoint, EndpointResult
+from cactus.server.outbound_message import NodeType, make_msg
+from cactus.server.ws_connection import WSCactusConnection
+from cactus.simulator.simulator_protocol import FarmNewBlockProtocol
+from cactus.types.announcement import Announcement
+from cactus.types.blockchain_format.coin import Coin, coin_as_list
+from cactus.types.blockchain_format.program import Program
+from cactus.types.blockchain_format.sized_bytes import bytes32
+from cactus.types.coin_spend import CoinSpend
+from cactus.types.spend_bundle import SpendBundle
+from cactus.util.bech32m import decode_puzzle_hash, encode_puzzle_hash
+from cactus.util.byte_types import hexstr_to_bytes
+from cactus.util.config import load_config
+from cactus.util.errors import KeychainIsLocked
+from cactus.util.ints import uint8, uint32, uint64, uint16
+from cactus.util.keychain import bytes_to_mnemonic, generate_mnemonic
+from cactus.util.path import path_from_root
+from cactus.util.ws_message import WsRpcMessage, create_payload_dict
+from cactus.wallet.cat_wallet.cat_constants import DEFAULT_CATS
+from cactus.wallet.cat_wallet.cat_wallet import CATWallet
+from cactus.wallet.derive_keys import (
     MAX_POOL_WALLETS,
     master_sk_to_farmer_sk,
     master_sk_to_pool_sk,
     master_sk_to_singleton_owner_sk,
     match_address_to_sk,
 )
-from chia.wallet.did_wallet.did_wallet import DIDWallet
-from chia.wallet.nft_wallet import nft_puzzles
-from chia.wallet.nft_wallet.nft_info import NFTInfo, NFTCoinInfo
-from chia.wallet.nft_wallet.nft_puzzles import get_metadata_and_phs
-from chia.wallet.nft_wallet.nft_wallet import NFTWallet
-from chia.wallet.nft_wallet.uncurry_nft import UncurriedNFT
-from chia.wallet.outer_puzzles import AssetType
-from chia.wallet.puzzle_drivers import PuzzleInfo
-from chia.wallet.rl_wallet.rl_wallet import RLWallet
-from chia.wallet.trade_record import TradeRecord
-from chia.wallet.trading.offer import Offer
-from chia.wallet.transaction_record import TransactionRecord
-from chia.wallet.util.address_type import AddressType
-from chia.wallet.util.transaction_type import TransactionType
-from chia.wallet.util.wallet_types import AmountWithPuzzlehash, WalletType
-from chia.wallet.wallet_info import WalletInfo
-from chia.wallet.wallet_node import WalletNode
+from cactus.wallet.did_wallet.did_wallet import DIDWallet
+from cactus.wallet.nft_wallet import nft_puzzles
+from cactus.wallet.nft_wallet.nft_info import NFTInfo, NFTCoinInfo
+from cactus.wallet.nft_wallet.nft_puzzles import get_metadata_and_phs
+from cactus.wallet.nft_wallet.nft_wallet import NFTWallet
+from cactus.wallet.nft_wallet.uncurry_nft import UncurriedNFT
+from cactus.wallet.outer_puzzles import AssetType
+from cactus.wallet.puzzle_drivers import PuzzleInfo
+from cactus.wallet.rl_wallet.rl_wallet import RLWallet
+from cactus.wallet.trade_record import TradeRecord
+from cactus.wallet.trading.offer import Offer
+from cactus.wallet.transaction_record import TransactionRecord
+from cactus.wallet.util.address_type import AddressType
+from cactus.wallet.util.transaction_type import TransactionType
+from cactus.wallet.util.wallet_types import AmountWithPuzzlehash, WalletType
+from cactus.wallet.wallet_info import WalletInfo
+from cactus.wallet.wallet_node import WalletNode
 
 # Timeout for response from wallet/full node for sending a transaction
 TIMEOUT = 30
@@ -68,7 +68,7 @@ class WalletRpcApi:
     def __init__(self, wallet_node: WalletNode):
         assert wallet_node is not None
         self.service = wallet_node
-        self.service_name = "chia_wallet"
+        self.service_name = "cactus_wallet"
         self.balance_cache: Dict[int, Any] = {}
 
     def get_routes(self) -> Dict[str, Endpoint]:
@@ -327,8 +327,8 @@ class WalletRpcApi:
             return False, False
 
         config: Dict = load_config(new_root, "config.yaml")
-        farmer_target = config["farmer"].get("xch_target_address")
-        pool_target = config["pool"].get("xch_target_address")
+        farmer_target = config["farmer"].get("cac_target_address")
+        pool_target = config["pool"].get("cac_target_address")
         address_to_check: List[bytes32] = [decode_puzzle_hash(farmer_target), decode_puzzle_hash(pool_target)]
 
         found_addresses: Set[bytes32] = match_address_to_sk(sk, address_to_check, max_ph_to_search)
@@ -618,7 +618,7 @@ class WalletRpcApi:
 
                 owner_puzzle_hash: bytes32 = await self.service.wallet_state_manager.main_wallet.get_puzzle_hash(True)
 
-                from chia.pools.pool_wallet_info import initial_pool_state_from_dict
+                from cactus.pools.pool_wallet_info import initial_pool_state_from_dict
 
                 async with self.service.wallet_state_manager.lock:
                     # We assign a pseudo unique id to each pool wallet, so that each one gets its own deterministic
@@ -1066,8 +1066,8 @@ class WalletRpcApi:
         ###
         # This is temporary code, delete it when we no longer care about incorrectly parsing CAT1s
         # There's also temp code in test_wallet_rpc.py and wallet_funcs.py
-        from chia.util.bech32m import bech32_decode, convertbits
-        from chia.wallet.util.puzzle_compression import decompress_object_with_puzzles
+        from cactus.util.bech32m import bech32_decode, convertbits
+        from cactus.wallet.util.puzzle_compression import decompress_object_with_puzzles
 
         hrpgot, data = bech32_decode(offer_hex, max_length=len(offer_hex))
         if data is None:
@@ -1092,7 +1092,7 @@ class WalletRpcApi:
     async def check_offer_validity(self, request) -> EndpointResult:
         offer_hex: str = request["offer"]
         offer = Offer.from_bech32(offer_hex)
-        peer: Optional[WSChiaConnection] = self.service.get_full_node_peer()
+        peer: Optional[WSCactusConnection] = self.service.get_full_node_peer()
         if peer is None:
             raise ValueError("No peer connected")
         return {"valid": (await self.service.wallet_state_manager.trade_manager.check_offer_validity(offer, peer))}
@@ -1104,7 +1104,7 @@ class WalletRpcApi:
         min_coin_amount: uint64 = uint64(request.get("min_coin_amount", 0))
 
         async with self.service.wallet_state_manager.lock:
-            peer: Optional[WSChiaConnection] = self.service.get_full_node_peer()
+            peer: Optional[WSCactusConnection] = self.service.get_full_node_peer()
             if peer is None:
                 raise ValueError("No peer connected")
             result = await self.service.wallet_state_manager.trade_manager.respond_to_offer(
@@ -1186,7 +1186,7 @@ class WalletRpcApi:
         if cancel_all:
             asset_id = None
         else:
-            asset_id = request.get("asset_id", "xch")
+            asset_id = request.get("asset_id", "cac")
 
         start: int = 0
         end: int = start + batch_size
@@ -1194,7 +1194,7 @@ class WalletRpcApi:
         log.info(f"Start cancelling offers for  {'asset_id: '+asset_id if asset_id is not None else 'all'} ...")
         # Traverse offers page by page
         key = None
-        if asset_id is not None and asset_id != "xch":
+        if asset_id is not None and asset_id != "cac":
             key = bytes32.from_hexstr(asset_id)
         while True:
             records: List[TradeRecord] = []
@@ -1646,7 +1646,7 @@ class WalletRpcApi:
         else:
             coin_id = bytes32.from_hexstr(coin_id)
         # Get coin state
-        peer: Optional[WSChiaConnection] = self.service.get_full_node_peer()
+        peer: Optional[WSCactusConnection] = self.service.get_full_node_peer()
         if peer is None:
             raise ValueError("No peers to get info from")
         coin_state_list: List[CoinState] = await self.service.wallet_state_manager.wallet_node.get_coin_state(

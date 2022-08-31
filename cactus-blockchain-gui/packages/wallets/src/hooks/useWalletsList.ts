@@ -1,14 +1,14 @@
 import { useMemo } from 'react';
-import { WalletType } from '@chia/api';
-import type { Wallet } from '@chia/api';
-import { useShowError } from '@chia/core';
+import { WalletType } from '@cactus/api';
+import type { Wallet } from '@cactus/api';
+import { useShowError } from '@cactus/core';
 import { orderBy } from 'lodash';
 import {
   useGetWalletsQuery,
   useGetStrayCatsQuery,
   useGetCatListQuery,
   useAddCATTokenMutation,
-} from '@chia/api-react';
+} from '@cactus/api-react';
 import useHiddenWallet from './useHiddenWallet';
 
 export type ListItem = {
@@ -167,7 +167,7 @@ export default function useWalletsList(
         assetId: wallet.meta?.assetId,
         name:
           wallet.type === WalletType.STANDARD_WALLET
-            ? 'Chia'
+            ? 'Cactus'
             : wallet.meta?.name ?? wallet.name,
       })),
       ...catBaseWallets.map((wallet: Wallet) => ({

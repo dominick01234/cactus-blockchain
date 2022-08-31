@@ -7,9 +7,9 @@ import {
   useCheckOfferValidityMutation,
   useGetNFTInfoQuery,
   useGetNFTWallets,
-} from '@chia/api-react';
-import type { Wallet } from '@chia/api';
-import { OfferSummaryRecord, OfferTradeRecord } from '@chia/api';
+} from '@cactus/api-react';
+import type { Wallet } from '@cactus/api';
+import { OfferSummaryRecord, OfferTradeRecord } from '@cactus/api';
 import {
   Back,
   Button,
@@ -22,11 +22,11 @@ import {
   Tooltip,
   TooltipIcon,
   catToMojo,
-  chiaToMojo,
-  mojoToChia,
+  cactusToMojo,
+  mojoToCactus,
   useColorModeValue,
   useShowError,
-} from '@chia/core';
+} from '@cactus/core';
 import { Box, Divider, Grid, Typography } from '@mui/material';
 import { Warning as WarningIcon } from '@mui/icons-material';
 import { useTheme } from '@mui/material/styles';
@@ -92,8 +92,8 @@ function NFTOfferSummaryRow(props: NFTOfferSummaryRowProps) {
         const infoDict = summaryInfo[key];
         let assetType: OfferAsset | undefined;
 
-        if (['xch', 'txch'].includes(key.toLowerCase())) {
-          assetType = OfferAsset.CHIA;
+        if (['cac', 'tcac'].includes(key.toLowerCase())) {
+          assetType = OfferAsset.CACTUS;
         } else if (infoDict?.type) {
           switch (infoDict.type.toLowerCase()) {
             case 'singleton':
@@ -121,7 +121,7 @@ function NFTOfferSummaryRow(props: NFTOfferSummaryRowProps) {
     switch (assetType) {
       case undefined:
         return null;
-      case OfferAsset.CHIA: // fall-through
+      case OfferAsset.CACTUS: // fall-through
       case OfferAsset.TOKEN:
         return (
           <OfferSummaryTokenRow
@@ -419,12 +419,12 @@ function NFTOfferDetails(props: NFTOfferDetailsProps) {
     }
 
     const royaltyPercentage = convertRoyaltyToPercentage(nft.royaltyPercentage);
-    const xchMakerFee = mojoToChia(makerFee);
+    const cacMakerFee = mojoToCactus(makerFee);
 
     return {
       ...calculateNFTRoyalties(
         amount,
-        parseFloat(xchMakerFee),
+        parseFloat(cacMakerFee),
         convertRoyaltyToPercentage(nft.royaltyPercentage),
         exchangeType,
       ),
@@ -437,8 +437,8 @@ function NFTOfferDetails(props: NFTOfferDetailsProps) {
     : 'textSecondary';
   const overrideNFTSellerAmount =
     exchangeType === NFTOfferExchangeType.TokenForNFT
-      ? assetType === OfferAsset.CHIA
-        ? chiaToMojo(nftSaleInfo?.nftSellerNetAmount ?? 0)
+      ? assetType === OfferAsset.CACTUS
+        ? cactusToMojo(nftSaleInfo?.nftSellerNetAmount ?? 0)
         : catToMojo(nftSaleInfo?.nftSellerNetAmount ?? 0)
       : undefined;
 

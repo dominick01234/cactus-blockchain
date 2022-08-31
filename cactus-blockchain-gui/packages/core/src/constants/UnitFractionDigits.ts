@@ -1,7 +1,7 @@
 import Unit from './Unit';
 
 const UnitFractionDigits = {
-  [Unit.CHIA]: 12,
+  [Unit.CACTUS]: 12,
   [Unit.MOJO]: 0,
   [Unit.CAT]: 3,
 };

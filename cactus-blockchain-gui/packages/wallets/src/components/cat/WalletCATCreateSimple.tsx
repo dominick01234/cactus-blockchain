@@ -3,13 +3,13 @@ import { useRouteMatch, useNavigate } from 'react-router-dom';
 import { Trans, t } from '@lingui/macro';
 import { Grid } from '@mui/material';
 import { Add as AddIcon } from '@mui/icons-material';
-import { Back, Flex, Loading, useShowError } from '@chia/core';
-import { useGetWalletsQuery, useAddCATTokenMutation, useGetCatListQuery } from '@chia/api-react';
+import { Back, Flex, Loading, useShowError } from '@cactus/core';
+import { useGetWalletsQuery, useAddCATTokenMutation, useGetCatListQuery } from '@cactus/api-react';
 import WalletCreateCard from '../create/WalletCreateCard';
 import isCATWalletPresent from '../../utils/isCATWalletPresent';
-import type { CATToken } from '@chia/api';
+import type { CATToken } from '@cactus/api';
 import useWalletState from '../../hooks/useWalletState';
-import { SyncingStatus } from '@chia/api';
+import { SyncingStatus } from '@cactus/api';
 
 export default function WalletCATCreateSimple() {
   const navigate = useNavigate();

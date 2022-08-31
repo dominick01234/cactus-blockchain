@@ -11,7 +11,7 @@ import {
   RadioGroup,
   Fee,
   TextField,
-} from '@chia/core';
+} from '@cactus/core';
 import {
   Alert,
   Grid,
@@ -102,7 +102,7 @@ export default function PlotNFTSelectBase(props: Props) {
                     control={<Radio />}
                     label={
                       <Trans>
-                        Self pool. When you win a block you will earn XCH
+                        Self pool. When you win a block you will earn CAC
                         rewards.
                       </Trans>
                     }

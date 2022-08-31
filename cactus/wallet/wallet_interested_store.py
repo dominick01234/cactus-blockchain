@@ -1,8 +1,8 @@
 from typing import List, Tuple, Optional
 
-from chia.types.blockchain_format.sized_bytes import bytes32
-from chia.util.db_wrapper import DBWrapper2
-from chia.util.ints import uint32
+from cactus.types.blockchain_format.sized_bytes import bytes32
+from cactus.util.db_wrapper import DBWrapper2
+from cactus.util.ints import uint32
 
 
 class WalletInterestedStore:

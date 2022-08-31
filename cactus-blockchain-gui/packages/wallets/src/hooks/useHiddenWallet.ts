@@ -1,6 +1,6 @@
 import { useCallback } from 'react';
-import { useLocalStorage } from '@chia/core';
-import { useGetLoggedInFingerprintQuery } from '@chia/api-react';
+import { useLocalStorage } from '@cactus/core';
+import { useGetLoggedInFingerprintQuery } from '@cactus/api-react';
 
 export default function useHiddenWallet(): {
   hide: (walletId: number) => void;

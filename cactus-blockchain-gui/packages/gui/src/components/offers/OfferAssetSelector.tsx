@@ -1,10 +1,10 @@
 import React, { useMemo } from 'react';
 import { useFormContext } from 'react-hook-form';
-import { Wallet, WalletType, type CATToken } from '@chia/api';
-import { useGetCatListQuery, useGetWalletsQuery } from '@chia/api-react';
+import { Wallet, WalletType, type CATToken } from '@cactus/api';
+import { useGetCatListQuery, useGetWalletsQuery } from '@cactus/api-react';
 import { Trans } from '@lingui/macro';
 import { FormControl, InputLabel, MenuItem } from '@mui/material';
-import { Select, useCurrencyCode } from '@chia/core';
+import { Select, useCurrencyCode } from '@cactus/core';
 import type OfferEditorRowData from './OfferEditorRowData';
 
 type WalletOfferAssetSelection = {
@@ -23,7 +23,7 @@ type BuildAssetSelectorListParams = {
   rows: OfferEditorRowData[];
   otherRows: OfferEditorRowData[];
   selectedWalletId: number;
-  chiaCurrencyCode: string;
+  cactusCurrencyCode: string;
 };
 
 function buildAssetSelectorList(
@@ -35,7 +35,7 @@ function buildAssetSelectorList(
     rows,
     otherRows,
     selectedWalletId,
-    chiaCurrencyCode,
+    cactusCurrencyCode,
   } = params;
   const list: WalletOfferAssetSelection[] = [];
   const usedWalletIds: Set<number> = new Set();
@@ -71,8 +71,8 @@ function buildAssetSelectorList(
     }
 
     if (wallet.type === WalletType.STANDARD_WALLET) {
-      name = 'Chia';
-      symbol = chiaCurrencyCode;
+      name = 'Cactus';
+      symbol = cactusCurrencyCode;
     } else if (wallet.type === WalletType.CAT) {
       name = wallet.name;
       tail = wallet.meta.assetId;
@@ -140,7 +140,7 @@ function OfferAssetSelector(props: OfferAssetSelectorProps) {
       rows,
       otherRows,
       selectedWalletId,
-      chiaCurrencyCode: currencyCode,
+      cactusCurrencyCode: currencyCode,
     });
   }, [wallets, catList, rows, otherRows]);
 

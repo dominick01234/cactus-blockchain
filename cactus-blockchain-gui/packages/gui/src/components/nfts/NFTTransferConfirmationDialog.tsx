@@ -3,12 +3,12 @@ import { Trans, Plural } from '@lingui/macro';
 import styled from 'styled-components';
 import {
   useCurrencyCode,
-  chiaToMojo,
+  cactusToMojo,
   ConfirmDialog,
   Flex,
   TooltipIcon,
   FormatLargeNumber,
-} from '@chia/core';
+} from '@cactus/core';
 import { Box, Divider, Typography } from '@mui/material';
 
 const StyledTitle = styled(Box)`
@@ -47,7 +47,7 @@ export default function NFTTransferConfirmationDialog(
     confirmColor = 'secondary',
     ...rest
   } = props;
-  const feeInMojos = chiaToMojo(fee || 0);
+  const feeInMojos = cactusToMojo(fee || 0);
   const currencyCode = useCurrencyCode();
 
   return (

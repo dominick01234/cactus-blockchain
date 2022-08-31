@@ -1,8 +1,8 @@
 import React, { useMemo } from 'react';
 import { Trans } from '@lingui/macro';
-import { Back, Flex, LayoutDashboardSub, Loading } from '@chia/core';
-import type { NFTInfo, Wallet } from '@chia/api';
-import { useGetNFTWallets } from '@chia/api-react';
+import { Back, Flex, LayoutDashboardSub, Loading } from '@cactus/core';
+import type { NFTInfo, Wallet } from '@cactus/api';
+import { useGetNFTWallets } from '@cactus/api-react';
 import { Box, Typography } from '@mui/material';
 import { useParams } from 'react-router-dom';
 import NFTPreview from '../NFTPreview';

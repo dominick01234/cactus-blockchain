@@ -2,10 +2,10 @@ from typing import Optional
 
 from typing_extensions import Protocol
 
-from chia.types.blockchain_format.program import Program
-from chia.types.blockchain_format.sized_bytes import bytes32
-from chia.wallet.puzzle_drivers import PuzzleInfo, Solver
-from chia.wallet.uncurried_puzzle import UncurriedPuzzle
+from cactus.types.blockchain_format.program import Program
+from cactus.types.blockchain_format.sized_bytes import bytes32
+from cactus.wallet.puzzle_drivers import PuzzleInfo, Solver
+from cactus.wallet.uncurried_puzzle import UncurriedPuzzle
 
 
 class DriverProtocol(Protocol):

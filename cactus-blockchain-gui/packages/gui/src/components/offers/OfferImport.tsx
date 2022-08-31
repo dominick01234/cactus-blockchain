@@ -8,10 +8,10 @@ import {
   useOpenDialog,
   useSerializedNavigationState,
   useShowError,
-} from '@chia/core';
+} from '@cactus/core';
 import { Button, Grid, Typography } from '@mui/material';
-import { useGetOfferSummaryMutation } from '@chia/api-react';
-import { type OfferSummaryRecord } from '@chia/api';
+import { useGetOfferSummaryMutation } from '@cactus/api-react';
+import { type OfferSummaryRecord } from '@cactus/api';
 import OfferDataEntryDialog from './OfferDataEntryDialog';
 import { offerContainsAssetOfType } from './utils';
 import fs, { Stats } from 'fs';

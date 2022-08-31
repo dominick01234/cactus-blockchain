@@ -8,7 +8,7 @@ import {
   CardStep,
   Flex,
   TextField,
-} from '@chia/core';
+} from '@cactus/core';
 import { Typography } from '@mui/material';
 import useSelectDirectory from '../../../hooks/useSelectDirectory';
 import Plotter from '../../../types/Plotter';

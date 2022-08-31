@@ -1,6 +1,6 @@
 import React from 'react';
 import { Trans } from '@lingui/macro';
-import { Flex, Link, useColorModeValue } from '@chia/core';
+import { Flex, Link, useColorModeValue } from '@cactus/core';
 import { Typography } from '@mui/material';
 import styled from 'styled-components';
 
@@ -47,7 +47,7 @@ export default function OfferHeader(props: OfferHeaderProps) {
           {'This offer is no longer valid. To understand why, click '}
           <Link
             target="_blank"
-            href="https://chialisp.com/docs/tutorials/offers_gui_tutorial/#taker-attempts-to-accept-an-invalid-offer"
+            href="https://cactuslisp.com/docs/tutorials/offers_gui_tutorial/#taker-attempts-to-accept-an-invalid-offer"
           >
             here
           </Link> to learn more.

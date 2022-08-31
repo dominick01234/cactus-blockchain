@@ -1,7 +1,7 @@
 import { useMemo } from 'react';
-import type { Wallet } from '@chia/api';
-import { WalletType } from '@chia/api';
-import { useGetWalletsQuery, useGetWalletBalanceQuery } from '@chia/api-react';
+import type { Wallet } from '@cactus/api';
+import { WalletType } from '@cactus/api';
+import { useGetWalletsQuery, useGetWalletBalanceQuery } from '@cactus/api-react';
 
 export default function useStandardWallet(): {
   loading: boolean;

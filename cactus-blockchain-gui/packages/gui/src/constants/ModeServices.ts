@@ -1,5 +1,5 @@
-import { ServiceName } from '@chia/api';
-import { Mode } from '@chia/core';
+import { ServiceName } from '@cactus/api';
+import { Mode } from '@cactus/core';
 
 export default {
   [Mode.WALLET]: [

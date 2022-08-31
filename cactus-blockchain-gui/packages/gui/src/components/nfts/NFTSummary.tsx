@@ -1,14 +1,14 @@
 import React, { useMemo } from 'react';
 import { t, Trans } from '@lingui/macro';
-import type { NFTAttribute } from '@chia/api';
-import { useGetNFTInfoQuery } from '@chia/api-react';
+import type { NFTAttribute } from '@cactus/api';
+import { useGetNFTInfoQuery } from '@cactus/api-react';
 import {
   CopyToClipboard,
   Flex,
   Loading,
   TooltipIcon,
   truncateValue,
-} from '@chia/core';
+} from '@cactus/core';
 import { Box, Card, CardContent, Typography } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import useNFTMetadata from '../../hooks/useNFTMetadata';

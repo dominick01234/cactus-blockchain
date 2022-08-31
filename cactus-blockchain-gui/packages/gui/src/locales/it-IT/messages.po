@@ -6,13 +6,13 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: @lingui/cli\n"
 "Language: it_IT\n"
-"Project-Id-Version: chia-blockchain\n"
+"Project-Id-Version: cactus-blockchain\n"
 "Report-Msgid-Bugs-To: \n"
 "PO-Revision-Date: 2022-07-27 18:38\n"
 "Last-Translator: \n"
 "Language-Team: Italian\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Crowdin-Project: chia-blockchain\n"
+"X-Crowdin-Project: cactus-blockchain\n"
 "X-Crowdin-Project-ID: 440660\n"
 "X-Crowdin-Language: it\n"
 "X-Crowdin-File: /main/packages/gui/src/locales/en-US/messages.po\n"
@@ -39,7 +39,7 @@ msgid "+ Add a Plot"
 msgstr "+ Aggiungi un Plot"
 
 #: src/components/settings/ProfileAdd.tsx:91
-msgid "<0>Need some XCH?</0>"
+msgid "<0>Need some CAC?</0>"
 msgstr ""
 
 #: src/components/settings/ProfileAdd.tsx:99
@@ -56,8 +56,8 @@ msgstr "Un valore di {0} è raccomandato"
 
 #: src/electron/main.tsx:607
 #: src/electron/main.tsx:694
-msgid "About Chia Blockchain"
-msgstr "Informazioni sulla Blockchain di Chia"
+msgid "About Cactus Blockchain"
+msgstr "Informazioni sulla Blockchain di Cactus"
 
 #: src/components/offers/NFTOfferViewer.tsx:750
 #: src/components/offers/OfferAcceptConfirmationDialog.tsx:23
@@ -123,7 +123,7 @@ msgstr "Aggiungi {currencyCode} dal Faucet"
 
 #: src/components/app/AppKeyringMigrator.tsx:259
 msgid "After your keys are successfully migrated to the new keyring, you may choose to have your keys removed from the old keyring."
-msgstr "Dopo che le chiavi saranno migrate con successo al nuovo keyring, sarà possibile rimuoverle da vecchio"
+msgstr "Dopo che le cactusvi saranno migrate con successo al nuovo keyring, sarà possibile rimuoverle da vecchio"
 
 #: src/components/nfts/gallery/NFTGallerySidebar.tsx:44
 #: src/components/nfts/gallery/NFTGallerySidebar.tsx:73
@@ -211,7 +211,7 @@ msgid "Backup file is used to restore smart wallets."
 msgstr "Il file di backup viene usato per ripristinare gli smart wallet."
 
 #: src/components/settings/ProfileAdd.tsx:103
-msgid "Balance: {standardBalance} XCH"
+msgid "Balance: {standardBalance} CAC"
 msgstr ""
 
 #: src/components/block/Block.jsx:277
@@ -243,8 +243,8 @@ msgid "Block VDF Iterations"
 msgstr "Blocco Iterazioni VDF"
 
 #: src/components/block/Block.jsx:296
-msgid "Block at height {0} in the Chia blockchain"
-msgstr "Blocco all'altezza {0} nella blockchain Chia"
+msgid "Block at height {0} in the Cactus blockchain"
+msgstr "Blocco all'altezza {0} nella blockchain Cactus"
 
 #: src/components/block/Block.jsx:122
 msgid "Block with hash {headerHash}"
@@ -363,12 +363,12 @@ msgid "Check Provenance on Spacescan.io"
 msgstr ""
 
 #: src/electron/main.tsx:604
-msgid "Chia"
-msgstr "Chia"
+msgid "Cactus"
+msgstr "Cactus"
 
 #: src/electron/main.tsx:543
-msgid "Chia Blockchain Wiki"
-msgstr "Wiki della Blockchain Chia"
+msgid "Cactus Blockchain Wiki"
+msgstr "Wiki della Blockchain Cactus"
 
 #: src/components/app/AppSelectMode.tsx:155
 msgid "Choose Farming Mode"
@@ -561,7 +561,7 @@ msgid "Create an Offer"
 msgstr ""
 
 #: src/components/offers/OfferManager.tsx:576
-msgid "Create an offer to exchange assets including XCH, tokens, and NFTs. View an offer to inspect and accept an offer made by another party."
+msgid "Create an offer to exchange assets including CAC, tokens, and NFTs. View an offer to inspect and accept an offer made by another party."
 msgstr ""
 
 #: src/components/offers/OfferManager.tsx:153
@@ -638,7 +638,7 @@ msgstr "Elimina"
 
 #: src/components/app/AppPassPrompt.tsx:110
 msgid "Delete Key"
-msgstr "Elimina Chiave"
+msgstr "Elimina Cactusve"
 
 #: src/components/plot/PlotAction.tsx:24
 #: src/components/plot/queue/PlotQueueActions.tsx:40
@@ -651,11 +651,11 @@ msgstr "Elimina Transazioni non Confermate"
 
 #: src/components/app/AppPassPrompt.tsx:106
 msgid "Deleting key"
-msgstr "Chiave in cancellazione"
+msgstr "Cactusve in cancellazione"
 
 #: src/components/plot/add/PlotAddChoosePlotter.tsx:92
-msgid "Depending on your system configuration, you may find that an alternative plotter produces plots faster than the default Chia Proof of Space plotter. If unsure, use the default Chia Proof of Space plotter."
-msgstr "A seconda della configurazione del tuo sistema, potresti verificare che un plotter alternativo è più rapido del plotter predefinito. Se vi fossero dubbi, si consiglia di utilizzare il plotter standard Chia."
+msgid "Depending on your system configuration, you may find that an alternative plotter produces plots faster than the default Cactus Proof of Space plotter. If unsure, use the default Cactus Proof of Space plotter."
+msgstr "A seconda della configurazione del tuo sistema, potresti verificare che un plotter alternativo è più rapido del plotter predefinito. Se vi fossero dubbi, si consiglia di utilizzare il plotter standard Cactus."
 
 #: src/components/settings/SettingsPanel.tsx:185
 msgid "Derivation Index"
@@ -783,11 +783,11 @@ msgstr ""
 
 #: src/components/app/AppKeyringMigrator.tsx:143
 msgid "Enter a strong passphrase and click Migrate Keys to secure your keys"
-msgstr "Inserisci una Passphrase complessa e fai click su Migrare per mettere al sicuro le tue chiavi"
+msgstr "Inserisci una Passphrase complessa e fai click su Migrare per mettere al sicuro le tue cactusvi"
 
 #: src/components/settings/SetPassphrasePrompt.tsx:158
 msgid "Enter a strong passphrase to secure your keys:"
-msgstr "Inserisci una Passphrase complessa per proteggere le tue chiavi:"
+msgstr "Inserisci una Passphrase complessa per proteggere le tue cactusvi:"
 
 #: src/components/settings/RemovePassphrasePrompt.tsx:121
 msgid "Enter your passphrase:"
@@ -821,7 +821,7 @@ msgid "Exclude final directory"
 msgstr "Escludi directory finale"
 
 #: src/components/nfts/gallery/NFTGalleryHero.tsx:17
-msgid "Explore the Chia ecosystem; discover and trade great NFTs"
+msgid "Explore the Cactus ecosystem; discover and trade great NFTs"
 msgstr ""
 
 #: src/components/offers/utils.ts:175
@@ -847,7 +847,7 @@ msgstr "Errore nell'aggiornare la tua Passphrase: {0}"
 
 #: src/components/plot/add/PlotAddNumberOfPlots.tsx:297
 msgid "Farmer Public Key"
-msgstr "Chiave pubblica del farmer"
+msgstr "Cactusve pubblica del farmer"
 
 #: src/components/block/Block.jsx:245
 msgid "Farmer Puzzle Hash"
@@ -1111,7 +1111,7 @@ msgstr ""
 
 #: src/components/offers/NFTOfferEditor.tsx:102
 #: src/components/offers/OfferEditorConditionsPanel.tsx:463
-msgid "Including a fee in the offer can help expedite the transaction when the offer is accepted. The recommended minimum fee is 0.000005 XCH (5,000,000 mojos)"
+msgid "Including a fee in the offer can help expedite the transaction when the offer is accepted. The recommended minimum fee is 0.000005 CAC (5,000,000 mojos)"
 msgstr ""
 
 #: src/components/farm/FarmLatestBlockChallenges.tsx:19
@@ -1148,7 +1148,7 @@ msgstr "Stato non valido"
 
 #: src/components/plotNFT/PlotNFTGetPoolLoginLinkDialog.tsx:66
 msgid "It is a one-time login link that can be used to log in to a pool's website. It contains a signature using the farmer's key from the plot NFT. Not all pools support this feature."
-msgstr "Si tratta di un collegamento di accesso una tantum che può essere utilizzato per accedere al sito web di una pool. Contiene una firma che utilizza la chiave del farmer dal plot NFT. Non tutte le pool supportano questa funzione."
+msgstr "Si tratta di un collegamento di accesso una tantum che può essere utilizzato per accedere al sito web di una pool. Contiene una firma che utilizza la cactusve del farmer dal plot NFT. Non tutte le pool supportano questa funzione."
 
 #: src/components/plotNFT/PlotNFTCard.tsx:402
 msgid "Join Pool"
@@ -1163,16 +1163,16 @@ msgid "Join a Pool"
 msgstr "Unisciti ad una Pool"
 
 #: src/components/plot/add/PlotAddNFT.tsx:49
-msgid "Join a pool and get consistent XCH farming rewards. The average returns are the same, but it is much less volatile."
-msgstr "Unisciti a una pool e ottieni ricompense continue per il farming in XCH. I rendimenti medi sono gli stessi, ma sono molto meno volatili."
+msgid "Join a pool and get consistent CAC farming rewards. The average returns are the same, but it is much less volatile."
+msgstr "Unisciti a una pool e ottieni ricompense continue per il farming in CAC. I rendimenti medi sono gli stessi, ma sono molto meno volatili."
 
 #: src/components/plotNFT/PlotNFTAdd.tsx:63
-msgid "Join a pool and get consistent XCH farming rewards. The average returns are the same, but it is much less volatile. Assign plots to a plot NFT. You can easily switch pools without having to re-plot."
-msgstr "Unisciti a una pool e ottieni ricompense continue per il farming in XCH. I rendimenti medi sono gli stessi, ma sono molto meno volatili. Assegna dei plot ad un pool NFT. È possibile cambiare facilmente pool senza dover ri-plottare."
+msgid "Join a pool and get consistent CAC farming rewards. The average returns are the same, but it is much less volatile. Assign plots to a plot NFT. You can easily switch pools without having to re-plot."
+msgstr "Unisciti a una pool e ottieni ricompense continue per il farming in CAC. I rendimenti medi sono gli stessi, ma sono molto meno volatili. Assegna dei plot ad un pool NFT. È possibile cambiare facilmente pool senza dover ri-plottare."
 
 #: src/components/plot/add/PlotAddNFT.tsx:138
-msgid "Join a pool and get more consistent XCH farming rewards. Create a plot NFT and assign your new plots to a group."
-msgstr "Unisciti a una pool e ottieni ricompense continue per il farming in XCH. Crea un plot NFT e assegna i tuoi nuovi plot ad un gruppo."
+msgid "Join a pool and get more consistent CAC farming rewards. Create a plot NFT and assign your new plots to a group."
+msgstr "Unisciti a una pool e ottieni ricompense continue per il farming in CAC. Crea un plot NFT e assegna i tuoi nuovi plot ad un gruppo."
 
 #: src/components/app/AppSelectMode.tsx:143
 msgid "Join farming pools"
@@ -1328,7 +1328,7 @@ msgstr "Migra Keyring"
 
 #: src/components/app/AppKeyringMigrator.tsx:277
 msgid "Migrate Keys"
-msgstr "Migra Chiavi"
+msgstr "Migra Cactusvi"
 
 #: src/components/app/AppKeyringMigrator.tsx:136
 msgid "Migration required"
@@ -1356,7 +1356,7 @@ msgstr "Minuti"
 
 #: src/components/plot/PlotHarvester.tsx:105
 msgid "Missing Keys"
-msgstr "Chiavi mancanti"
+msgstr "Cactusvi mancanti"
 
 #: src/components/plot/add/PlotAddNumberOfPlots.tsx:118
 msgid "More memory slightly increases speed"
@@ -1432,7 +1432,7 @@ msgid "NFT details not available"
 msgstr ""
 
 #: src/components/offers/NFTOfferEditor.tsx:256
-#~ msgid "NFT for XCH"
+#~ msgid "NFT for CAC"
 #~ msgstr ""
 
 #: src/components/offers/NFTOfferPreview.tsx:56
@@ -1490,7 +1490,7 @@ msgstr "Ancora nessun plot"
 #: src/components/block/FarmManageFarmingRewards.tsx:135
 #: src/components/farm/FarmManageFarmingRewards.tsx:148
 msgid "No private keys for one or both addresses. Safe only if you are sending rewards to another wallet."
-msgstr "Nessuna chiave privata per uno o entrambi gli indirizzi. Sicuro solo se stai inviando ricompense ad un altro wallet."
+msgstr "Nessuna cactusve privata per uno o entrambi gli indirizzi. Sicuro solo se stai inviando ricompense ad un altro wallet."
 
 #: src/components/offers/OfferViewer.tsx:176
 msgid "Node Count"
@@ -1544,8 +1544,8 @@ msgstr "Non connesso"
 
 #: src/components/block/FarmManageFarmingRewards.tsx:163
 #: src/components/farm/FarmManageFarmingRewards.tsx:176
-msgid "Note that this does not change your pooling payout addresses. This only affects old format plots, and the 0.25XCH reward for pooling plots."
-msgstr "Nota che questo non cambia gli indirizzi di pagamento del pooling. Questo influenza solo i vecchi plot col vecchio formato, e la ricompensa di 0.25XCH per il pooling dei plot."
+msgid "Note that this does not change your pooling payout addresses. This only affects old format plots, and the 0.25CAC reward for pooling plots."
+msgstr "Nota che questo non cambia gli indirizzi di pagamento del pooling. Questo influenza solo i vecchi plot col vecchio formato, e la ricompensa di 0.25CAC per il pooling dei plot."
 
 #: src/components/plotNFT/PlotExternalNFTCard.tsx:117
 #: src/components/plotNFT/PlotNFTCard.tsx:158
@@ -1686,7 +1686,7 @@ msgstr "La protezione Passphrase è stata abilitata"
 
 #: src/components/settings/SettingsPanel.tsx:100
 msgid "Passphrase support requires migrating your keys to a new keyring"
-msgstr "Il supporto alla Passphrase richiede la migrazione delle chiavi a un nuovo Keyring"
+msgstr "Il supporto alla Passphrase richiede la migrazione delle cactusvi a un nuovo Keyring"
 
 #: src/components/offers/OfferDataEntryDialog.tsx:40
 #: src/components/offers/OfferImport.tsx:177
@@ -1802,7 +1802,7 @@ msgstr "Id Plot"
 
 #: src/components/plot/PlotHarvesterPlots.tsx:46
 msgid "Plot Key"
-msgstr "Chiave Plot"
+msgstr "Cactusve Plot"
 
 #: src/components/plot/add/PlotAddNumberOfPlots.tsx:318
 msgid "Plot NFT Plot Target Address"
@@ -1819,7 +1819,7 @@ msgstr "Il Plot NFT con p2_singleton_puzzle_hash {plotNFTId} non esiste"
 
 #: src/components/block/Block.jsx:237
 msgid "Plot Public Key"
-msgstr "Chiave Pubblica del Plot"
+msgstr "Cactusve Pubblica del Plot"
 
 #: src/components/plot/add/PlotAddChooseSize.tsx:93
 msgid "Plot Size"
@@ -1852,11 +1852,11 @@ msgstr "Plot che hanno passato il filtro"
 
 #: src/components/plot/card/PlotCardNotFound.tsx:11
 msgid "Plots With Missing Keys"
-msgstr "Plot con chiavi mancanti"
+msgstr "Plot con cactusvi mancanti"
 
 #: src/components/plot/overview/PlotOverviewHero.tsx:33
-msgid "Plots are allocated space on your hard drive used to farm and earn Chia.<0>Learn more</0>"
-msgstr "I plot hanno allocato spazio nel tuo hard disk per coltivare e guadagnare Chia.<0>Per saperne di piu<0>"
+msgid "Plots are allocated space on your hard drive used to farm and earn Cactus.<0>Learn more</0>"
+msgstr "I plot hanno allocato spazio nel tuo hard disk per coltivare e guadagnare Cactus.<0>Per saperne di piu<0>"
 
 #: src/components/plot/add/PlotAddChoosePlotter.tsx:103
 msgid "Plotter"
@@ -1900,7 +1900,7 @@ msgstr "Indirizzo Contratto Pool"
 
 #: src/components/plot/PlotHarvesterPlots.tsx:52
 msgid "Pool Key"
-msgstr "Chiave Pool"
+msgstr "Cactusve Pool"
 
 #: src/components/plotNFT/PlotNFTGetPoolLoginLinkDialog.tsx:53
 msgid "Pool Login Link"
@@ -1913,7 +1913,7 @@ msgstr "Istruzioni Di Pagamento Pool"
 #: src/components/block/Block.jsx:241
 #: src/components/plot/add/PlotAddNumberOfPlots.tsx:308
 msgid "Pool Public Key"
-msgstr "Chiave Pubblica Pool"
+msgstr "Cactusve Pubblica Pool"
 
 #: src/components/block/Block.jsx:252
 msgid "Pool Puzzle Hash"
@@ -2051,7 +2051,7 @@ msgid "Recommended"
 msgstr "Raccomandato"
 
 #: src/components/settings/ProfileAdd.tsx:118
-msgid "Recommended: 0.000005 XCH"
+msgid "Recommended: 0.000005 CAC"
 msgstr ""
 
 #: src/components/plot/PlotHeader.tsx:75
@@ -2080,7 +2080,7 @@ msgstr "Rimuovi Passphrase"
 
 #: src/components/app/AppKeyringMigrator.tsx:255
 msgid "Remove keys from old keyring upon successful migration"
-msgstr "Rimuovere le chiavi dal vecchio keyring al momento della migrazione riuscita"
+msgstr "Rimuovere le cactusvi dal vecchio keyring al momento della migrazione riuscita"
 
 #: src/components/plot/queue/PlotQueueIndicator.tsx:36
 msgid "Removing"
@@ -2147,7 +2147,7 @@ msgstr "Posizione seconda cartella temporanea"
 
 #: src/components/settings/SettingsPanel.tsx:102
 msgid "Secure your keychain using a strong passphrase"
-msgstr "Proteggi il tuo portachiavi usando una Passphrase complessa"
+msgstr "Proteggi il tuo portacactusvi usando una Passphrase complessa"
 
 #: src/components/plot/add/PlotAddSelectTemporaryDirectory.tsx:100
 msgid "Select 2nd Temporary Directory"
@@ -2201,8 +2201,8 @@ msgid "Self Pooling"
 msgstr "Self Pooling"
 
 #: src/components/plotNFT/select/PlotNFTSelectBase.tsx:104
-msgid "Self pool. When you win a block you will earn XCH rewards."
-msgstr "Self pool. Quando vinci un blocco, guadagnerai ricompense in XCH."
+msgid "Self pool. When you win a block you will earn CAC rewards."
+msgstr "Self pool. Quando vinci un blocco, guadagnerai ricompense in CAC."
 
 #: src/components/offers/NFTOfferEditor.tsx:367
 msgid "Sell an NFT"
@@ -2292,8 +2292,8 @@ msgid "Skips adding a final directory to harvester for farming"
 msgstr "Salta l'aggiunta di una cartella finale all'harvester per il farming"
 
 #: src/components/pool/PoolHero.tsx:21
-msgid "Smooth out your XCH farming rewards by joining a pool."
-msgstr "Riduci la fluttuazione nelle tue ricompense in XCH da farming unendoti ad una piscina."
+msgid "Smooth out your CAC farming rewards by joining a pool."
+msgstr "Riduci la fluttuazione nelle tue ricompense in CAC da farming unendoti ad una piscina."
 
 #: src/components/plot/add/PlotAddNumberOfPlots.tsx:138
 msgid "Specify a value of 0 to use all available threads"
@@ -2325,8 +2325,8 @@ msgid "Status"
 msgstr "Stato"
 
 #: src/components/app/AppSelectMode.tsx:84
-msgid "Store and Send XCH"
-msgstr "Salva e invia XCH"
+msgid "Store and Send CAC"
+msgstr "Salva e invia CAC"
 
 #: src/components/app/AppPassPrompt.tsx:114
 msgid "Submit"
@@ -2393,7 +2393,7 @@ msgid "The NFT transfer transaction has been successfully submitted to the block
 msgstr ""
 
 #: src/components/settings/SettingsPanel.tsx:187
-msgid "The derivation index sets the range of wallet addresses that the wallet scans the blockchain for. This number is generally higher if you have a lot of transactions or canceled offers for XCH, CATs, or NFTs. If you believe your balance is incorrect because it’s missing coins, then increasing the derivation index could help the wallet include the missing coins in the balance total."
+msgid "The derivation index sets the range of wallet addresses that the wallet scans the blockchain for. This number is generally higher if you have a lot of transactions or canceled offers for CAC, CATs, or NFTs. If you believe your balance is incorrect because it’s missing coins, then increasing the derivation index could help the wallet include the missing coins in the balance total."
 msgstr ""
 
 #: src/components/farm/FarmFullNodeConnections.tsx:95
@@ -2467,8 +2467,8 @@ msgid "The total transactions fees in this block. Rewarded to the farmer."
 msgstr "Il totale delle tasse di transazione in questo blocco. Date come ricompensa al coltivatore."
 
 #: src/components/plotNFT/PlotNFTPayoutInstructionsDialog.tsx:106
-msgid "These are the instructions for how the farmer wants to get paid. By default this will be an XCH address, but it can be set to any string with a size of less than 1024 characters, so it can represent another blockchain or payment system identifier."
-msgstr "Queste sono le istruzioni per il modo in cui il farmer vuole farsi pagare. Per impostazione predefinita questo sarà un indirizzo XCH, ma può essere impostato su qualsiasi stringa con una dimensione inferiore a 1024 caratteri, in modo che possa rappresentare un altro identificatore blockchain o sistema di pagamento."
+msgid "These are the instructions for how the farmer wants to get paid. By default this will be an CAC address, but it can be set to any string with a size of less than 1024 characters, so it can represent another blockchain or payment system identifier."
+msgstr "Queste sono le istruzioni per il modo in cui il farmer vuole farsi pagare. Per impostazione predefinita questo sarà un indirizzo CAC, ma può essere impostato su qualsiasi stringa con una dimensione inferiore a 1024 caratteri, in modo che possa rappresentare un altro identificatore blockchain o sistema di pagamento."
 
 #: src/components/plot/card/PlotCardPlotsFailedToOpen.tsx:15
 msgid "These plots are invalid, you might want to delete them."
@@ -2537,7 +2537,7 @@ msgstr ""
 
 #: src/components/plotNFT/PlotExternalNFTCard.tsx:307
 msgid "This plot NFT is assigned to a different key. You can still create plots for this plot NFT, but you can not make changes."
-msgstr "Questo plot NFT è assegnato a una chiave diversa. Puoi ancora creare dei plot per questo plot NFT, ma non puoi apportare modifiche."
+msgstr "Questo plot NFT è assegnato a una cactusve diversa. Puoi ancora creare dei plot per questo plot NFT, ma non puoi apportare modifiche."
 
 #: src/components/farm/FarmLastAttemptedProof.tsx:47
 msgid "This table shows you the last time your farm attempted to win a block challenge. <0>Learn more</0>"
@@ -2590,9 +2590,9 @@ msgstr ""
 msgid "Total Amount Requested"
 msgstr ""
 
-#: src/components/farm/card/FarmCardTotalChiaFarmed.tsx:27
-msgid "Total Chia Farmed"
-msgstr "Totale Chia guadagnati"
+#: src/components/farm/card/FarmCardTotalCactusFarmed.tsx:27
+msgid "Total Cactus Farmed"
+msgstr "Totale Cactus guadagnati"
 
 #: src/components/plot/card/PlotCardTotalHarvesters.tsx:11
 msgid "Total Harvesters"
@@ -2845,7 +2845,7 @@ msgid "Would you like to transfer the specified NFT to a new owner?"
 msgstr ""
 
 #: src/components/offers/NFTOfferEditor.tsx:261
-#~ msgid "XCH for NFT"
+#~ msgid "CAC for NFT"
 #~ msgstr ""
 
 #: src/components/plot/add/PlotAddChooseSize.tsx:48
@@ -2943,15 +2943,15 @@ msgstr "Il tuo Keyring è bloccato"
 
 #: src/components/app/AppKeyringMigrator.tsx:69
 #~ msgid "Your keys have not been migrated to a new keyring. You will be unable to create new keys or delete existing keys until migration completes. Are you sure you want to skip migrating your keys?"
-#~ msgstr "Le chiavi non sono state migrate ad un nuovo keyring. Non sarà possibile creare nuove chiavi o eliminare le chiavi esistenti fino al completamento della migrazione. Vuoi migrare le tue chiavi ora?"
+#~ msgstr "Le cactusvi non sono state migrate ad un nuovo keyring. Non sarà possibile creare nuove cactusvi o eliminare le cactusvi esistenti fino al completamento della migrazione. Vuoi migrare le tue cactusvi ora?"
 
 #: src/components/app/AppKeyringMigrator.tsx:112
 #~ msgid "Your keys need to be migrated to a new keyring that is optionally secured by a master passphrase."
-#~ msgstr "Le chiavi devono essere migrate a un nuovo keyring che è opzionalmente protetto da una master passphrase "
+#~ msgstr "Le cactusvi devono essere migrate a un nuovo keyring che è opzionalmente protetto da una master passphrase "
 
 #: src/components/app/AppKeyringMigrator.tsx:118
 #~ msgid "Your keys need to be migrated to a new keyring that is secured by a master passphrase."
-#~ msgstr "Le chiavi devono essere migrate a un nuovo keyring che è opzionalmente protetto da una master passphrase "
+#~ msgstr "Le cactusvi devono essere migrate a un nuovo keyring che è opzionalmente protetto da una master passphrase "
 
 #: src/components/offers/OfferShareDialog.tsx:1023
 msgid "Your offer has been successfully posted to Keybase."
@@ -2964,8 +2964,8 @@ msgstr ""
 #: src/components/app/AppKeyringMigrator.tsx:239
 #: src/components/settings/ChangePassphrasePrompt.tsx:271
 #: src/components/settings/SetPassphrasePrompt.tsx:242
-msgid "Your passphrase can be stored in your system's secure credential store. Chia will be able to access your keys without prompting for your passphrase."
-msgstr "La tua passphrase può essere memorizzata nell'archivio credenziali sicuro del tuo sistema. Chia sarà in grado di accedere alle tue chiavi senza richiedere la tua passphrase."
+msgid "Your passphrase can be stored in your system's secure credential store. Cactus will be able to access your keys without prompting for your passphrase."
+msgstr "La tua passphrase può essere memorizzata nell'archivio credenziali sicuro del tuo sistema. Cactus sarà in grado di accedere alle tue cactusvi senza richiedere la tua passphrase."
 
 #: src/components/settings/SettingsPanel.tsx:61
 msgid "Your passphrase has been set"

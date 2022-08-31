@@ -3,15 +3,15 @@ from typing import List, Iterator, Optional
 
 from blspy import G2Element
 
-from chia.types.blockchain_format.coin import Coin, coin_as_list
-from chia.types.blockchain_format.program import Program, INFINITE_COST
-from chia.types.blockchain_format.sized_bytes import bytes32
-from chia.types.condition_opcodes import ConditionOpcode
-from chia.types.spend_bundle import CoinSpend, SpendBundle
-from chia.util.condition_tools import conditions_dict_for_solution
-from chia.wallet.lineage_proof import LineageProof
-from chia.wallet.puzzles.cat_loader import CAT_MOD
-from chia.wallet.uncurried_puzzle import UncurriedPuzzle
+from cactus.types.blockchain_format.coin import Coin, coin_as_list
+from cactus.types.blockchain_format.program import Program, INFINITE_COST
+from cactus.types.blockchain_format.sized_bytes import bytes32
+from cactus.types.condition_opcodes import ConditionOpcode
+from cactus.types.spend_bundle import CoinSpend, SpendBundle
+from cactus.util.condition_tools import conditions_dict_for_solution
+from cactus.wallet.lineage_proof import LineageProof
+from cactus.wallet.puzzles.cat_loader import CAT_MOD
+from cactus.wallet.uncurried_puzzle import UncurriedPuzzle
 
 NULL_SIGNATURE = G2Element()
 
@@ -85,7 +85,7 @@ def next_info_for_spendable_cat(spendable_cat: SpendableCAT) -> Program:
     c = spendable_cat.coin
     list = [c.parent_coin_info, spendable_cat.inner_puzzle.get_tree_hash(), c.amount]
     # ignoring hint error here for:
-    # https://github.com/Chia-Network/clvm/pull/102
+    # https://github.com/Cactus-Network/clvm/pull/102
     return Program.to(list)  # type: ignore[no-any-return]
 
 

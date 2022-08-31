@@ -1,8 +1,8 @@
 {
-  "name": "@chia/api",
-  "author": "Chia Network <hello@chia.net> (https://chia.net/)",
-  "description": "Chia API Library",
-  "productName": "Chia Blockchain",
+  "name": "@cactus/api",
+  "author": "Cactus Network <hello@cactus-network.net> (https://cactus-network.net/)",
+  "description": "Cactus API Library",
+  "productName": "Cactus Blockchain",
   "private": true,
   "version": "1.0.0",
   "engines": {

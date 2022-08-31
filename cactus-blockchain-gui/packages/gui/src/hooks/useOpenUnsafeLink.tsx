@@ -7,7 +7,7 @@ import {
   Flex,
   useOpenDialog,
   useOpenExternal,
-} from '@chia/core';
+} from '@cactus/core';
 import {
   Checkbox,
   FormControlLabel,

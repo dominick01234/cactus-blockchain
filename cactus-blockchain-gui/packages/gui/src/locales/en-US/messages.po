@@ -6,13 +6,13 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: @lingui/cli\n"
 "Language: en_US\n"
-"Project-Id-Version: chia-blockchain\n"
+"Project-Id-Version: cactus-blockchain\n"
 "Report-Msgid-Bugs-To: \n"
 "PO-Revision-Date: 2022-08-04 12:03\n"
 "Last-Translator: \n"
 "Language-Team: English\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Crowdin-Project: chia-blockchain\n"
+"X-Crowdin-Project: cactus-blockchain\n"
 "X-Crowdin-Project-ID: 440660\n"
 "X-Crowdin-Language: en\n"
 "X-Crowdin-File: /main/packages/gui/src/locales/en-US/messages.po\n"
@@ -39,8 +39,8 @@ msgid "+ Add a Plot"
 msgstr "+ Add a Plot"
 
 #: src/components/settings/ProfileAdd.tsx:91
-msgid "<0>Need some XCH?</0>"
-msgstr "<0>Need some XCH?</0>"
+msgid "<0>Need some CAC?</0>"
+msgstr "<0>Need some CAC?</0>"
 
 #: src/components/settings/ProfileAdd.tsx:99
 msgid "<0>Use one (1) mojo to create a Profile.</0>"
@@ -56,8 +56,8 @@ msgstr "A value of {0} is recommended"
 
 #: src/electron/main.tsx:607
 #: src/electron/main.tsx:694
-msgid "About Chia Blockchain"
-msgstr "About Chia Blockchain"
+msgid "About Cactus Blockchain"
+msgstr "About Cactus Blockchain"
 
 #: src/components/offers/NFTOfferViewer.tsx:750
 #: src/components/offers/OfferAcceptConfirmationDialog.tsx:23
@@ -211,8 +211,8 @@ msgid "Backup file is used to restore smart wallets."
 msgstr "Backup file is used to restore smart wallets."
 
 #: src/components/settings/ProfileAdd.tsx:103
-msgid "Balance: {standardBalance} XCH"
-msgstr "Balance: {standardBalance} XCH"
+msgid "Balance: {standardBalance} CAC"
+msgstr "Balance: {standardBalance} CAC"
 
 #: src/components/block/Block.jsx:277
 msgid "Base Farmer Reward Amount"
@@ -243,8 +243,8 @@ msgid "Block VDF Iterations"
 msgstr "Block VDF Iterations"
 
 #: src/components/block/Block.jsx:296
-msgid "Block at height {0} in the Chia blockchain"
-msgstr "Block at height {0} in the Chia blockchain"
+msgid "Block at height {0} in the Cactus blockchain"
+msgstr "Block at height {0} in the Cactus blockchain"
 
 #: src/components/block/Block.jsx:122
 msgid "Block with hash {headerHash}"
@@ -363,12 +363,12 @@ msgid "Check Provenance on Spacescan.io"
 msgstr "Check Provenance on Spacescan.io"
 
 #: src/electron/main.tsx:604
-msgid "Chia"
-msgstr "Chia"
+msgid "Cactus"
+msgstr "Cactus"
 
 #: src/electron/main.tsx:543
-msgid "Chia Blockchain Wiki"
-msgstr "Chia Blockchain Wiki"
+msgid "Cactus Blockchain Wiki"
+msgstr "Cactus Blockchain Wiki"
 
 #: src/components/app/AppSelectMode.tsx:155
 msgid "Choose Farming Mode"
@@ -561,8 +561,8 @@ msgid "Create an Offer"
 msgstr "Create an Offer"
 
 #: src/components/offers/OfferManager.tsx:576
-msgid "Create an offer to exchange assets including XCH, tokens, and NFTs. View an offer to inspect and accept an offer made by another party."
-msgstr "Create an offer to exchange assets including XCH, tokens, and NFTs. View an offer to inspect and accept an offer made by another party."
+msgid "Create an offer to exchange assets including CAC, tokens, and NFTs. View an offer to inspect and accept an offer made by another party."
+msgstr "Create an offer to exchange assets including CAC, tokens, and NFTs. View an offer to inspect and accept an offer made by another party."
 
 #: src/components/offers/OfferManager.tsx:153
 msgid "Creates and submits a transaction on the blockchain that cancels the offer"
@@ -654,8 +654,8 @@ msgid "Deleting key"
 msgstr "Deleting key"
 
 #: src/components/plot/add/PlotAddChoosePlotter.tsx:92
-msgid "Depending on your system configuration, you may find that an alternative plotter produces plots faster than the default Chia Proof of Space plotter. If unsure, use the default Chia Proof of Space plotter."
-msgstr "Depending on your system configuration, you may find that an alternative plotter produces plots faster than the default Chia Proof of Space plotter. If unsure, use the default Chia Proof of Space plotter."
+msgid "Depending on your system configuration, you may find that an alternative plotter produces plots faster than the default Cactus Proof of Space plotter. If unsure, use the default Cactus Proof of Space plotter."
+msgstr "Depending on your system configuration, you may find that an alternative plotter produces plots faster than the default Cactus Proof of Space plotter. If unsure, use the default Cactus Proof of Space plotter."
 
 #: src/components/settings/SettingsPanel.tsx:185
 msgid "Derivation Index"
@@ -821,8 +821,8 @@ msgid "Exclude final directory"
 msgstr "Exclude final directory"
 
 #: src/components/nfts/gallery/NFTGalleryHero.tsx:17
-msgid "Explore the Chia ecosystem; discover and trade great NFTs"
-msgstr "Explore the Chia ecosystem; discover and trade great NFTs"
+msgid "Explore the Cactus ecosystem; discover and trade great NFTs"
+msgstr "Explore the Cactus ecosystem; discover and trade great NFTs"
 
 #: src/components/offers/utils.ts:175
 #: src/components/plot/PlotHarvester.tsx:118
@@ -1111,8 +1111,8 @@ msgstr "In exchange for:"
 
 #: src/components/offers/NFTOfferEditor.tsx:102
 #: src/components/offers/OfferEditorConditionsPanel.tsx:463
-msgid "Including a fee in the offer can help expedite the transaction when the offer is accepted. The recommended minimum fee is 0.000005 XCH (5,000,000 mojos)"
-msgstr "Including a fee in the offer can help expedite the transaction when the offer is accepted. The recommended minimum fee is 0.000005 XCH (5,000,000 mojos)"
+msgid "Including a fee in the offer can help expedite the transaction when the offer is accepted. The recommended minimum fee is 0.000005 CAC (5,000,000 mojos)"
+msgstr "Including a fee in the offer can help expedite the transaction when the offer is accepted. The recommended minimum fee is 0.000005 CAC (5,000,000 mojos)"
 
 #: src/components/farm/FarmLatestBlockChallenges.tsx:19
 msgid "Index"
@@ -1167,16 +1167,16 @@ msgid "Join a Pool"
 msgstr "Join a Pool"
 
 #: src/components/plot/add/PlotAddNFT.tsx:49
-msgid "Join a pool and get consistent XCH farming rewards. The average returns are the same, but it is much less volatile."
-msgstr "Join a pool and get consistent XCH farming rewards. The average returns are the same, but it is much less volatile."
+msgid "Join a pool and get consistent CAC farming rewards. The average returns are the same, but it is much less volatile."
+msgstr "Join a pool and get consistent CAC farming rewards. The average returns are the same, but it is much less volatile."
 
 #: src/components/plotNFT/PlotNFTAdd.tsx:63
-msgid "Join a pool and get consistent XCH farming rewards. The average returns are the same, but it is much less volatile. Assign plots to a plot NFT. You can easily switch pools without having to re-plot."
-msgstr "Join a pool and get consistent XCH farming rewards. The average returns are the same, but it is much less volatile. Assign plots to a plot NFT. You can easily switch pools without having to re-plot."
+msgid "Join a pool and get consistent CAC farming rewards. The average returns are the same, but it is much less volatile. Assign plots to a plot NFT. You can easily switch pools without having to re-plot."
+msgstr "Join a pool and get consistent CAC farming rewards. The average returns are the same, but it is much less volatile. Assign plots to a plot NFT. You can easily switch pools without having to re-plot."
 
 #: src/components/plot/add/PlotAddNFT.tsx:138
-msgid "Join a pool and get more consistent XCH farming rewards. Create a plot NFT and assign your new plots to a group."
-msgstr "Join a pool and get more consistent XCH farming rewards. Create a plot NFT and assign your new plots to a group."
+msgid "Join a pool and get more consistent CAC farming rewards. Create a plot NFT and assign your new plots to a group."
+msgstr "Join a pool and get more consistent CAC farming rewards. Create a plot NFT and assign your new plots to a group."
 
 #: src/components/app/AppSelectMode.tsx:143
 msgid "Join farming pools"
@@ -1436,8 +1436,8 @@ msgid "NFT details not available"
 msgstr "NFT details not available"
 
 #: src/components/offers/NFTOfferEditor.tsx:256
-#~ msgid "NFT for XCH"
-#~ msgstr "NFT for XCH"
+#~ msgid "NFT for CAC"
+#~ msgstr "NFT for CAC"
 
 #: src/components/offers/NFTOfferPreview.tsx:56
 msgid "NFT identifier does not reference a valid NFT coin."
@@ -1548,8 +1548,8 @@ msgstr "Not connected"
 
 #: src/components/block/FarmManageFarmingRewards.tsx:163
 #: src/components/farm/FarmManageFarmingRewards.tsx:176
-msgid "Note that this does not change your pooling payout addresses. This only affects old format plots, and the 0.25XCH reward for pooling plots."
-msgstr "Note that this does not change your pooling payout addresses. This only affects old format plots, and the 0.25XCH reward for pooling plots."
+msgid "Note that this does not change your pooling payout addresses. This only affects old format plots, and the 0.25CAC reward for pooling plots."
+msgstr "Note that this does not change your pooling payout addresses. This only affects old format plots, and the 0.25CAC reward for pooling plots."
 
 #: src/components/plotNFT/PlotExternalNFTCard.tsx:117
 #: src/components/plotNFT/PlotNFTCard.tsx:158
@@ -1859,8 +1859,8 @@ msgid "Plots With Missing Keys"
 msgstr "Plots with Missing Keys"
 
 #: src/components/plot/overview/PlotOverviewHero.tsx:33
-msgid "Plots are allocated space on your hard drive used to farm and earn Chia.<0>Learn more</0>"
-msgstr "Plots are allocated space on your hard drive used to farm and earn Chia.<0>Learn more</0>"
+msgid "Plots are allocated space on your hard drive used to farm and earn Cactus.<0>Learn more</0>"
+msgstr "Plots are allocated space on your hard drive used to farm and earn Cactus.<0>Learn more</0>"
 
 #: src/components/plot/add/PlotAddChoosePlotter.tsx:103
 msgid "Plotter"
@@ -2055,8 +2055,8 @@ msgid "Recommended"
 msgstr "Recommended"
 
 #: src/components/settings/ProfileAdd.tsx:118
-msgid "Recommended: 0.000005 XCH"
-msgstr "Recommended: 0.000005 XCH"
+msgid "Recommended: 0.000005 CAC"
+msgstr "Recommended: 0.000005 CAC"
 
 #: src/components/plot/PlotHeader.tsx:75
 #: src/components/plot/overview/PlotOverviewHero.tsx:59
@@ -2205,8 +2205,8 @@ msgid "Self Pooling"
 msgstr "Self Pooling"
 
 #: src/components/plotNFT/select/PlotNFTSelectBase.tsx:104
-msgid "Self pool. When you win a block you will earn XCH rewards."
-msgstr "Self pool. When you win a block you will earn XCH rewards."
+msgid "Self pool. When you win a block you will earn CAC rewards."
+msgstr "Self pool. When you win a block you will earn CAC rewards."
 
 #: src/components/offers/NFTOfferEditor.tsx:367
 msgid "Sell an NFT"
@@ -2296,8 +2296,8 @@ msgid "Skips adding a final directory to harvester for farming"
 msgstr "Skips adding a final directory to harvester for farming"
 
 #: src/components/pool/PoolHero.tsx:21
-msgid "Smooth out your XCH farming rewards by joining a pool."
-msgstr "Smooth out your XCH farming rewards by joining a pool."
+msgid "Smooth out your CAC farming rewards by joining a pool."
+msgstr "Smooth out your CAC farming rewards by joining a pool."
 
 #: src/components/plot/add/PlotAddNumberOfPlots.tsx:138
 msgid "Specify a value of 0 to use all available threads"
@@ -2329,8 +2329,8 @@ msgid "Status"
 msgstr "Status"
 
 #: src/components/app/AppSelectMode.tsx:84
-msgid "Store and Send XCH"
-msgstr "Store and Send XCH"
+msgid "Store and Send CAC"
+msgstr "Store and Send CAC"
 
 #: src/components/app/AppPassPrompt.tsx:114
 msgid "Submit"
@@ -2397,8 +2397,8 @@ msgid "The NFT transfer transaction has been successfully submitted to the block
 msgstr "The NFT transfer transaction has been successfully submitted to the blockchain."
 
 #: src/components/settings/SettingsPanel.tsx:187
-msgid "The derivation index sets the range of wallet addresses that the wallet scans the blockchain for. This number is generally higher if you have a lot of transactions or canceled offers for XCH, CATs, or NFTs. If you believe your balance is incorrect because it’s missing coins, then increasing the derivation index could help the wallet include the missing coins in the balance total."
-msgstr "The derivation index sets the range of wallet addresses that the wallet scans the blockchain for. This number is generally higher if you have a lot of transactions or canceled offers for XCH, CATs, or NFTs. If you believe your balance is incorrect because it’s missing coins, then increasing the derivation index could help the wallet include the missing coins in the balance total."
+msgid "The derivation index sets the range of wallet addresses that the wallet scans the blockchain for. This number is generally higher if you have a lot of transactions or canceled offers for CAC, CATs, or NFTs. If you believe your balance is incorrect because it’s missing coins, then increasing the derivation index could help the wallet include the missing coins in the balance total."
+msgstr "The derivation index sets the range of wallet addresses that the wallet scans the blockchain for. This number is generally higher if you have a lot of transactions or canceled offers for CAC, CATs, or NFTs. If you believe your balance is incorrect because it’s missing coins, then increasing the derivation index could help the wallet include the missing coins in the balance total."
 
 #: src/components/farm/FarmFullNodeConnections.tsx:95
 msgid "The full node that your farmer is connected to is below. <0>Learn more</0>"
@@ -2471,8 +2471,8 @@ msgid "The total transactions fees in this block. Rewarded to the farmer."
 msgstr "The total transactions fees in this block. Rewarded to the farmer."
 
 #: src/components/plotNFT/PlotNFTPayoutInstructionsDialog.tsx:106
-msgid "These are the instructions for how the farmer wants to get paid. By default this will be an XCH address, but it can be set to any string with a size of less than 1024 characters, so it can represent another blockchain or payment system identifier."
-msgstr "These are the instructions for how the farmer wants to get paid. By default this will be an XCH address, but it can be set to any string with a size of less than 1024 characters, so it can represent another blockchain or payment system identifier."
+msgid "These are the instructions for how the farmer wants to get paid. By default this will be an CAC address, but it can be set to any string with a size of less than 1024 characters, so it can represent another blockchain or payment system identifier."
+msgstr "These are the instructions for how the farmer wants to get paid. By default this will be an CAC address, but it can be set to any string with a size of less than 1024 characters, so it can represent another blockchain or payment system identifier."
 
 #: src/components/plot/card/PlotCardPlotsFailedToOpen.tsx:15
 msgid "These plots are invalid, you might want to delete them."
@@ -2594,9 +2594,9 @@ msgstr "Total Amount Offered"
 msgid "Total Amount Requested"
 msgstr "Total Amount Requested"
 
-#: src/components/farm/card/FarmCardTotalChiaFarmed.tsx:27
-msgid "Total Chia Farmed"
-msgstr "Total Chia Farmed"
+#: src/components/farm/card/FarmCardTotalCactusFarmed.tsx:27
+msgid "Total Cactus Farmed"
+msgstr "Total Cactus Farmed"
 
 #: src/components/plot/card/PlotCardTotalHarvesters.tsx:11
 msgid "Total Harvesters"
@@ -2849,8 +2849,8 @@ msgid "Would you like to transfer the specified NFT to a new owner?"
 msgstr "Would you like to transfer the specified NFT to a new owner?"
 
 #: src/components/offers/NFTOfferEditor.tsx:261
-#~ msgid "XCH for NFT"
-#~ msgstr "XCH for NFT"
+#~ msgid "CAC for NFT"
+#~ msgstr "CAC for NFT"
 
 #: src/components/plot/add/PlotAddChooseSize.tsx:48
 #: src/electron/main.tsx:362
@@ -2968,8 +2968,8 @@ msgstr "Your offer:"
 #: src/components/app/AppKeyringMigrator.tsx:239
 #: src/components/settings/ChangePassphrasePrompt.tsx:271
 #: src/components/settings/SetPassphrasePrompt.tsx:242
-msgid "Your passphrase can be stored in your system's secure credential store. Chia will be able to access your keys without prompting for your passphrase."
-msgstr "Your passphrase can be stored in your system's secure credential store. Chia will be able to access your keys without prompting for your passphrase."
+msgid "Your passphrase can be stored in your system's secure credential store. Cactus will be able to access your keys without prompting for your passphrase."
+msgstr "Your passphrase can be stored in your system's secure credential store. Cactus will be able to access your keys without prompting for your passphrase."
 
 #: src/components/settings/SettingsPanel.tsx:61
 msgid "Your passphrase has been set"

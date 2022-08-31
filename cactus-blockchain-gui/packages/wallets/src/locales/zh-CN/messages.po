@@ -6,13 +6,13 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: @lingui/cli\n"
 "Language: zh_CN\n"
-"Project-Id-Version: chia-blockchain\n"
+"Project-Id-Version: cactus-blockchain\n"
 "Report-Msgid-Bugs-To: \n"
 "PO-Revision-Date: 2022-07-27 18:38\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Crowdin-Project: chia-blockchain\n"
+"X-Crowdin-Project: cactus-blockchain\n"
 "X-Crowdin-Project-ID: 440660\n"
 "X-Crowdin-Language: zh-CN\n"
 "X-Crowdin-File: /main/packages/wallets/src/locales/en-US/messages.po\n"
@@ -113,7 +113,7 @@ msgstr "取消"
 
 #: src/components/WalletSend.tsx:103
 #: src/components/cat/WalletCATSend.tsx:118
-msgid "Cannot send chia to coloured address. Please enter a chia address."
+msgid "Cannot send cactus to coloured address. Please enter a cactus address."
 msgstr "错误: 无法发送奇亚到上色的地址. 请输入一个奇亚钱包地址."
 
 #: src/components/WalletsSidebar.tsx:145
@@ -123,7 +123,7 @@ msgstr "检查我的快照余额"
 #: src/components/cat/WalletCATSelect.tsx:25
 #: src/components/create/WalletCreateList.tsx:32
 #: src/constants/WalletName.ts:23
-msgid "Chia Asset Token"
+msgid "Cactus Asset Token"
 msgstr "奇亚资产代币"
 
 #: src/components/WalletsSidebar.tsx:160
@@ -178,16 +178,16 @@ msgid "Create An Attestation Packet"
 msgstr "创建一个认证包"
 
 #: src/components/cat/WalletCATCreateExisting.tsx:76
-msgid "Create Chia Asset Token Wallet from Existing TAIL"
-msgstr "从现有的TAIL创建Chia Asset Token 钱包"
+msgid "Create Cactus Asset Token Wallet from Existing TAIL"
+msgstr "从现有的TAIL创建Cactus Asset Token 钱包"
 
 #: src/components/did/WalletDIDCreate.tsx:109
 msgid "Create Distributed Identity Wallet"
 msgstr "创建分布式身份钱包"
 
 #: src/components/cat/WalletCATCreateNew.tsx:75
-msgid "Create New Chia Asset Token Wallet"
-msgstr "创建新的Chia Asset Token 钱包"
+msgid "Create New Cactus Asset Token Wallet"
+msgstr "创建新的Cactus Asset Token 钱包"
 
 #: src/components/cat/WalletCATSelect.tsx:32
 #: src/components/did/WalletDIDSelect.tsx:32
@@ -266,7 +266,7 @@ msgid "Drag and drop your recovery backup file"
 msgstr "拖放您的恢复备份文件"
 
 #: src/components/WalletImport.tsx:133
-msgid "Enter the 24 word mnemonic that you have saved in order to restore your Chia wallet."
+msgid "Enter the 24 word mnemonic that you have saved in order to restore your Cactus wallet."
 msgstr "请输入你保存的24个助记词来恢复奇亚钱包"
 
 #: src/components/cat/WalletCATSend.tsx:128
@@ -728,7 +728,7 @@ msgstr "支出迭代长度(区块数)"
 
 #: src/components/rateLimited/WalletRateLimited.jsx:400
 #: src/components/rateLimited/WalletRateLimited.jsx:447
-msgid "Spending Limit (chia per interval): {0}"
+msgid "Spending Limit (cactus per interval): {0}"
 msgstr "消费限额（单位时间可消费的奇亚币）：{0}"
 
 #: src/constants/WalletName.ts:5
@@ -758,8 +758,8 @@ msgid "Syncing"
 msgstr "正在同步"
 
 #: src/components/card/WalletCardTotalBalance.tsx:65
-msgid "The derivation index sets the range of wallet addresses that the wallet scans the blockchain for. This number is generally higher if you have a lot of transactions or canceled offers for XCH, CATs, or NFTs. If you believe your balance is incorrect because it’s missing coins, then increasing the derivation index could help the wallet include the missing coins in the balance total."
-msgstr "衍生指数设置钱包链扫描钱包地址的范围。 如果您有大量交易或取消了 XCH、CATs 或 NFT 的报价，这个数字通常更高。 如果你认为你的余额是不正确的，因为它缺少硬币， 增加衍生指数可以帮助钱包在余额总额中包括缺失的硬币。"
+msgid "The derivation index sets the range of wallet addresses that the wallet scans the blockchain for. This number is generally higher if you have a lot of transactions or canceled offers for CAC, CATs, or NFTs. If you believe your balance is incorrect because it’s missing coins, then increasing the derivation index could help the wallet include the missing coins in the balance total."
+msgstr "衍生指数设置钱包链扫描钱包地址的范围。 如果您有大量交易或取消了 CAC、CATs 或 NFT 的报价，这个数字通常更高。 如果你认为你的余额是不正确的，因为它缺少硬币， 增加衍生指数可以帮助钱包在余额总额中包括缺失的硬币。"
 
 #: src/components/cat/WalletDID.tsx:789
 #: src/components/did/WalletDID.tsx:789
@@ -780,7 +780,7 @@ msgid "This is not a valid address for sending funds to"
 msgstr "这不是一个有效的可发送资金进入的地址"
 
 #: src/components/standard/WalletStandardCards.tsx:23
-msgid "This is the amount of Chia that you can currently use to make transactions. It does not include pending farming rewards, pending incoming transactions, and Chia that you have just spent but is not yet in the blockchain."
+msgid "This is the amount of Cactus that you can currently use to make transactions. It does not include pending farming rewards, pending incoming transactions, and Cactus that you have just spent but is not yet in the blockchain."
 msgstr "这是你目前可以交易的奇亚币数额。该数额不包含处理中的农场奖励、收入交易，以及未经区块链确认的支付交易。"
 
 #: src/components/standard/WalletStandardCards.tsx:44
@@ -792,7 +792,7 @@ msgid "This is the sum of the incoming and outgoing pending transactions (not ye
 msgstr "待处理的收入与支出总和(还未上链). 不包括农场耕种奖励."
 
 #: src/components/standard/WalletStandardCards.tsx:16
-msgid "This is the total amount of chia in the blockchain at the current peak block that is controlled by your private keys. It includes frozen farming rewards, but not pending incoming and outgoing transactions."
+msgid "This is the total amount of cactus in the blockchain at the current peak block that is controlled by your private keys. It includes frozen farming rewards, but not pending incoming and outgoing transactions."
 msgstr "这里是你的私钥所控制的，到目前最新子块高度为止的全部奇亚数。包含被冻结的耕种奖励， 但不包含待处理的收入与支出。"
 
 #: src/components/standard/WalletStandardCards.tsx:31
